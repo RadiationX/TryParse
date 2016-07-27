@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     "    </li>\n" +
                     "</ul>\n";
 
+    private final static int green = Color.argb(48, 0, 255, 0);
+    private final static int red = Color.argb(48, 255, 0, 0);
+    private final static int blue = Color.argb(255, 0, 0, 255);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         //Рекурсивной функцией создаем и заполняем список
         long date = new Date().getTime();
         Ul ul = recurseUi(element);
-        Log.d("kek", "executing "+(new Date().getTime()-date)+"ms");
+        Log.d("kek", "executing " + (new Date().getTime() - date) + "ms");
         //...
         list.addView(ul);
     }
@@ -74,10 +78,8 @@ public class MainActivity extends AppCompatActivity {
         if (ul == null)
             return ulElem;
         for (Element li : ul.select(">li")) {
-            //На всякий случай
-            boolean isHead = li.select(">ul").size() != 0;
             Li liElem = new Li(this);
-            final Elements links = li.select(">a");
+            Elements links = li.select(">a");
             if (links != null) {
                 //Правильно находит ссылки для списков такого вида: http://beardycast.com/2016/07/26/Vladimir_P/edc-1-vladimir/
                 Element link = links.select("[href*='#']").first();
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 //Создаем textview
                 TextView textView = new TextView(this);
                 textView.setText(linkTitle);
-                textView.setTextColor(Color.parseColor("#0000ff"));
+                textView.setTextColor(blue);
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -113,15 +115,16 @@ public class MainActivity extends AppCompatActivity {
         return ulElem;
     }
 
+
     class Li extends LinearLayout {
 
         public Li(Context context) {
             super(context);
-            setBackgroundColor(Color.argb(48, 0, 255, 0));
-            LinearLayout.LayoutParams paramsLi = new LinearLayout.LayoutParams(
+            setBackgroundColor(green);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            paramsLi.setMargins(4, 4, 4, 4);
-            setLayoutParams(paramsLi);
+            params.setMargins(4, 4, 4, 4);
+            setLayoutParams(params);
             setOrientation(VERTICAL);
         }
     }
@@ -130,11 +133,11 @@ public class MainActivity extends AppCompatActivity {
 
         public Ul(Context context) {
             super(context);
-            setBackgroundColor(Color.argb(48, 255, 0, 0));
-            LinearLayout.LayoutParams paramsUl = new LinearLayout.LayoutParams(
+            setBackgroundColor(red);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            paramsUl.setMargins(16, 8, 8, 8);
-            setLayoutParams(paramsUl);
+            params.setMargins(16, 8, 8, 8);
+            setLayoutParams(params);
             setOrientation(VERTICAL);
         }
     }
