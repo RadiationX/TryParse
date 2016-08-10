@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.text.LoginFilter;
 import android.text.Spanned;
 import android.text.SpannedString;
 import android.util.Log;
@@ -14,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -25,13 +23,12 @@ import java.util.regex.Pattern;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private Pattern pattern = Pattern.compile("<div class=\"article-entry\"[^>]*?>[\\s\\S]*?<!-- toc -->([\\s\\S]*?)<!-- tocstop -->[^<]*?<hr>[^<]*?([\\s\\S]*?)</div>[^<]*?<footer");
+    private Pattern pattern = Pattern.compile("<div class=\"article-entry\"[^>]*?>([\\s\\S]*?)</div>[^<]*?<footer");
 
     private final static int green = Color.argb(48, 0, 255, 0);
     private final static int red = Color.argb(48, 255, 0, 0);
@@ -44,17 +41,21 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Call call, IOException e) {
+            @Override
+            public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
 
-            @Override public void onResponse(Call call, Response response) throws IOException {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
                 parse(response.body().string());
             }
         });
     }
+
     private LinearLayout list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,48 +68,64 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void parse(String html){
-        html = StringEscapeUtils.unescapeHtml4(html);
+    private void parse(String html) {
+        Log.d("kek", "check 1");
+        //html = StringEscapeUtils.unescapeHtml4(html);
+        Log.d("kek", "check 2");
         final Matcher matcher = pattern.matcher(html);
-        if(matcher.find()){
+        Log.d("kek", "check 3");
+        if (matcher.find()) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Element element = Jsoup.parse(matcher.group(1)).select("ul").first();
-                    Ul ul = recurseUi(element);
-                    list.addView(ul);
+                    Log.d("kek", "check 4");
 
-                    Elements document = Jsoup.parse(matcher.group(2)).body().select(">*");
+
+                    /*Element element = Jsoup.parse(matcher.group(1)).select("ul").first();
+                    Log.d("kek", "check 5");
+                    Ul ul = recurseUi(element);
+                    list.addView(ul);*/
+
+                    Log.d("kek", "check 6");
+                    Elements document = Jsoup.parse(matcher.group(1)).body().children();
+                    Log.d("kek", "check 7");
                     list.addView(recurseContent(document));
+                    Log.d("kek", "check 8");
+                    Log.d("kek", "point iterations "+iterations);
                 }
             });
         }
 
     }
-
+int iterations = 0;
     private HTMLTAG recurseContent(Elements elements) {
-        String lol = "";
         HTMLTAG root = new HTMLTAG(this);
         for (Element thisElement : elements) {
-            String tag = thisElement.tagName();
             String ownText = thisElement.ownText();
             Element tempLinkElem = thisElement.select(">a").first();
-            HTMLTAG thisView = getViewByTag(tag);
-            HTMLTAG deeperView = recurseContent(thisElement.children());
+            HTMLTAG thisView = getViewByTag(thisElement.tagName());
+            boolean doRecurse = true;
 
-            if (tag.equals("li")) {
-                thisView.setHtmlText(Html.fromHtml(thisElement.html()));
-                deeperView = null;
-            } else if (tag.equals("img")) {
+            if (thisElement.tagName().equals("a")) {
+                ((A) thisView).setUrl(thisElement.attr("href"));
+                thisView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MainActivity.this, ((A) view).getUrl(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            if (thisElement.tagName().equals("img")) {
                 ((IMAGE) thisView).setImage(thisElement.attr("src"));
                 thisView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity.this, ((IMAGE)view).getUrl(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, ((IMAGE) view).getUrl(), Toast.LENGTH_SHORT).show();
                     }
                 });
             } else if (!ownText.isEmpty()) {
-                if (tag.matches("h1|h2|h3|h4|h5|h6")) {
+                if (thisElement.tagName().matches("h1|h2|h3|h4|h5|h6")) {
                     thisView.setHtmlText(ownText);
                     if (tempLinkElem != null)
                         thisView.setTag(tempLinkElem.attr("href"));
@@ -117,13 +134,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+            if (!thisElement.tagName().equals("li") && tempLinkElem != null)
+                doRecurse = false;
+            if (thisElement.tagName().equals("li")) {
+                for (Element temp : thisElement.children()) {
+                    if (!temp.tagName().matches("li|ul|a")) {
+                        doRecurse = false;
+                        break;
+                    }
+                }
+            }
 
-            if (tempLinkElem != null && !tempLinkElem.hasClass("fancybox"))
-                deeperView = null;
+            if (doRecurse)
+                thisView.addView(recurseContent(thisElement.children()));
 
-            if (deeperView != null)
-                thisView.addView(deeperView);
-
+            iterations++;
             root.addView(thisView);
         }
         return root;
@@ -155,6 +180,8 @@ public class MainActivity extends AppCompatActivity {
                 return new IFRAME(this);
             case "img":
                 return new IMAGE(this);
+            case "a":
+                return new A(this);
             default:
                 return new UNDEFINED(this);
         }
@@ -272,6 +299,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    class A extends HTMLTAG {
+        private String url;
+
+        public A(Context context) {
+            super(context);
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+    }
 
     class P extends HTMLTAG {
         public P(Context context) {
@@ -287,6 +329,7 @@ public class MainActivity extends AppCompatActivity {
 
     class IMAGE extends HTMLTAG {
         private String url;
+
         public IMAGE(Context context) {
             super(context);
             setBackgroundColor(red);
@@ -296,7 +339,8 @@ public class MainActivity extends AppCompatActivity {
             this.url = url;
             setHtmlText("IMAGE " + url);
         }
-        public String getUrl(){
+
+        public String getUrl() {
             return url;
         }
     }
