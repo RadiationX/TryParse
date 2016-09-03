@@ -161,7 +161,7 @@ public class FastActivity extends AppCompatActivity {
     }
 
 
-    private final static Pattern p2 = Pattern.compile("^(b|i|u|del|sub|sup|span|a|br|p)$");
+    private final static Pattern p2 = Pattern.compile("^(b|i|u|del|sub|sup|span|a|br)$");
     private Matcher matcher;
 
     private BaseTag recurseUi(final Element element) {
@@ -279,7 +279,7 @@ public class FastActivity extends AppCompatActivity {
 
     public void run() throws Exception {
         Request request = new Request.Builder()
-                .url("http://beardycast.com/2016/08/08/Beardygram/beardygram-5/")
+                .url("http://beardycast.com/2016/08/24/Anton_P/space-battle/")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {

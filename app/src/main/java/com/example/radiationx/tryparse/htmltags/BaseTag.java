@@ -131,8 +131,13 @@ public class BaseTag extends LinearLayout {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            if (textView != null)
+            if (textView != null){
+                Log.d("kek", "texta "+Html.toHtml(spanned));
                 textView.setText(spanned);
+                if(spanned.toString().isEmpty()){
+                    textView.setVisibility(GONE);
+                }
+            }
         }
     }
 
