@@ -153,6 +153,7 @@ public class FastActivity extends AppCompatActivity {
                     Log.d("kek", "point iterations views: " + iViews);
                     Log.d("kek", "point iterations textviews: " + iTextViews);
                     Log.d("kek", "time full:  " + Math.floor((System.currentTimeMillis() - time) * coef));
+                    getSupportActionBar().setTitle("ui " + Math.floor((System.currentTimeMillis() - time) * coef));
                 }
             });
 
@@ -168,8 +169,8 @@ public class FastActivity extends AppCompatActivity {
         /*if (element.tagName().equals("br"))
             return null;*/
         BaseTag thisView = getViewByTag(element.tagName());
-        if(element.tagName().equals("img")){
-            thisView.setImage("http://beardycast.com/"+element.attr("src"));
+        if (element.tagName().equals("img")) {
+            thisView.setImage("http://beardycast.com/".concat(element.attr("src")));
             thisView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -203,7 +204,8 @@ public class FastActivity extends AppCompatActivity {
             }
             if (res1 && res2 && matcher.matches()) {
 
-                html = html.concat(child.html());
+                //html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
+                html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
                 text = true;
                 continue;
 
@@ -259,6 +261,7 @@ public class FastActivity extends AppCompatActivity {
         }*/
         return thisView;
     }
+
     private BaseTag getViewByTag(String tag) {
         switch (tag) {
             case "h1":
@@ -273,6 +276,7 @@ public class FastActivity extends AppCompatActivity {
                 return new BaseTag(this);
         }
     }
+
     public void run() throws Exception {
         Request request = new Request.Builder()
                 .url("http://beardycast.com/2016/08/08/Beardygram/beardygram-5/")

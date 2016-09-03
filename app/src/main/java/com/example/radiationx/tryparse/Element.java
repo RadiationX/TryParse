@@ -99,12 +99,15 @@ public class Element {
     }
 
     public String html() {
-        return html(this);
+        return html(this, true);
+    }
+    public String htmlNoParent() {
+        return html(this, false);
     }
 
     Pattern pattern = Pattern.compile("br|img|meta");
     Matcher matcher;
-    public String html(Element element) {
+    public String html(Element element, boolean withParent) {
         String html = "";
         /*if (!element.tagName().matches("a|meta|p|span|img")) {
             html = html.concat("\n");
@@ -113,17 +116,20 @@ public class Element {
         }*/
 
         html = html.concat(" ");
-        html = html.concat("<").concat(element.tagName());
-        for(Map.Entry<String, String> entry : element.getAttributes().entrySet()) {
-            html = html.concat(" ").concat(entry.getKey()).concat("=\"").concat(entry.getValue()).concat("\"");
+        if(withParent){
+            html = html.concat("<").concat(element.tagName());
+            for(Map.Entry<String, String> entry : element.getAttributes().entrySet()) {
+                html = html.concat(" ").concat(entry.getKey()).concat("=\"").concat(entry.getValue()).concat("\"");
+            }
+            html = html.concat(">");
         }
-        html = html.concat(">");
+
         if (!element.getText().isEmpty()) {
             html = html.concat(element.getText());
         }
 
         for (int i = 0; i < element.getSize(); i++) {
-            html = html.concat(html(element.get(i)));
+            html = html.concat(html(element.get(i), true));
         }
 
         /*if (!element.tagName().matches("br|meta|a|p|span|img")) {
@@ -131,13 +137,16 @@ public class Element {
             for (int k = 0; k < element.getLevel(); k++)
                 html = html.concat("\t");
         }*/
-        matcher = pattern.matcher(element.tagName());
-        if (!matcher.matches()) {
-            html = html.concat("</").concat(element.tagName()).concat(">");
+        if(withParent){
+            matcher = pattern.matcher(element.tagName());
+            if (!matcher.matches()) {
+                html = html.concat("</").concat(element.tagName()).concat(">");
+            }
+            if (!element.getAfterText().isEmpty()) {
+                html = html.concat(element.getAfterText());
+            }
         }
-        if (!element.getAfterText().isEmpty()) {
-            html = html.concat(element.getAfterText());
-        }
+
         html = html.concat(" ");
         return html;
     }

@@ -26,5 +26,7 @@ dependencies {
     compile 'org.jsoup:jsoup:1.9.2'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'org.sufficientlysecure:html-textview:2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
