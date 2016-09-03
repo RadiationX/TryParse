@@ -13,6 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -67,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+    float coef = 1;
     private void parse(String html) {
+        //coef = 8.2f;
         Log.d("kek", "check 1");
         //html = StringEscapeUtils.unescapeHtml4(html);
         Log.d("kek", "check 2");
@@ -79,21 +83,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     long time = System.currentTimeMillis();
-                    Log.d("kek", "check 4");
-
-
-                    /*Element element = Jsoup.parse(matcher.group(1)).select("ul").first();
-                    Log.d("kek", "check 5");
-                    Ul ul = recurseUi(element);
-                    list.addView(ul);*/
-
-                    Log.d("kek", "check 6");
+                    //Document document = Document.parse(Jsoup.parse(finalHtml).body().html());
                     Elements document = Jsoup.parse(matcher.group(1)).body().children();
-                    Log.d("kek", "check 7");
+                    Log.d("kek", "time parse: " + Math.floor((System.currentTimeMillis() - time) * coef));
+                    long time2 = System.currentTimeMillis();
                     list.addView(recurseContent(document));
-                    Log.d("kek", "time "+(System.currentTimeMillis()-time));
-                    Log.d("kek", "check 8");
-                    Log.d("kek", "point iterations "+iterations);
+                    Log.d("kek", "time add ui:  " + Math.floor((System.currentTimeMillis() - time2) * coef));
+                    Log.d("kek", "time full:  " + Math.floor((System.currentTimeMillis() - time) * coef));
+                    Log.d("kek", "point iterations: " + iterations);
                 }
             });
         }

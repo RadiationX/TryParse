@@ -1,0 +1,63 @@
+package com.example.radiationx.tryparse;
+
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.os.Handler;
+
+import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+
+/**
+ * Created by radiationx on 03.09.16.
+ */
+public class App extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        initImageLoader(this);
+    }
+
+    private static DisplayImageOptions.Builder options = new DisplayImageOptions.Builder()
+            .cacheInMemory(true)
+            .resetViewBeforeLoading(true)
+            .cacheOnDisc(true)
+            .bitmapConfig(Bitmap.Config.ARGB_8888)
+            .handler(new Handler())
+            .displayer(new FadeInBitmapDisplayer(500, true, true, false));
+
+    public static DisplayImageOptions.Builder getDefaultOptionsUIL() {
+        return options;
+    }
+
+    public static void initImageLoader(Context context) {
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+                .threadPoolSize(5)
+                .threadPriority(Thread.MIN_PRIORITY)
+                .denyCacheImageMultipleSizesInMemory()
+                .memoryCache(new UsingFreqLimitedMemoryCache(5 * 1024 * 1024)) // 2 Mb
+                .discCacheFileNameGenerator(new HashCodeFileNameGenerator())
+                .defaultDisplayImageOptions(options.build())
+                .build();
+
+        ImageLoader.getInstance().init(config);
+    }
+    private static App INSTANCE = new App();
+
+    public static App getInstance() {
+        return INSTANCE;
+    }
+
+    public App() {
+        INSTANCE = this;
+    }
+    public static Context getContext() {
+        return getInstance();
+    }
+}

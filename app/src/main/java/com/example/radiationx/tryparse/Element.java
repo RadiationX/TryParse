@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by radiationx on 27.08.16.
@@ -100,14 +102,17 @@ public class Element {
         return html(this);
     }
 
+    Pattern pattern = Pattern.compile("br|img|meta");
+    Matcher matcher;
     public String html(Element element) {
         String html = "";
-        if (!element.tagName().matches("a|meta|p|span|img")) {
+        /*if (!element.tagName().matches("a|meta|p|span|img")) {
             html = html.concat("\n");
             for (int k = 0; k < element.getLevel(); k++)
                 html = html.concat("\t");
-        }
+        }*/
 
+        html = html.concat(" ");
         html = html.concat("<").concat(element.tagName());
         for(Map.Entry<String, String> entry : element.getAttributes().entrySet()) {
             html = html.concat(" ").concat(entry.getKey()).concat("=\"").concat(entry.getValue()).concat("\"");
@@ -121,17 +126,19 @@ public class Element {
             html = html.concat(html(element.get(i)));
         }
 
-        if (!element.tagName().matches("br|meta|a|p|span|img")) {
+        /*if (!element.tagName().matches("br|meta|a|p|span|img")) {
             html = html.concat("\n");
             for (int k = 0; k < element.getLevel(); k++)
                 html = html.concat("\t");
-        }
-        if (!element.tagName().matches("br|img|meta")) {
+        }*/
+        matcher = pattern.matcher(element.tagName());
+        if (!matcher.matches()) {
             html = html.concat("</").concat(element.tagName()).concat(">");
         }
         if (!element.getAfterText().isEmpty()) {
             html = html.concat(element.getAfterText());
         }
+        html = html.concat(" ");
         return html;
     }
 
