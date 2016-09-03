@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+                    long time = System.currentTimeMillis();
                     Log.d("kek", "check 4");
 
 
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     Elements document = Jsoup.parse(matcher.group(1)).body().children();
                     Log.d("kek", "check 7");
                     list.addView(recurseContent(document));
+                    Log.d("kek", "time "+(System.currentTimeMillis()-time));
                     Log.d("kek", "check 8");
                     Log.d("kek", "point iterations "+iterations);
                 }
