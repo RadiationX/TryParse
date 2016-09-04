@@ -1,12 +1,8 @@
 package com.example.radiationx.tryparse;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
-import android.text.SpannedString;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -14,16 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.example.radiationx.tryparse.htmltags.BaseTag;
 import com.example.radiationx.tryparse.htmltags.H1Tag;
 import com.example.radiationx.tryparse.htmltags.H2Tag;
-import com.example.radiationx.tryparse.htmltags.IBaseTag;
 import com.example.radiationx.tryparse.htmltags.LiTag;
 import com.example.radiationx.tryparse.htmltags.UlTag;
-
-import org.jsoup.Jsoup;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -144,7 +135,8 @@ public class FastActivity extends AppCompatActivity {
                     final long time = System.currentTimeMillis();
                     //Document document = Document.parse(Jsoup.parse(finalHtml).body().html());
                     Document document = Document.parse(finalHtml);
-                    //Log.d("kek", "html +" + document.getHtml());
+                    Log.d("kek", "html +" + document.getHtml().substring(300));
+                    //System.out.print(document.getHtml());
                     Log.d("kek", "time parse: " + Math.floor((System.currentTimeMillis() - time) * coef));
                     final long time2 = System.currentTimeMillis();
                     list.addView(recurseUi(document.getRoot()));
@@ -177,6 +169,13 @@ public class FastActivity extends AppCompatActivity {
                     Toast.makeText(FastActivity.this, element.attr("src"), Toast.LENGTH_SHORT).show();
                 }
             });
+            //Log.d("kek", "alt desc " + element.attr("alt"));
+            if (element.attr("alt") != null) {
+                TextView textView = thisView.setHtmlText(element.attr("alt"));
+                thisView.setGravity(Gravity.CENTER_HORIZONTAL);
+                textView.setTextSize(12);
+            }
+
             return thisView;
         }
 
@@ -186,12 +185,13 @@ public class FastActivity extends AppCompatActivity {
 
         for (int i = 0; i < element.getElements().size(); i++) {
             Element child = element.get(i);
+            //Log.d("kek", "child "+child.tagName()+" : "+child.getLevel());
             BaseTag newView = null;
             if (!text && child.tagName().equals("br"))
                 continue;
             matcher = p2.matcher(child.tagName());
-            boolean res1 = true, res2 = true;
-            for (Element temp : child.getElements()) {
+            /*boolean res1 = true, res2 = true;*/
+            /*for (Element temp : child.getElements()) {
                 if (temp.tagName().equals("a")) {
                     for (Element imgs : temp.getElements()) {
                         if (imgs.tagName().equals("img")) {
@@ -201,8 +201,8 @@ public class FastActivity extends AppCompatActivity {
                 } else if (!temp.tagName().equals("br")) {
                     res2 = false;
                 }
-            }
-            if (res1 && res2 && matcher.matches()) {
+            }*/
+            if (/*res1 && res2 &&*/ matcher.matches()) {
 
                 //html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
                 html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
@@ -279,7 +279,7 @@ public class FastActivity extends AppCompatActivity {
 
     public void run() throws Exception {
         Request request = new Request.Builder()
-                .url("http://beardycast.com/2016/08/24/Anton_P/space-battle/")
+                .url("http://beardycast.com/2016/08/08/Beardygram/beardygram-5/")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {

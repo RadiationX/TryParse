@@ -1,7 +1,5 @@
 package com.example.radiationx.tryparse;
 
-import android.util.Log;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,6 +11,7 @@ public class Document {
 
     public static Document parse(String html) {
         html = html.replaceAll("(<(area|base|br|col|colgroup|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)[^>]*?>)", "$1</$2>");
+        html = html.replaceAll("<strong([^>]*?)>", "<b$1>").replaceAll("</strong>","</b>");
         html = html.replaceAll("<!--[\\s\\S]*?-->","");
         html = html.replaceAll("<script[^>]*>[\\s\\S]*?</script>","");
         //html = html.replaceAll("\t","");

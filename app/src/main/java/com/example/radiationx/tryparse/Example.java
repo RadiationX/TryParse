@@ -2,8 +2,6 @@ package com.example.radiationx.tryparse;
 
 import android.util.Log;
 
-import java.util.ArrayList;
-
 /**
  * Created by radiationx on 27.08.16.
  */

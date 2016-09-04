@@ -2,7 +2,6 @@ package com.example.radiationx.tryparse;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Handler;
 
