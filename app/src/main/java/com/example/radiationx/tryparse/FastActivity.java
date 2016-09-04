@@ -135,8 +135,6 @@ public class FastActivity extends AppCompatActivity {
                     final long time = System.currentTimeMillis();
                     //Document document = Document.parse(Jsoup.parse(finalHtml).body().html());
                     Document document = Document.parse(finalHtml);
-                    Log.d("kek", "html +" + document.getHtml().substring(300));
-                    //System.out.print(document.getHtml());
                     Log.d("kek", "time parse: " + Math.floor((System.currentTimeMillis() - time) * coef));
                     final long time2 = System.currentTimeMillis();
                     list.addView(recurseUi(document.getRoot()));
