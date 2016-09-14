@@ -12,6 +12,7 @@ public class Document {
     public static Document parse(String html) {
         html = html.replaceAll("(<(area|base|br|col|colgroup|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)[^>]*?>)", "$1</$2>");
         html = html.replaceAll("<strong([^>]*?)>", "<b$1>").replaceAll("</strong>","</b>");
+        html = html.replaceAll("<em([^>]*?)>", "<i$1>").replaceAll("</em>","</i>");
         html = html.replaceAll("<!--[\\s\\S]*?-->","");
         html = html.replaceAll("<script[^>]*>[\\s\\S]*?</script>","");
         //html = html.replaceAll("\t","");

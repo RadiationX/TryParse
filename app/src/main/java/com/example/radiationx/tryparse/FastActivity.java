@@ -185,8 +185,8 @@ public class FastActivity extends AppCompatActivity {
             Element child = element.get(i);
             //Log.d("kek", "child "+child.tagName()+" : "+child.getLevel());
             BaseTag newView = null;
-            if (!text && child.tagName().equals("br"))
-                continue;
+            /*if (!text && child.tagName().equals("br"))
+                continue;*/
             matcher = p2.matcher(child.tagName());
             /*boolean res1 = true, res2 = true;*/
             /*for (Element temp : child.getElements()) {
@@ -277,7 +277,7 @@ public class FastActivity extends AppCompatActivity {
 
     public void run() throws Exception {
         Request request = new Request.Builder()
-                .url("http://beardycast.com/2016/08/08/Beardygram/beardygram-5/")
+                .url("http://beardycast.com/2016/09/14/podcast/beardycast-103/")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
