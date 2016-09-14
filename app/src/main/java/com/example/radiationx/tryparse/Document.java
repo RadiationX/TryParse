@@ -1,5 +1,7 @@
 package com.example.radiationx.tryparse;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,10 +13,10 @@ public class Document {
 
     public static Document parse(String html) {
         html = html.replaceAll("(<(area|base|br|col|colgroup|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)[^>]*?>)", "$1</$2>");
-        html = html.replaceAll("<strong([^>]*?)>", "<b$1>").replaceAll("</strong>","</b>");
-        html = html.replaceAll("<em([^>]*?)>", "<i$1>").replaceAll("</em>","</i>");
-        html = html.replaceAll("<!--[\\s\\S]*?-->","");
-        html = html.replaceAll("<script[^>]*>[\\s\\S]*?</script>","");
+        html = html.replaceAll("<strong([^>]*?)>", "<b$1>").replaceAll("</strong>", "</b>");
+        html = html.replaceAll("<em([^>]*?)>", "<i$1>").replaceAll("</em>", "</i>");
+        html = html.replaceAll("<!--[\\s\\S]*?-->", "");
+        html = html.replaceAll("<script[^>]*>[\\s\\S]*?</script>", "");
         //html = html.replaceAll("\t","");
 
         final Pattern mainPattern = Pattern.compile("<([^/!][\\w]*)([^>]*)>([^<]*)|</([\\w]*)>([^<]*)");
@@ -24,7 +26,11 @@ public class Document {
         final Matcher matcher = mainPattern.matcher(html);
         Matcher attrMatcher;
         Element last = null;
+        List<Element> lasts = new ArrayList<>();
         while (matcher.find()) {
+            if (lasts.size() > 0) {
+                last = lasts.get(lasts.size() - 1);
+            }
             if (matcher.group(1) != null) {
                 Element element = new Element(matcher.group(1).toLowerCase());
 
@@ -32,18 +38,19 @@ public class Document {
                 while (attrMatcher.find())
                     element.addAttr(attrMatcher.group(1), attrMatcher.group(2));
 
-                element.setText(matcher.group(3).replaceAll("\t","").trim());
+                element.setText(matcher.group(3).replaceAll("\t", "").trim());
                 element.setLevel(level);
                 if (last != null)
                     element.setParent(last.getLevel() == element.getLevel() ? last.getParent() : last);
 
                 document.add(element);
-
+                lasts.add(element);
                 level++;
-                last = element;
             } else {
                 if (last != null && last.tagName().equals(matcher.group(4)))
-                    last.setAfterText(matcher.group(5).replaceAll("\t","").trim());
+                    last.setAfterText(matcher.group(5).replaceAll("\t", "").trim());
+                if (lasts.size() > 0)
+                    lasts.remove(lasts.size() - 1);
                 level--;
             }
         }
