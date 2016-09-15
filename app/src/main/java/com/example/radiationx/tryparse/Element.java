@@ -115,7 +115,6 @@ public class Element {
                 html = html.concat("\t");
         }*/
 
-        html = html.concat(probel);
         if(withParent){
             html = html.concat("<").concat(element.tagName());
             for(Map.Entry<String, String> entry : element.getAttributes().entrySet()) {
@@ -125,7 +124,7 @@ public class Element {
         }
 
         if (!element.getText().isEmpty()) {
-            html = html.concat(probel);
+            //html = html.concat(probel);
             html = html.concat(element.getText());
         }
 
@@ -143,8 +142,8 @@ public class Element {
             if (!matcher.matches()) {
                 html = html.concat("</").concat(element.tagName()).concat(">");
             }
-            html = html.concat(probel);
             if (!element.getAfterText().isEmpty()) {
+                html = html.concat(probel);
                 html = html.concat(element.getAfterText());
             }
         }
@@ -170,6 +169,13 @@ public class Element {
         text = text.concat(probel).concat(element.getAfterText());
 
         return text;
+    }
+
+    public static void fixSpace(Element element){
+        element.setText(element.getText().replaceAll(" ", "&nbsp;"));
+        for (int i = 0; i < element.getSize(); i++)
+            fixSpace(element.get(i));
+        element.setAfterText(element.getAfterText().replaceAll(" ", "&nbsp;"));
     }
 
 

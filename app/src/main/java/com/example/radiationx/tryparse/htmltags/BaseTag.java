@@ -57,7 +57,7 @@ public class BaseTag extends LinearLayout {
         }
 
         protected Void doInBackground(Void... urls) {
-            spanned = Html.fromHtml(text);
+            spanned = com.example.radiationx.tryparse.htmltags.Html.fromHtml(text);
             return null;
         }
 

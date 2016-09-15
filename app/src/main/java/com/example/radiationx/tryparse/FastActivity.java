@@ -1,8 +1,10 @@
 package com.example.radiationx.tryparse;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -11,10 +13,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.radiationx.tryparse.htmltags.BaseTag;
+import com.example.radiationx.tryparse.htmltags.CodePostBlock;
 import com.example.radiationx.tryparse.htmltags.H1Tag;
 import com.example.radiationx.tryparse.htmltags.H2Tag;
 import com.example.radiationx.tryparse.htmltags.LiTag;
+import com.example.radiationx.tryparse.htmltags.PTag;
+import com.example.radiationx.tryparse.htmltags.PostBlock;
+import com.example.radiationx.tryparse.htmltags.QuotePostBlock;
+import com.example.radiationx.tryparse.htmltags.SpoilerPostBlock;
 import com.example.radiationx.tryparse.htmltags.UlTag;
+import com.nostra13.universalimageloader.utils.L;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -111,10 +119,12 @@ public class FastActivity extends AppCompatActivity {
     }
 
     private Pattern pattern = Pattern.compile("(<div class=\"article-entry\"[^>]*?>[\\s\\S]*?</div>)[^<]*?<footer");
+    //private Pattern pattern = Pattern.compile("group-item([^\"]*?)\" data-message-id=\"145532\"[^>]*?data-unread-status=\"([^\"]*?)\">[\\s\\S]*?</b> ([^ <]*?) [\\s\\S]*?src=\"([^\"]*?)\"[\\s\\S]*?(<div[^>]*?msg-content[^>]*?>[\\s\\S]*?</div>)([^<]*?</div>[^<]*?<div (class=\"list|id=\"threa|class=\"date))");
 
     float coef = 1;
 
     private void parse(String html) {
+        Log.d("kek", "loaded html " + html);
         //coef = 8.2f;
         runOnUiThread(new Runnable() {
             @Override
@@ -151,23 +161,43 @@ public class FastActivity extends AppCompatActivity {
     }
 
 
-    private final static Pattern p2 = Pattern.compile("^(b|i|u|del|sub|sup|span|a|br)$");
-    private Matcher matcher;
+    private final static Pattern p2 = Pattern.compile("^(b|i|u|del|s|strike|sub|sup|span|a|br)$");
+
+    public Context getContext() {
+        return this;
+    }
 
     private BaseTag recurseUi(final Element element) {
-        //Log.d("kek", "element "+element.tagName()+" : "+element.getLevel());
-        /*if (element.tagName().equals("br"))
-            return null;*/
-        BaseTag thisView = getViewByTag(element.tagName());
+        BaseTag thisView = null;
+        String elClassios = element.attr("class");
+        if (elClassios != null && elClassios.contains("post-block")) {
+            if (elClassios.contains("quote")) {
+                thisView = new QuotePostBlock(getContext());
+            } else if (elClassios.contains("code")) {
+                thisView = new CodePostBlock(getContext());
+                Element.fixSpace(element.getLast());
+            } else if (elClassios.contains("spoil")) {
+                thisView = new SpoilerPostBlock(getContext());
+            } else {
+                thisView = new PostBlock(getContext());
+            }
+            if (!element.get(0).htmlNoParent().trim().equals(""))
+                ((PostBlock) thisView).setTitle(Html.fromHtml(element.get(0).htmlNoParent().trim()));
+            else
+                ((PostBlock) thisView).hideTitle();
+            ((PostBlock) thisView).addBody(recurseUi(element.getLast()));
+            return thisView;
+        } else {
+            thisView = getViewByTag(element.tagName());
+        }
         if (element.tagName().equals("img")) {
             thisView.setImage("http://beardycast.com/".concat(element.attr("src")));
             thisView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(FastActivity.this, element.attr("src"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), element.attr("src"), Toast.LENGTH_SHORT).show();
                 }
             });
-            //Log.d("kek", "alt desc " + element.attr("alt"));
             if (element.attr("alt") != null) {
                 TextView textView = thisView.setHtmlText(element.attr("alt"));
                 thisView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -183,59 +213,23 @@ public class FastActivity extends AppCompatActivity {
 
         for (int i = 0; i < element.getElements().size(); i++) {
             Element child = element.get(i);
-            //Log.d("kek", "child "+child.tagName()+" : "+child.getLevel());
             BaseTag newView = null;
-            /*if (!text && child.tagName().equals("br"))
-                continue;*/
-            matcher = p2.matcher(child.tagName());
-            /*boolean res1 = true, res2 = true;*/
-            /*for (Element temp : child.getElements()) {
-                if (temp.tagName().equals("a")) {
-                    for (Element imgs : temp.getElements()) {
-                        if (imgs.tagName().equals("img")) {
-                            res1 = false;
-                        }
-                    }
-                } else if (!temp.tagName().equals("br")) {
-                    res2 = false;
-                }
-            }*/
-            if (/*res1 && res2 &&*/ matcher.matches()) {
-
-                //html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
-                html = html.concat(child.tagName().equals("p") ? child.htmlNoParent() : child.html());
+            if (p2.matcher(child.tagName()).matches()) {
+                html = html.concat(child.html());
                 text = true;
                 continue;
-
-
             } else {
                 newView = recurseUi(child);
                 if (text) {
+                    html = startBreakTag.matcher(html).replaceFirst("");
+                    html = endBreakTag.matcher(html).replaceFirst("");
                     html = html.trim();
-                    //html = html.trim().replaceFirst("<br>$", "");
                     if (!html.isEmpty()) {
-                        //html = html.replaceFirst("^<br>", "");
-                        //thisView.setHtmlText(Html.fromHtml(html));
                         thisView.setHtmlText(html);
                         iTextViews++;
                         html = "";
                     }
                 }
-                //html += child.getText();
-                /*if (!html.isEmpty()) {
-
-                    //newView.setHtmlText(Html.fromHtml(html));
-
-                }
-                String attr = child.attr("align");
-                if (attr != null) {
-                    if (attr.equals("center")) {
-                        newView.setGravity(Gravity.CENTER_HORIZONTAL);
-                    } else if (attr.equals("right")) {
-                        newView.setGravity(Gravity.END);
-                    }
-                }*/
-
                 html = "";
                 text = false;
             }
@@ -245,21 +239,20 @@ public class FastActivity extends AppCompatActivity {
             iterations++;
         }
         html = html.trim();
-        //html = html.trim().replaceFirst("<br>$", "");
         if (!html.isEmpty()) {
-            //html = html.replaceFirst("^<br>", "");
+            html = startBreakTag.matcher(html).replaceFirst("");
+            html = endBreakTag.matcher(html).replaceFirst("");
+            html = html.trim();
             html = html.concat(element.getAfterText());
-            //thisView.setHtmlText(Html.fromHtml(html));
             thisView.setHtmlText(html);
             iTextViews++;
             html = "";
         }
-        /*for(int i = 0; i<122; i++){
-            thisView.addView(new BaseTag(this, ""));
-        }*/
         return thisView;
     }
 
+    private final static Pattern startBreakTag = Pattern.compile("^([ ]*|)<br>");
+    private final static Pattern endBreakTag = Pattern.compile("<br>([ ]*|)$");
     private BaseTag getViewByTag(String tag) {
         switch (tag) {
             case "h1":
@@ -270,6 +263,8 @@ public class FastActivity extends AppCompatActivity {
                 return new UlTag(this);
             case "li":
                 return new LiTag(this);
+            case "p":
+                return new PTag(this);
             default:
                 return new BaseTag(this);
         }
@@ -277,7 +272,7 @@ public class FastActivity extends AppCompatActivity {
 
     public void run() throws Exception {
         Request request = new Request.Builder()
-                .url("http://beardycast.com/2016/09/14/podcast/beardycast-103/")
+                .url("http://beardycast.com/2016/09/13/EDC/edc-7-brizitsky/")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
