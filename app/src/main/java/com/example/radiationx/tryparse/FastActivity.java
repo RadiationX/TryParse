@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,7 +26,11 @@ import com.example.radiationx.tryparse.htmltags.SpoilerPostBlock;
 import com.example.radiationx.tryparse.htmltags.UlTag;
 import com.nostra13.universalimageloader.utils.L;
 
+import org.jsoup.Jsoup;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,61 +42,9 @@ import okhttp3.Response;
 
 public class FastActivity extends AppCompatActivity {
 
-    /*String html =
-            "<div class=\"msg-content emoticons\">\n" +
-                    "    Тест bb кодов\n" +
-                    "    <br><b>bold</b>\n" +
-                    "    <br><i>italic</i>\n" +
-                    "    <br><u>podcherk</u>\n" +
-                    "    <br><del>zacherk</del>\n" +
-                    "    <br><sub>sub</sub>\n" +
-                    "    <br><sup>sup</sup>\n" +
-                    "    <br>\n" +
-                    "    <div align=\"left\">left</div>\n" +
-                    "    <br>\n" +
-                    "    <div align=\"center\">center</div>\n" +
-                    "    <br>\n" +
-                    "    <div align=\"right\">right</div>\n" +
-                    "    <br><a title=\"Ссылка\" rel=\"nofollow\" href=\"http://роирир\" target=\"_blank\">link</a>\n" +
-                    "    <br>\n" +
-                    "    <div class=\"post-block quote\">\n" +
-                    "        <div class=\"block-title\"></div>\n" +
-                    "        <div class=\"block-body\">quote</div>\n" +
-                    "    </div>\n" +
-                    "    <br><font style=\"font-size:9px;color:gray;\">font</font>\n" +
-                    "    <br>\n" +
-                    "    <div class=\"post-block code box\">suka\n" +
-                    "        <div class=\"block-title\"></div>\n" +
-                    "        <div class=\"block-body \">code</div>\n" +
-                    "    </div>\n" +
-                    "    <br>\n" +
-                    "    <div class=\"post-block spoil close\">\n" +
-                    "        <div class=\"block-title\">spoil title</div>\n" +
-                    "        <div class=\"block-body\">spoil</div>\n" +
-                    "    </div>\n" +
-                    "    <br>[HIDE]hide[/HIDE]\n" +
-                    "    <br>\n" +
-                    "    <ul>ul list\n" +
-                    "        <li>li 1\n" +
-                    "            <br>\n" +
-                    "        </li>\n" +
-                    "        <li>li 2</li>\n" +
-                    "    </ul>\n" +
-                    "    <br>\n" +
-                    "    <ol type=\"1\">ol list\n" +
-                    "        <li>li 1\n" +
-                    "            <br>\n" +
-                    "        </li>\n" +
-                    "        <li>li 2\n" +
-                    "            <br>\n" +
-                    "        </li>\n" +
-                    "        <li>li 3</li>\n" +
-                    "    </ol>\n" +
-                    "    <br><span style=\"color:coral\">ыалди</span>\n" +
-                    "    <br><span style=\"background-color:coral\">ьлипс</span>\n" +
-                    "    <br><span style=\"font-size:36pt;line-height:100%\">олмсч</span>\n" +
-                    "    <br>[CUR]оимссрщ[/CUR]\n" +
-                    "</div>";*/
+    String html =
+            "<div>tdivt<b>tbt<span>tspant<i tit=\"\"></i></span></b></div>\n" +
+                    "<div>tdivt<b>tbt<span>tspant</span></b></div>";
 
 
     private final static int green = Color.argb(48, 0, 255, 0);
@@ -119,6 +73,7 @@ public class FastActivity extends AppCompatActivity {
     }
 
     private Pattern pattern = Pattern.compile("(<div class=\"article-entry\"[^>]*?>[\\s\\S]*?</div>)[^<]*?<footer");
+    private Pattern pattern2 = Pattern.compile("(<div[^>]*?post_body[^>]*>[\\s\\S]*?</div>)</div><div data-post|(<div[^>]*?postcolor[^>]*?>[\\s\\S]*?<\\/div>)[^<]*?<\\/td>[^<]*?<\\/tr>[^<]*?<tr id=\"pb");
     //private Pattern pattern = Pattern.compile("group-item([^\"]*?)\" data-message-id=\"145532\"[^>]*?data-unread-status=\"([^\"]*?)\">[\\s\\S]*?</b> ([^ <]*?) [\\s\\S]*?src=\"([^\"]*?)\"[\\s\\S]*?(<div[^>]*?msg-content[^>]*?>[\\s\\S]*?</div>)([^<]*?</div>[^<]*?<div (class=\"list|id=\"threa|class=\"date))");
 
     float coef = 1;
@@ -136,7 +91,9 @@ public class FastActivity extends AppCompatActivity {
         final Matcher matcher = pattern.matcher(html);
         Log.d("kek", "check 3");
         if (matcher.find()) {
-            final String finalHtml = matcher.group(1);
+
+            final String finalHtml = matcher.group(1) == null ? matcher.group(2) : matcher.group(1);
+            Log.d("kek", "final html " + finalHtml);
 
             runOnUiThread(new Runnable() {
                 @Override
@@ -175,7 +132,7 @@ public class FastActivity extends AppCompatActivity {
                 thisView = new QuotePostBlock(getContext());
             } else if (elClassios.contains("code")) {
                 thisView = new CodePostBlock(getContext());
-                Element.fixSpace(element.getLast());
+                element.getLast().fixSpace();
             } else if (elClassios.contains("spoil")) {
                 thisView = new SpoilerPostBlock(getContext());
             } else {
@@ -253,6 +210,7 @@ public class FastActivity extends AppCompatActivity {
 
     private final static Pattern startBreakTag = Pattern.compile("^([ ]*|)<br>");
     private final static Pattern endBreakTag = Pattern.compile("<br>([ ]*|)$");
+
     private BaseTag getViewByTag(String tag) {
         switch (tag) {
             case "h1":
@@ -271,8 +229,9 @@ public class FastActivity extends AppCompatActivity {
     }
 
     public void run() throws Exception {
-        Request request = new Request.Builder()
-                .url("http://beardycast.com/2016/09/13/EDC/edc-7-brizitsky/")
+        final Request request = new Request.Builder()
+                //.url("http://beardycast.com/2016/09/13/EDC/edc-7-brizitsky/")
+                .url("http://4pda.ru/forum/index.php?showtopic=84979/")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
@@ -284,8 +243,60 @@ public class FastActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-                parse(response.body().string());
+                final Matcher matcher = pattern2.matcher(response.body().string());
+                if (matcher.find()) {
+                    loadedHtml = matcher.group(1);
+                    if (loadedHtml == null) {
+                        loadedHtml = matcher.group(2);
+                    }
+                }
+                parseHtmlTest(loadedHtml);
+                //parse(response.body().string());
             }
         });
+    }
+
+    String loadedHtml;
+
+    private void parseHtmlTest(String s) {
+        //loadedHtml = s;
+        /*long time = System.currentTimeMillis();
+        for (int i = 0; i < 20; i++) {
+            Document.parse(loadedHtml);
+        }
+        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));
+        time = System.currentTimeMillis();
+        for (int i = 0; i < 20; i++) {
+            OldDocument.parse(loadedHtml);
+        }
+        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));*/
+        //Document.parse(loadedHtml);
+        Log.d("myparser", "start");
+        long time = 0;
+        time = System.currentTimeMillis();
+        Document.parse(s);
+        Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));
+
+        time = System.currentTimeMillis();
+        OldDocument.parse(s);
+        Log.d("myparser", "test old: " + ((System.currentTimeMillis() - time)));
+
+        time = System.currentTimeMillis();
+        Jsoup.parseBodyFragment(s);
+        Log.d("myparser", "test jsoup: " + ((System.currentTimeMillis() - time)));
+        //Log.d("myparser", "parsed : "+document.html());
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add("reparse").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                parseHtmlTest(loadedHtml);
+                return false;
+            }
+        }).setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        return super.onCreateOptionsMenu(menu);
     }
 }
