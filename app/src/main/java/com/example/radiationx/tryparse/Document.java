@@ -69,7 +69,7 @@ public class Document {
                 if (lastNotNull)
                     element.setParent(last.getLevel() == element.getLevel() ? last.getParent() : last);
 
-                //document.add(element);
+                document.add(element);
                 if (!containsInUTag(element.tagName())) {
                     lasts.add(element);
                     level++;
