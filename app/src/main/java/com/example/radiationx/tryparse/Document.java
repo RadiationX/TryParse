@@ -1,6 +1,13 @@
 package com.example.radiationx.tryparse;
 
+import android.graphics.drawable.Drawable;
+import android.text.Editable;
+import android.text.SpannableStringBuilder;
 import android.util.Log;
+
+import com.example.radiationx.tryparse.htmltags.Html;
+
+import org.xml.sax.XMLReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,76 +23,72 @@ public class Document {
     private Element root;
     //private final static Pattern nonClosedTags = Pattern.compile("(<(area|base|br|col|colgroup|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([^>]*?)(/|)>)");
     //private final static Pattern unclosedTags = Pattern.compile("(?:area|area|br|col|colgroup|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)");
-    private final static Pattern commentTag = Pattern.compile("<!--[\\s\\S]*?-->");
-    private final static Pattern scriptBlock = Pattern.compile("");
+    /*private final static Pattern commentTag = Pattern.compile("<!--[\\s\\S]*?-->");
+    private final static Pattern scriptBlock = Pattern.compile("");*/
 
-    private final static Pattern mainPattern = Pattern.compile("<([^\\/!][\\w]*)(?: |)([^>]*)>([^<]*)|<\\/([\\w]*)>([^<]*)");
+    private static Pattern mainPattern;
     //private final static Pattern attrPattern = Pattern.compile("([^ \"]*?)=[\"']([^\"']*)[\"']");
     private final static String[] uTags = {"area", "area", "br", "col", "colgroup", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param", "source", "track", "wbr"};
 
+    public static void init() {
+        if (mainPattern == null)
+            mainPattern = Pattern.compile("(?:<([\\/])?([\\w]*)(?: ([^>]*))?\\/?>)(?:([^<]+))?");
+        ElementHelper.init();
+    }
+
     public static Document parse(String html) {
-        long time;
-        time = System.currentTimeMillis();
-
-        //html = commentTag.matcher(html).replaceAll("");
-        //html = scriptBlock.matcher(html).replaceAll("");
-        StringBuilder sb = new StringBuilder();
-        /*for(String s :html.split("<!--[\\s\\S]*?-->")){
-            sb.append(s);
-        }
-        html = sb.toString();
-        sb = new StringBuilder();*/
-        for(String s :html.split("<script[^>]*>[\\s\\S]*?</script>")){
-            sb.append(s);
-        }
-        html = sb.toString();
-
-        Log.e("myparser", "check1 " + (System.currentTimeMillis() - time));
-        time = System.currentTimeMillis();
-        int level = 0;
+        ArrayList<Element> unclosedTags = new ArrayList<>();
         Document document = new Document();
-        Matcher matcher = mainPattern.matcher(html);
-        Log.e("myparser", "check2 " + (System.currentTimeMillis() - time));
-        time = System.currentTimeMillis();
-        Element last = null;
-        ArrayList<Element> lasts = new ArrayList<>();
-        Element element;
-        String tempTag;
+        Element tempElem, last = null;
+        String tag, text;
         boolean lastNotNull = false;
+        int nestingLevel = 0;
+
+        //Более быстрый смособ убрать комментарии и скрипты
+        StringBuilder sb = new StringBuilder();
+        for (String s : html.split("<!--[\\s\\S]*?-->")) {
+            sb.append(s);
+        }
+        html = sb.toString();
+        sb = new StringBuilder();
+        for (String s : html.split("<script[^>]*>[\\s\\S]*?</script>")) {
+            sb.append(s);
+        }
+        html = sb.toString();
+
+        Matcher matcher = mainPattern.matcher(html);
         int i = 0;
-        Log.e("myparser", "check3 " + (System.currentTimeMillis() - time));
-        time = System.currentTimeMillis();
         while (matcher.find()) {
             i++;
-            if (lasts.size() > 0) {
-                last = lasts.get(lasts.size() - 1);
+            if (unclosedTags.size() > 0) {
+                last = unclosedTags.get(unclosedTags.size() - 1);
                 lastNotNull = true;
             }
-            tempTag = matcher.group(1);
-            if (tempTag != null) {
-                element = new Element(tempTag, matcher.group(2));
-                element.setText(matcher.group(3));
-                element.setLevel(level);
+            tag = matcher.group(2);
+            text = matcher.group(4);
+            if (matcher.group(1) == null) {
+                tempElem = new Element(tag, matcher.group(3));
+                if (text != null)
+                    tempElem.setText(text);
+                tempElem.setLevel(nestingLevel);
                 if (lastNotNull)
-                    element.setParent(last.getLevel() == element.getLevel() ? last.getParent() : last);
+                    tempElem.setParent(last.getLevel() == tempElem.getLevel() ? last.getParent() : last);
 
-                document.add(element);
-                if (!containsInUTag(element.tagName())) {
-                    lasts.add(element);
-                    level++;
+                document.add(tempElem);
+                if (!containsInUTag(tempElem.tagName())) {
+                    unclosedTags.add(tempElem);
+                    nestingLevel++;
                 }
             } else {
-                if (lasts.size() > 0 && lastNotNull) {
-                    if (last.tagName().equals(matcher.group(4)))
-                        last.setAfterText(matcher.group(5));
-                    lasts.remove(lasts.size() - 1);
+                if (unclosedTags.size() > 0 && lastNotNull) {
+                    if (text != null && last.tagName().equals(tag))
+                        last.setAfterText(text);
+                    unclosedTags.remove(unclosedTags.size() - 1);
                 }
-                level--;
+                nestingLevel--;
             }
         }
-        Log.e("myparser", "check4 " + (System.currentTimeMillis() - time));
-        time = System.currentTimeMillis();
-        Log.d("myparser", "asdf : " + i + " : " + lasts.size() + " : " + level);
+        //Log.d("myparser", "QualityControl : " + i + " : " + unclosedTags.size() + " : " + nestingLevel);
         return document;
     }
 

@@ -23,6 +23,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.support.v7.graphics.drawable.DrawerArrowDrawable;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Spannable;
@@ -1018,7 +1019,7 @@ class HtmlToSpannedConverter implements ContentHandler {
         if (d == null) {
             //TODO kakayato tam drawabla hz zachem
             d = Resources.getSystem().
-                    getDrawable(R.drawable.asd);
+                    getDrawable(android.R.drawable.btn_plus);
             d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
         }
         int len = text.length();

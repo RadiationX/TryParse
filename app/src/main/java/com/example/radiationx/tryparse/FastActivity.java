@@ -2,8 +2,10 @@ package com.example.radiationx.tryparse;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
@@ -27,6 +29,7 @@ import com.example.radiationx.tryparse.htmltags.UlTag;
 import com.nostra13.universalimageloader.utils.L;
 
 import org.jsoup.Jsoup;
+import org.xml.sax.XMLReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,8 +46,52 @@ import okhttp3.Response;
 public class FastActivity extends AppCompatActivity {
 
     String html =
-            "<div>tdivt<b>tbt<span>tspant<i tit=\"\"></i></span></b></div>\n" +
-                    "<div>tdivt<b>tbt<span>tspant</span></b></div>";
+            "<div>\n" +
+                    "    <div>\n" +
+                    "        <div>\n" +
+                    "            <div></div>\n" +
+                    "        </div>\n" +
+                    "    </div>\n" +
+                    "    <div>\n" +
+                    "        <div>\n" +
+                    "            <div>\n" +
+                    "                <div>\n" +
+                    "                    <div></div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "    </div>\n" +
+                    "    <div>\n" +
+                    "        <div>\n" +
+                    "            <div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div></div>\n" +
+                    "                <div>\n" +
+                    "                    <div>\n" +
+                    "                        <div></div>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "    </div>\n" +
+                    "    <div>\n" +
+                    "        <div></div>\n" +
+                    "        <div></div>\n" +
+                    "        <div></div>\n" +
+                    "        <div></div>\n" +
+                    "        <div></div>\n" +
+                    "        <div></div>\n" +
+                    "    </div>\n" +
+                    "</div>";
 
 
     private final static int green = Color.argb(48, 0, 255, 0);
@@ -63,6 +110,7 @@ public class FastActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Document.init();
         list = (LinearLayout) findViewById(R.id.list);
         try {
             run();
@@ -251,6 +299,8 @@ public class FastActivity extends AppCompatActivity {
                     }
                 }
                 parseHtmlTest(loadedHtml);
+                /*loadedHtml = response.body().string();
+                parseHtmlTest(loadedHtml);*/
                 //parse(response.body().string());
             }
         });
@@ -260,32 +310,46 @@ public class FastActivity extends AppCompatActivity {
 
     private void parseHtmlTest(String s) {
         //loadedHtml = s;
-        /*long time = System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         for (int i = 0; i < 20; i++) {
-            Document.parse(loadedHtml);
+            Document.parse(s);
         }
         Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));
         time = System.currentTimeMillis();
         for (int i = 0; i < 20; i++) {
-            OldDocument.parse(loadedHtml);
+            OldDocument.parse(s);
         }
-        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));*/
+        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));
         //Document.parse(loadedHtml);
-        Log.d("myparser", "start");
+        /*Log.d("myparser", "start");
         long time = 0;
         time = System.currentTimeMillis();
-        Document.parse(s);
-        Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));
-
+        Document document = Document.parse(s);
+        //Log.d("mypatser", "parsed \n"+document.html());
+        Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));*/
+/*
         time = System.currentTimeMillis();
         OldDocument.parse(s);
         Log.d("myparser", "test old: " + ((System.currentTimeMillis() - time)));
 
         time = System.currentTimeMillis();
         Jsoup.parseBodyFragment(s);
-        Log.d("myparser", "test jsoup: " + ((System.currentTimeMillis() - time)));
+        Log.d("myparser", "test jsoup: " + ((System.currentTimeMillis() - time)));*/
         //Log.d("myparser", "parsed : "+document.html());
+        /*time = System.currentTimeMillis();
 
+        com.example.radiationx.tryparse.htmltags.Html.fromHtml(s, com.example.radiationx.tryparse.htmltags.Html.FROM_HTML_MODE_LEGACY, new com.example.radiationx.tryparse.htmltags.Html.ImageGetter() {
+            @Override
+            public Drawable getDrawable(String source) {
+                return null;
+            }
+        }, new com.example.radiationx.tryparse.htmltags.Html.TagHandler() {
+            @Override
+            public void handleTag(boolean opening, String tag, Editable output, XMLReader xmlReader) {
+
+            }
+        });
+        Log.d("myparser", "test fromhtml: " + ((System.currentTimeMillis() - time)));*/
     }
 
     @Override

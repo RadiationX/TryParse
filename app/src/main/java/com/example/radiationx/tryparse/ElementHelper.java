@@ -13,8 +13,15 @@ import java.util.regex.Pattern;
  */
 
 public class ElementHelper {
-    private final static Pattern pattern = Pattern.compile("br|img|meta");
-    private final static Pattern attrPattern = Pattern.compile("([^ \"]*?)=[\"']([^\"']*)[\"']");
+    private static Pattern pattern;
+    private static Pattern attrPattern;
+
+    public static void init() {
+        if (pattern == null)
+            pattern = Pattern.compile("br|img|meta");
+        if (attrPattern == null)
+            attrPattern = Pattern.compile("([^ \"]*?)=[\"']([^\"']*)[\"']");
+    }
 
     public static String html(Element element, boolean withParent) {
         String html = "";
@@ -26,9 +33,10 @@ public class ElementHelper {
 
         if (withParent) {
             html = html.concat("<").concat(element.tagName());
-            for (Pair<String, String> pair : element.getAttributes()) {
+            /*for (Pair<String, String> pair : element.getAttributes()) {
                 html = html.concat(" ").concat(pair.first).concat("=\"").concat(pair.second).concat("\"");
-            }
+            }*/
+            html = html.concat(" ").concat(element.getAttrsSource());
             html = html.concat(">");
         }
 
@@ -62,7 +70,6 @@ public class ElementHelper {
     }
 
 
-
     public static String getAllText(Element element) {
         String text = "";
         //text+=" "+element.getText();
@@ -84,7 +91,7 @@ public class ElementHelper {
     }
 
 
-    public static List<Pair<String,String>> parseAttrs(String source, List<Pair<String,String>> attrs){
+    public static List<Pair<String, String>> parseAttrs(String source, List<Pair<String, String>> attrs) {
         if (!source.isEmpty()) {
             Matcher attrMatcher = attrPattern.matcher(source);
             while (attrMatcher.find())

@@ -18,7 +18,7 @@ public class Element {
     private List<Pair<String, String>> attributes = null;
     private String text = "";
     private String afterText = "";
-    private String tagName = "";
+    private String tagName = "ERROR-TAG";
     private int level = 0;
     private String attrsSource = "";
 
@@ -32,8 +32,14 @@ public class Element {
     }
 
     public Element(String tagName, String attrs) {
-        this.tagName = tagName;
-        this.attrsSource = attrs;
+        if (tagName != null)
+            this.tagName = tagName;
+        if (attrs != null)
+            this.attrsSource = attrs;
+    }
+
+    public String getAttrsSource() {
+        return attrsSource;
     }
 
     public int getSize() {
