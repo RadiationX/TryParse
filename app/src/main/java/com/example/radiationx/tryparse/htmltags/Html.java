@@ -18,12 +18,12 @@ package com.example.radiationx.tryparse.htmltags;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import android.app.Application;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.support.v7.graphics.drawable.DrawerArrowDrawable;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Spannable;
@@ -49,9 +49,7 @@ import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 
-
 import com.example.radiationx.tryparse.App;
-import com.example.radiationx.tryparse.R;
 
 import org.ccil.cowan.tagsoup.HTMLSchema;
 import org.ccil.cowan.tagsoup.Parser;

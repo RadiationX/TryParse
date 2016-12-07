@@ -1,18 +1,7 @@
 package com.example.radiationx.tryparse;
 
-import android.graphics.drawable.Drawable;
-import android.text.Editable;
-import android.text.SpannableStringBuilder;
 import android.util.Log;
 
-import com.example.radiationx.tryparse.htmltags.Html;
-
-import org.xml.sax.XMLReader;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,11 +22,12 @@ public class Document {
     public static void init() {
         if (mainPattern == null)
             mainPattern = Pattern.compile("(?:<([\\/])?([\\w]*)(?: ([^>]*))?\\/?>)(?:([^<]+))?");
+        //Pattern mainPattern2 = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|script[^>]*>)[\\s\\S]*?(?:--|\\/script)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script>|-->))?");
         ElementHelper.init();
     }
 
     public static Document parse(String html) {
-        ArrayList<Element> unclosedTags = new ArrayList<>();
+        ElementsList unclosedTags = new ElementsList();
         Document document = new Document();
         Element tempElem, last = null;
         String tag, text;

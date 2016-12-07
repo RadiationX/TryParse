@@ -3,17 +3,13 @@ package com.example.radiationx.tryparse;
 import android.util.Pair;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by radiationx on 27.08.16.
  */
 public class Element {
-    private List<Element> elements = new ArrayList<>();
+    private ElementsList elements = new ElementsList();
     private Element parent;
     private List<Pair<String, String>> attributes = null;
     private String text = "";
@@ -56,7 +52,7 @@ public class Element {
         return elements.get(elements.size() - 1);
     }
 
-    public List<Element> getElements() {
+    public ElementsList getElements() {
         return elements;
     }
 
@@ -139,7 +135,7 @@ public class Element {
 
     public String ownText() {
         StringBuilder text = new StringBuilder();
-        for (Element element : elements)
+        for (Element element : elements.toArray())
             text.append(" ").append(element.getAfterText());
         return text.toString().trim();
     }

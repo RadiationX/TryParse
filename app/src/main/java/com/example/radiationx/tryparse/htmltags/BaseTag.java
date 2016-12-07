@@ -2,10 +2,8 @@ package com.example.radiationx.tryparse.htmltags;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.text.Html;
 import android.text.Spanned;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;

@@ -2,10 +2,8 @@ package com.example.radiationx.tryparse;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
@@ -26,14 +24,10 @@ import com.example.radiationx.tryparse.htmltags.PostBlock;
 import com.example.radiationx.tryparse.htmltags.QuotePostBlock;
 import com.example.radiationx.tryparse.htmltags.SpoilerPostBlock;
 import com.example.radiationx.tryparse.htmltags.UlTag;
-import com.nostra13.universalimageloader.utils.L;
 
 import org.jsoup.Jsoup;
-import org.xml.sax.XMLReader;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -216,7 +210,7 @@ public class FastActivity extends AppCompatActivity {
 
         boolean text = true;
 
-        for (int i = 0; i < element.getElements().size(); i++) {
+        for (int i = 0; i < element.getSize(); i++) {
             Element child = element.get(i);
             BaseTag newView = null;
             if (p2.matcher(child.tagName()).matches()) {
@@ -345,6 +339,17 @@ public class FastActivity extends AppCompatActivity {
         document1.getAllText();
         Log.d("myparser", "test allText old: " + ((System.currentTimeMillis() - time)));
 
+
+        time = System.currentTimeMillis();
+        org.jsoup.nodes.Document document2 = Jsoup.parse(s);
+        //Log.d("mypatser", "parsed \n"+document.html());
+        Log.d("myparser", "test jsoup: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document2.html();
+        Log.d("myparser", "test html jsoup: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document2.text();
+        Log.d("myparser", "test allText jsoup: " + ((System.currentTimeMillis() - time)));
 /*
         time = System.currentTimeMillis();
         OldDocument.parse(s);

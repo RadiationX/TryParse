@@ -2,9 +2,7 @@ package com.example.radiationx.tryparse;
 
 import android.util.Pair;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,13 +11,10 @@ import java.util.regex.Pattern;
  */
 
 public class ElementHelper {
-    //private static Pattern pattern;
     private static Pattern attrPattern;
     private final static String[] tags = {"br", "img", "meta"};
 
     public static void init() {
-        /*if (pattern == null)
-            pattern = Pattern.compile("br|img|meta");*/
         if (attrPattern == null)
             attrPattern = Pattern.compile("([^ \"]*?)\\s*?=\\s*?[\"']([^\"']*)[\"']");
     }
@@ -34,9 +29,6 @@ public class ElementHelper {
         StringBuilder html = new StringBuilder();
         if (withParent) {
             html.append("<").append(element.tagName()).append(" ");
-            /*for (Pair<String, String> pair : element.getAttributes()) {
-                html = html.append(" ").append(pair.first).append("=\"").append(pair.second).append("\"");
-            }*/
             html.append(element.getAttrsSource());
             html.append(">");
         }
@@ -45,7 +37,7 @@ public class ElementHelper {
             html.append(element.getText());
         }
 
-        for (Element el : element.getElements())
+        for (Element el : element.getElements().toArray())
             html.append(html(el, true));
 
         if (withParent) {
@@ -65,7 +57,7 @@ public class ElementHelper {
         StringBuilder text = new StringBuilder();
         text.append(" ").append(element.getText());
 
-        for (Element el : element.getElements())
+        for (Element el : element.getElements().toArray())
             text.append(getAllText(el));
 
         text.append(" ").append(element.getAfterText());
@@ -74,7 +66,7 @@ public class ElementHelper {
 
     public static void fixSpace(Element element) {
         //element.setText(element.getText().replaceAll(" ", "&nbsp;"));
-        for (Element el : element.getElements())
+        for (Element el : element.getElements().toArray())
             fixSpace(el);
         //element.setAfterText(element.getAfterText().replaceAll(" ", "&nbsp;"));
     }
