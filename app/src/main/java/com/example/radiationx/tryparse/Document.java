@@ -21,8 +21,7 @@ public class Document {
 
     public static void init() {
         if (mainPattern == null)
-            mainPattern = Pattern.compile("(?:<([\\/])?([\\w]*)(?: ([^>]*))?\\/?>)(?:([^<]+))?");
-        //Pattern mainPattern2 = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|script[^>]*>)[\\s\\S]*?(?:--|\\/script)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script>|-->))?");
+            mainPattern = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|(?:script|style)[^>]*>)[\\s\\S]*?(?:--|\\/script|\\/style)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script|--|style)>)?");
         ElementHelper.init();
     }
 
@@ -35,7 +34,7 @@ public class Document {
         int nestingLevel = 0;
 
         //Более быстрый смособ убрать комментарии и скрипты
-        StringBuilder sb = new StringBuilder();
+        /*StringBuilder sb = new StringBuilder();
         for (String s : html.split("<!--[\\s\\S]*?-->")) {
             sb.append(s);
         }
@@ -44,7 +43,7 @@ public class Document {
         for (String s : html.split("<script[^>]*>[\\s\\S]*?</script>")) {
             sb.append(s);
         }
-        html = sb.toString();
+        html = sb.toString();*/
 
         Matcher matcher = mainPattern.matcher(html);
         int i = 0;
@@ -56,7 +55,7 @@ public class Document {
             }
             tag = matcher.group(2);
             text = matcher.group(4);
-            if (matcher.group(1) == null) {
+            if (matcher.group(1) == null & tag != null) {
                 tempElem = new Element(tag, matcher.group(3));
                 if (text != null)
                     tempElem.setText(text);
@@ -71,14 +70,26 @@ public class Document {
                 }
             } else {
                 if (unclosedTags.size() > 0 && lastNotNull) {
-                    if (text != null && last.tagName().equals(tag))
-                        last.setAfterText(text);
+                    if (tag == null) {
+                        if (last.getLast() != null) {
+                            last.getLast().addAfterText(matcher.group());
+                            continue;
+                        }
+                    } else {
+                        if (text != null && last.tagName().equals(tag))
+                            last.setAfterText(text);
+                    }
                     unclosedTags.remove(unclosedTags.size() - 1);
                 }
-                nestingLevel--;
+                if (tag != null)
+                    nestingLevel--;
             }
         }
-        //Log.d("myparser", "QualityControl : " + i + " : " + unclosedTags.size() + " : " + nestingLevel);
+        //TODO nestingLevel > 0 почему-то в некоторых случаях, например при парсинге полной страницы, но в итоге вроде всё валидно
+        Log.d("myparser", "QualityControl : " + i + " : " + unclosedTags.size() + " : " + nestingLevel);
+        for (Element el : unclosedTags.toArray()) {
+            Log.e("UNCLOSED", "" + el.tagName());
+        }
         return document;
     }
 

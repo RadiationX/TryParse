@@ -1,5 +1,6 @@
 package com.example.radiationx.tryparse;
 
+import android.util.Log;
 import android.util.Pair;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.regex.Pattern;
 
 public class ElementHelper {
     private static Pattern attrPattern;
-    private final static String[] tags = {"br", "img", "meta"};
+    private final static String[] tags = {"area", "area", "br", "col", "colgroup", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param", "source", "track", "wbr"};
 
     public static void init() {
         if (attrPattern == null)
@@ -28,8 +29,10 @@ public class ElementHelper {
     public static StringBuilder html(Element element, boolean withParent) {
         StringBuilder html = new StringBuilder();
         if (withParent) {
-            html.append("<").append(element.tagName()).append(" ");
-            html.append(element.getAttrsSource());
+            html.append("<").append(element.tagName());
+            if (!element.getAttrsSource().isEmpty()) {
+                html.append(" ").append(element.getAttrsSource());
+            }
             html.append(">");
         }
 
@@ -40,15 +43,14 @@ public class ElementHelper {
         for (Element el : element.getElements().toArray())
             html.append(html(el, true));
 
+
         if (withParent) {
-            if (containsInUTag(element.tagName()))
+            if (!containsInUTag(element.tagName()))
                 html.append("</").append(element.tagName()).append(">");
 
             if (!element.getAfterText().isEmpty())
-                html.append(" ").append(element.getAfterText());
+                html.append(element.getAfterText());
         }
-
-        html.append(" ");
         return html;
     }
 

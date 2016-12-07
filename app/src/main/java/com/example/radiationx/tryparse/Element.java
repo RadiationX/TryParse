@@ -104,6 +104,9 @@ public class Element {
     public void setAfterText(String afterText) {
         this.afterText = afterText;
     }
+    public void addAfterText(String afterText){
+        this.afterText = this.afterText.concat(afterText);
+    }
 
     public String getAfterText() {
         return afterText;

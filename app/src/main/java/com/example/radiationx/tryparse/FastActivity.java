@@ -319,7 +319,6 @@ public class FastActivity extends AppCompatActivity {
         long time = 0;
         time = System.currentTimeMillis();
         Document document = Document.parse(s);
-        //Log.d("mypatser", "parsed \n"+document.html());
         Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));
         time = System.currentTimeMillis();
         document.html();
@@ -330,7 +329,6 @@ public class FastActivity extends AppCompatActivity {
 
         time = System.currentTimeMillis();
         OldDocument document1 = OldDocument.parse(s);
-        //Log.d("mypatser", "parsed \n"+document.html());
         Log.d("myparser", "test old: " + ((System.currentTimeMillis() - time)));
         time = System.currentTimeMillis();
         document1.html();
@@ -342,7 +340,6 @@ public class FastActivity extends AppCompatActivity {
 
         time = System.currentTimeMillis();
         org.jsoup.nodes.Document document2 = Jsoup.parse(s);
-        //Log.d("mypatser", "parsed \n"+document.html());
         Log.d("myparser", "test jsoup: " + ((System.currentTimeMillis() - time)));
         time = System.currentTimeMillis();
         document2.html();
