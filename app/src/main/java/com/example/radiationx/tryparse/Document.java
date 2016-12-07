@@ -94,8 +94,7 @@ public class Document {
 
     private static boolean containsInUTag(String tag) {
         for (String uTag : uTags)
-            if (uTag.compareTo(tag) == 0) return true;
-
+            if (uTag.equals(tag)) return true;
         return false;
     }
 

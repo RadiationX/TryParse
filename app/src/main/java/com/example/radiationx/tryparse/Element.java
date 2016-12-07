@@ -82,7 +82,7 @@ public class Element {
 
     public String attr(String key) {
         for (Pair<String, String> p : getAttributes()) {
-            if (p.first.compareTo(key) == 0) {
+            if (p.first.equals(key)) {
                 return p.second;
             }
         }
@@ -122,15 +122,15 @@ public class Element {
     }
 
     public String html() {
-        return ElementHelper.html(this, true);
+        return ElementHelper.html(this, true).toString();
     }
 
     public String htmlNoParent() {
-        return ElementHelper.html(this, false);
+        return ElementHelper.html(this, false).toString();
     }
 
     public String getAllText() {
-        return ElementHelper.getAllText(this);
+        return ElementHelper.getAllText(this).toString();
     }
 
     public void fixSpace() {
@@ -138,11 +138,10 @@ public class Element {
     }
 
     public String ownText() {
-        String text = getText();
-        for (Element element : elements) {
-            text += " " + element.getAfterText();
-        }
-        return text.trim();
+        StringBuilder text = new StringBuilder();
+        for (Element element : elements)
+            text.append(" ").append(element.getAfterText());
+        return text.toString().trim();
     }
 }
 

@@ -310,7 +310,7 @@ public class FastActivity extends AppCompatActivity {
 
     private void parseHtmlTest(String s) {
         //loadedHtml = s;
-        long time = System.currentTimeMillis();
+        /*long time = System.currentTimeMillis();
         for (int i = 0; i < 20; i++) {
             Document.parse(s);
         }
@@ -319,14 +319,32 @@ public class FastActivity extends AppCompatActivity {
         for (int i = 0; i < 20; i++) {
             OldDocument.parse(s);
         }
-        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));
+        Log.d("myparser", "test average: " + ((System.currentTimeMillis() - time) / 20f));*/
         //Document.parse(loadedHtml);
-        /*Log.d("myparser", "start");
+        Log.d("myparser", "start");
         long time = 0;
         time = System.currentTimeMillis();
         Document document = Document.parse(s);
         //Log.d("mypatser", "parsed \n"+document.html());
-        Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));*/
+        Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document.html();
+        Log.d("myparser", "test html new: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document.getAllText();
+        Log.d("myparser", "test allText new: " + ((System.currentTimeMillis() - time)));
+
+        time = System.currentTimeMillis();
+        OldDocument document1 = OldDocument.parse(s);
+        //Log.d("mypatser", "parsed \n"+document.html());
+        Log.d("myparser", "test old: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document1.html();
+        Log.d("myparser", "test html old: " + ((System.currentTimeMillis() - time)));
+        time = System.currentTimeMillis();
+        document1.getAllText();
+        Log.d("myparser", "test allText old: " + ((System.currentTimeMillis() - time)));
+
 /*
         time = System.currentTimeMillis();
         OldDocument.parse(s);
