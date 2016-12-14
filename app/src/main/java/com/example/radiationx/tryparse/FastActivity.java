@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,9 @@ import com.example.radiationx.tryparse.htmltags.UlTag;
 
 import org.jsoup.Jsoup;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,52 +43,41 @@ import okhttp3.Response;
 public class FastActivity extends AppCompatActivity {
 
     String html =
-            "<div>\n" +
-                    "    <div>\n" +
+            "<html>\n" +
+                    "\n" +
+                    "<body class=\"root\">\n" +
+                    "    <table>\n" +
                     "        <div>\n" +
                     "            <div></div>\n" +
+                    "            <div></div>\n" +
+                    "            <div></div>\n" +
+                    "            <div></div>\n" +
+                    "            <div></div>\n" +
+                    "            <div></div>\n" +
                     "        </div>\n" +
-                    "    </div>\n" +
-                    "    <div>\n" +
-                    "        <div>\n" +
-                    "            <div>\n" +
-                    "                <div>\n" +
-                    "                    <div></div>\n" +
-                    "                </div>\n" +
-                    "            </div>\n" +
-                    "        </div>\n" +
-                    "    </div>\n" +
-                    "    <div>\n" +
-                    "        <div>\n" +
-                    "            <div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div></div>\n" +
-                    "                <div>\n" +
-                    "                    <div>\n" +
-                    "                        <div></div>\n" +
-                    "                    </div>\n" +
-                    "                </div>\n" +
-                    "            </div>\n" +
-                    "        </div>\n" +
-                    "    </div>\n" +
-                    "    <div>\n" +
-                    "        <div></div>\n" +
-                    "        <div></div>\n" +
-                    "        <div></div>\n" +
-                    "        <div></div>\n" +
-                    "        <div></div>\n" +
-                    "        <div></div>\n" +
-                    "    </div>\n" +
-                    "</div>";
+                    "    </table>\n" +
+                    "    <!--<div class=\"hui\"><!--asdasds dasd</div>-->-->\n" +
+                    "    <!--<div class=\"hui\"><!--asdasds dasd</div>-->-->\n" +
+                    "    <!--<div class=\"hui\"><!--asdasds dasd</div>-->-->\n" +
+                    "    <!--<div class=\"hui\"><!--asdasds dasd</div>-->-->\n" +
+                    "    <div class=\"hui\"></div>\n" +
+                    "    <div class=\"hui\"></div>\n" +
+                    "    <div class=\"hui\"></div>\n" +
+                    "    <div class=\"hui\"></div>\n" +
+                    "    <noindex><span class=\"social-icons\">\n" +
+                    "<a href=\"http://twitter.com/4pdaru\" rel=\"nofollow\" title=\"Следуйте за нами в Twitter\" target=\"_blank\" class=\"icon-TWITTER\"></a>&nbsp;<a href=\"http://vk.com/4pdaru\" rel=\"nofollow\" title=\"Официальная группа 4pda\" target=\"_blank\" class=\"icon-VK\"></a>&nbsp;<a href=\"https://www.facebook.com/4pdaru\" rel=\"nofollow\" title=\"Официальная страница в Facebook\" target=\"_blank\" class=\"icon-FB\"></a>&nbsp;<a href=\"http://www.youtube.com/user/4pdaRU\" rel=\"nofollow\" title=\"Наш канал на YouTube\" target=\"_blank\" class=\"icon-YOUTUBE\"></a>\n" +
+                    "</span> </noindex>\n" +
+                    "    <br suka/>\n" +
+                    "    <br padla/>\n" +
+                    "    <!--LiveInternet counter-->\n" +
+                    "    <script type=\"text/javascript\">\n" +
+                    "        <!--\n" +
+                    "        document.write(\"<a href='http://www.liveinternet.ru/click' \" + \"target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r\" + escape(document.referrer) + ((typeof (screen) == \"undefined\") ? \"\" : \";s\" + screen.width + \"*\" + screen.height + \"*\" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + \";u\" + escape(document.URL) + \";\" + Math.random() + \"' alt='' title='LiveInternet: number of pageviews for 24 hours,\" + \" of visitors for 24 hours and for today is shown' \" + \"border=0 width=88 height=31></a>\") //-->\n" +
+                    "    </script>\n" +
+                    "    <!--/LiveInternet-->\n" +
+                    "</body>\n" +
+                    "\n" +
+                    "</html>";
 
 
     private final static int green = Color.argb(48, 0, 255, 0);
@@ -100,17 +92,50 @@ public class FastActivity extends AppCompatActivity {
 
     private LinearLayout list;
 
+    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Document.init();
         list = (LinearLayout) findViewById(R.id.list);
-        try {
-            run();
-        } catch (Exception e) {
-            e.printStackTrace();
+        webView = (WebView) findViewById(R.id.webview);
+        if(false){
+            try {
+                run();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else {
+            StringBuilder sb = new StringBuilder();
+            BufferedReader reader = null;
+            try {
+                reader = new BufferedReader(
+                        new InputStreamReader(getAssets().open("html.txt"), "UTF-8"));
+
+                // do reading, usually loop until end of file reading
+                String mLine;
+                while ((mLine = reader.readLine()) != null) {
+                    //process line
+                    sb.append(mLine).append("\n");
+                }
+            } catch (IOException e) {
+                //log the exception
+            } finally {
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        //log the exception
+                    }
+                }
+            }
+            loadedHtml = sb.toString();
+            parseHtmlTest(loadedHtml);
         }
+
+
+
         //parse(html);
     }
 
@@ -273,7 +298,7 @@ public class FastActivity extends AppCompatActivity {
     public void run() throws Exception {
         final Request request = new Request.Builder()
                 //.url("http://beardycast.com/2016/09/13/EDC/edc-7-brizitsky/")
-                .url("http://4pda.ru/forum/index.php?showtopic=84979/")
+                .url("http://4pda.ru/forum/index.php?showtopic=674009")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
@@ -285,16 +310,17 @@ public class FastActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-                final Matcher matcher = pattern2.matcher(response.body().string());
+                /*final Matcher matcher = pattern2.matcher(response.body().string());
                 if (matcher.find()) {
                     loadedHtml = matcher.group(1);
                     if (loadedHtml == null) {
                         loadedHtml = matcher.group(2);
                     }
                 }
-                parseHtmlTest(loadedHtml);
-                /*loadedHtml = response.body().string();
                 parseHtmlTest(loadedHtml);*/
+                loadedHtml = response.body().string();
+                //loadedHtml = loadedHtml.replaceFirst("<head[\\s\\S]*?head>","");
+                parseHtmlTest(loadedHtml);
                 //parse(response.body().string());
             }
         });
@@ -320,7 +346,22 @@ public class FastActivity extends AppCompatActivity {
         time = System.currentTimeMillis();
         Document document = Document.parse(s);
         Log.d("myparser", "test new: " + ((System.currentTimeMillis() - time)));
-        time = System.currentTimeMillis();
+        final String veryLongString = document.html();
+        /*runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                webView.loadDataWithBaseURL(null, loadedHtml, "text/html", "UTF-8", null);
+
+            }
+        });*/
+        int maxLogSize = 1000;
+        for(int i = 0; i <= veryLongString.length() / maxLogSize; i++) {
+            int start = i * maxLogSize;
+            int end = (i+1) * maxLogSize;
+            end = end > veryLongString.length() ? veryLongString.length() : end;
+            Log.v("SUKA", veryLongString.substring(start, end));
+        }
+        /*time = System.currentTimeMillis();
         document.html();
         Log.d("myparser", "test html new: " + ((System.currentTimeMillis() - time)));
         time = System.currentTimeMillis();
@@ -335,7 +376,7 @@ public class FastActivity extends AppCompatActivity {
         Log.d("myparser", "test html old: " + ((System.currentTimeMillis() - time)));
         time = System.currentTimeMillis();
         document1.getAllText();
-        Log.d("myparser", "test allText old: " + ((System.currentTimeMillis() - time)));
+        Log.d("myparser", "test allText old: " + ((System.currentTimeMillis() - time)));*/
 
 
         time = System.currentTimeMillis();

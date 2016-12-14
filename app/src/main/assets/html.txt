@@ -1,0 +1,12 @@
+<div>
+    <div class="signature"><span style="color:blue"><span style="font-family:tempus sans itc"><b>CWM </span><span style="font-family:Comic Sans MS">мертв, а я еще нет...</b></span></span>
+        <span style="font-family:Segoe UI"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php?s=&showtopic=522854&view=findpost&p=39733526" target="_blank"><b><span style="color:limegreen">Мои поделки</span></b>
+        </a>
+        </span>
+    </div>
+    <div class="signature"><b><span style="color:red">OxygenOS | Android 6.0.1 | Stock Kernel </b></span>
+        <b><span style="color:red"><sup>flounder</sup> Stock | Android 7.0 | Fire-Ice Kernel </b></span>
+    </div>
+    <div class="u-note"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php" target="_blank"><b>Cо-разрабо</a></b>
+    </div>
+</div>

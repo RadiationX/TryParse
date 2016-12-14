@@ -1,7 +1,9 @@
 package com.example.radiationx.tryparse;
 
 import android.util.Log;
+import android.util.Pair;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,76 +23,140 @@ public class Document {
 
     public static void init() {
         if (mainPattern == null)
-            mainPattern = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|(?:script|style)[^>]*>)[\\s\\S]*?(?:--|\\/script|\\/style)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script|--|style)>)?");
+            mainPattern = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|(?:script|style)[^>]*>)[\\s\\S]*?(?:--|\\/script|\\/style)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script|--|style)>[^<]*)?");
         ElementHelper.init();
     }
 
     public static Document parse(String html) {
-        ElementsList unclosedTags = new ElementsList();
-        Document document = new Document();
-        Element tempElem, last = null;
-        String tag, text;
-        boolean lastNotNull = false;
-        int nestingLevel = 0;
+        Document doc = new Document();
+        ElementsList openedTags = new ElementsList();
+        ArrayList<Pair<String, String>> errorTags = new ArrayList<>();
+        Element lastOpened = null, lastClosed = null, newElement = null;
+        String tag = null, text = null;
+        Matcher m = mainPattern.matcher(html);
+        int tags = 0, otherText = 0, errorTagsCount = 0, openTagsCount = 0, closeTagsCount = 0;
+        while (m.find()) {
+            tags++;
+            //Более удобное обращение к последнему открытому тегу
+            if (openedTags.size() > 0)
+                lastOpened = openedTags.get(openedTags.size() - 1);
 
-        //Более быстрый смособ убрать комментарии и скрипты
-        /*StringBuilder sb = new StringBuilder();
-        for (String s : html.split("<!--[\\s\\S]*?-->")) {
-            sb.append(s);
-        }
-        html = sb.toString();
-        sb = new StringBuilder();
-        for (String s : html.split("<script[^>]*>[\\s\\S]*?</script>")) {
-            sb.append(s);
-        }
-        html = sb.toString();*/
+            //Выбор название тега
+            tag = m.group(2);
 
-        Matcher matcher = mainPattern.matcher(html);
-        int i = 0;
-        while (matcher.find()) {
-            i++;
-            if (unclosedTags.size() > 0) {
-                last = unclosedTags.get(unclosedTags.size() - 1);
-                lastNotNull = true;
+            //null в том случае, когда попадается script/style/comment
+            if (tag == null) {
+                otherText++;
+                //Если нет последнего закрытого элемента, то попавшийся текст добавляется в тело элемента
+                //Иначе добавляется как текст после элемента
+                if (lastClosed == null) {
+                    if (lastOpened != null)
+                        lastOpened.addText(m.group());
+                } else {
+                    lastClosed.addAfterText(m.group());
+                }
+                //Нет смысла продолжать выполнение
+                continue;
             }
-            tag = matcher.group(2);
-            text = matcher.group(4);
-            if (matcher.group(1) == null & tag != null) {
-                tempElem = new Element(tag, matcher.group(3));
-                if (text != null)
-                    tempElem.setText(text);
-                tempElem.setLevel(nestingLevel);
-                if (lastNotNull)
-                    tempElem.setParent(last.getLevel() == tempElem.getLevel() ? last.getParent() : last);
 
-                document.add(tempElem);
-                if (!containsInUTag(tempElem.tagName())) {
-                    unclosedTags.add(tempElem);
-                    nestingLevel++;
+            //Выбор текста
+            text = m.group(4);
+
+            //null в том случае, когда тег открывается
+            if (m.group(1) == null) {
+                openTagsCount++;
+                //Группа 3 - аттрибуты тега, добавляются сразу для уменьшения времени парсинга
+                newElement = new Element(tag, m.group(3));
+
+                //Уровень вложенности элемента. Совпадает с кол-вом открытых тегов
+                newElement.setLevel(openedTags.size());
+
+                if (lastOpened != null) {
+                    //Устанавливается родитель элемента.
+                    //Истинно, когда в одном родителе идёт несколько последовательно вложенных элементов
+                    //<div>
+                    //  Последовательно выложенные:
+                    //  <div></div>
+                    //  <div></div>
+                    //  <div></div>
+                    //</div>
+                    newElement.setParent(lastOpened.getLevel() == openedTags.size() ? lastOpened.getParent() : lastOpened);
+                }
+
+                doc.add(newElement);
+
+                //Проверка на теги, которые можно не закрывать
+                if (containsInUTag(newElement.tagName())) {
+                    //Т.к. у незакрывающегося тега нет тела, то текст добавляется после него
+                    newElement.addAfterText(text);
+
+                    //Т.к. тег неявно закрывающийся, то последний закрытый тег это он
+                    lastClosed = newElement;
+                } else {
+                    //Есть тело элемента, добавляем текст
+                    newElement.addText(text);
+
+                    //Добавляем в список открытых элементов
+                    openedTags.add(newElement);
+
+                    //Делаем null, потому-что иначе будет неверно добавляться script/sty
+                    lastClosed = null;
                 }
             } else {
-                if (unclosedTags.size() > 0 && lastNotNull) {
-                    if (tag == null) {
-                        if (last.getLast() != null) {
-                            last.getLast().addAfterText(matcher.group());
-                            continue;
+                if (lastOpened != null) {
+                    closeTagsCount++;
+                    lastClosed = lastOpened;
+
+                    //На случай, если допущена ошибка и есть лишний закрывающий тег
+                    Log.d("SUKA", "CLOSE " + lastClosed.tagName() + " : " + tag);
+                    if (!lastClosed.tagName().equals(tag)) {
+                        Log.e("SUKA", "ERROR ^^^^^^^^^^^^^^^^^^^^");
+                        boolean contains = false;
+                        for (Element element : openedTags.toArray()) {
+                            if (element.tagName().equals(tag)) {
+                                errorTags.add(new Pair<>(lastClosed.tagName(), tag));
+                                contains = true;
+                                break;
+                            }
                         }
-                    } else {
-                        if (text != null && last.tagName().equals(tag))
-                            last.setAfterText(text);
+                        errorTagsCount++;
+                        continue;
                     }
-                    unclosedTags.remove(unclosedTags.size() - 1);
+
+
+                    //Добавляем текст после закрывающего тега
+                    lastClosed.addAfterText(text);
+
+                    //Удаляем/"закрываем" тег
+                    openedTags.remove(openedTags.size() - 1);
+                    boolean contains = false;
+                    for (Pair<String, String> errorTag : errorTags) {
+                        if (errorTag.first.equals(tag)) {
+                            Log.e("SUKA", "RESOLVE " + errorTag.first + " : " + errorTag.second + " --------- " + (openedTags.size() > 0 ? openedTags.get(openedTags.size() - 1).tagName() : "NO REMOVE"));
+                            if (openedTags.size() > 0) {
+                                /*if(!openedTags.get(openedTags.size()-1).tagName().equals(errorTag.second)){
+                                    continue;
+                                }*/
+                                openedTags.remove(openedTags.size() - 1);
+                            }
+                            errorTags.remove(errorTag);
+                            contains = true;
+                            break;
+                        }
+                    }
                 }
-                if (tag != null)
-                    nestingLevel--;
             }
         }
-        //TODO nestingLevel > 0 почему-то в некоторых случаях, например при парсинге полной страницы, но в итоге вроде всё валидно
-        Log.d("myparser", "QualityControl : " + i + " : " + unclosedTags.size() + " : " + nestingLevel);
-        for (Element el : unclosedTags.toArray()) {
-            Log.e("UNCLOSED", "" + el.tagName());
+
+        Log.d("QualityControl", "Main Info {AllTags: " + tags + "; ErrorTags: " + errorTags.size() + "; UnclosedTags: " + openedTags.size() + "}");
+        Log.d("QualityControl", "More Info {OtherText: " + otherText + "; OpenedTags: " + openTagsCount + "; ClosedTags: " + closeTagsCount + "}");
+        for (Element el : openedTags.toArray()) {
+            Log.e("QualityControl", "Unclosed Tag: " + el.tagName());
         }
-        return document;
+        for (Pair<String, String> el : errorTags) {
+            Log.e("QualityControl", "Unclosed Tag: " + el.first + ":" + el.second);
+        }
+        return doc;
     }
 
     private static boolean containsInUTag(String tag) {
