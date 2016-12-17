@@ -30,11 +30,12 @@ public class Document {
     public static Document parse(String html) {
         Document doc = new Document();
         ElementsList openedTags = new ElementsList();
-        ArrayList<Pair<String, String>> errorTags = new ArrayList<>();
+        //ArrayList<Pair<String, String>> errorTags = new ArrayList<>();
+        ArrayList<String> errorTags = new ArrayList<>();
         Element lastOpened = null, lastClosed = null, newElement = null;
-        String tag = null, text = null;
+        String tag, text;
         Matcher m = mainPattern.matcher(html);
-        int tags = 0, otherText = 0, errorTagsCount = 0, openTagsCount = 0, closeTagsCount = 0;
+        int tags = 0, otherText = 0, resolvedErrors = 0, openTagsCount = 0, closeTagsCount = 0;
         while (m.find()) {
             tags++;
             //Более удобное обращение к последнему открытому тегу
@@ -92,6 +93,7 @@ public class Document {
 
                     //Т.к. тег неявно закрывающийся, то последний закрытый тег это он
                     lastClosed = newElement;
+                    closeTagsCount++;
                 } else {
                     //Есть тело элемента, добавляем текст
                     newElement.addText(text);
@@ -104,22 +106,64 @@ public class Document {
                 }
             } else {
                 if (lastOpened != null) {
-                    closeTagsCount++;
+
                     lastClosed = lastOpened;
 
                     //На случай, если допущена ошибка и есть лишний закрывающий тег
-                    Log.d("SUKA", "CLOSE " + lastClosed.tagName() + " : " + tag);
+                    //<span><b></span></b>
+                    //<span></b></span>
+                    //<span><b></span>
                     if (!lastClosed.tagName().equals(tag)) {
-                        Log.e("SUKA", "ERROR ^^^^^^^^^^^^^^^^^^^^");
-                        boolean contains = false;
-                        for (Element element : openedTags.toArray()) {
-                            if (element.tagName().equals(tag)) {
-                                errorTags.add(new Pair<>(lastClosed.tagName(), tag));
-                                contains = true;
+                        boolean resolved = false;
+
+                        //Исправление ошибки с переносом элемента внутрь
+                        for (int i = errorTags.size() - 1; i >= 0; i--) {
+                            String errorTag = errorTags.get(i);
+                            if (errorTag.equals(tag)) {
+                                //Если последний в последнем или последний в последнем в последнем тег равен тегу по разметке
+                                //На случай когда есть в errorTags, но уже исправлено
+                                if (lastClosed.getLast() != null && (lastClosed.getLast().getLast() != null && lastClosed.getLast().getLast().tagName().equals(tag) | lastClosed.getLast().tagName().equals(tag))) {
+                                    errorTags.remove(i);
+                                    resolved = true;
+                                    break;
+                                }
+                                //Создаем элемент и вставляем в последний, с переносом текста
+                                //Так решается ошибка в хроме например
+                                Element resolveElement = new Element(errorTag);
+                                resolveElement.setLevel(lastClosed.getLevel() + 1);
+                                resolveElement.setParent(lastClosed);
+                                resolveElement.setText(lastClosed.getText());
+                                lastClosed.setText("");
+                                doc.add(resolveElement);
+                                lastClosed = null;
+                                resolved = true;
+                                errorTags.remove(i);
                                 break;
                             }
                         }
-                        errorTagsCount++;
+                        //Если ошибка исправлена, то продолжать смысла нет
+                        if (resolved) {
+                            resolvedErrors++;
+                            continue;
+                        }
+
+                        //Добавляем в список ошибок
+                        errorTags.add(lastClosed.tagName());
+
+                        //Закрываем тег
+                        openedTags.remove(openedTags.size() - 1);
+                        closeTagsCount++;
+
+                        //Исправление ошибки с правильным выносом элемента
+                        if (openedTags.size() > 0) {
+                            if (openedTags.get(openedTags.size() - 1).tagName().equals(tag)) {
+                                openedTags.remove(openedTags.size() - 1);
+                                closeTagsCount++;
+                                lastClosed = null;
+                                resolvedErrors++;
+                                continue;
+                            }
+                        }
                         continue;
                     }
 
@@ -129,32 +173,18 @@ public class Document {
 
                     //Удаляем/"закрываем" тег
                     openedTags.remove(openedTags.size() - 1);
-                    boolean contains = false;
-                    for (Pair<String, String> errorTag : errorTags) {
-                        if (errorTag.first.equals(tag)) {
-                            Log.e("SUKA", "RESOLVE " + errorTag.first + " : " + errorTag.second + " --------- " + (openedTags.size() > 0 ? openedTags.get(openedTags.size() - 1).tagName() : "NO REMOVE"));
-                            if (openedTags.size() > 0) {
-                                /*if(!openedTags.get(openedTags.size()-1).tagName().equals(errorTag.second)){
-                                    continue;
-                                }*/
-                                openedTags.remove(openedTags.size() - 1);
-                            }
-                            errorTags.remove(errorTag);
-                            contains = true;
-                            break;
-                        }
-                    }
+                    closeTagsCount++;
                 }
             }
         }
 
-        Log.d("QualityControl", "Main Info {AllTags: " + tags + "; ErrorTags: " + errorTags.size() + "; UnclosedTags: " + openedTags.size() + "}");
+        Log.d("QualityControl", "Main Info {AllTags: " + tags + "; ErrorTags: " + errorTags.size() + "; ResolvedErrors : " + resolvedErrors + "; UnclosedTags: " + openedTags.size() + "}");
         Log.d("QualityControl", "More Info {OtherText: " + otherText + "; OpenedTags: " + openTagsCount + "; ClosedTags: " + closeTagsCount + "}");
         for (Element el : openedTags.toArray()) {
             Log.e("QualityControl", "Unclosed Tag: " + el.tagName());
         }
-        for (Pair<String, String> el : errorTags) {
-            Log.e("QualityControl", "Unclosed Tag: " + el.first + ":" + el.second);
+        for (String el : errorTags) {
+            Log.e("QualityControl", "Error Tag: " + el);
         }
         return doc;
     }

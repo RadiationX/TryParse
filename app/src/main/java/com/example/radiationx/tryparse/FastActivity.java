@@ -100,7 +100,7 @@ public class FastActivity extends AppCompatActivity {
         Document.init();
         list = (LinearLayout) findViewById(R.id.list);
         webView = (WebView) findViewById(R.id.webview);
-        if(false){
+        if(true){
             try {
                 run();
             } catch (Exception e) {
@@ -298,7 +298,7 @@ public class FastActivity extends AppCompatActivity {
     public void run() throws Exception {
         final Request request = new Request.Builder()
                 //.url("http://beardycast.com/2016/09/13/EDC/edc-7-brizitsky/")
-                .url("http://4pda.ru/forum/index.php?showtopic=674009")
+                .url("http://4pda.ru/forum/index.php?showtopic=84979")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
@@ -310,17 +310,17 @@ public class FastActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-                /*final Matcher matcher = pattern2.matcher(response.body().string());
+                final Matcher matcher = pattern2.matcher(response.body().string());
                 if (matcher.find()) {
                     loadedHtml = matcher.group(1);
                     if (loadedHtml == null) {
                         loadedHtml = matcher.group(2);
                     }
                 }
-                parseHtmlTest(loadedHtml);*/
-                loadedHtml = response.body().string();
-                //loadedHtml = loadedHtml.replaceFirst("<head[\\s\\S]*?head>","");
                 parseHtmlTest(loadedHtml);
+                //loadedHtml = response.body().string();
+                //loadedHtml = loadedHtml.replaceFirst("<head[\\s\\S]*?head>","");
+                //parseHtmlTest(loadedHtml);
                 //parse(response.body().string());
             }
         });
@@ -354,13 +354,13 @@ public class FastActivity extends AppCompatActivity {
 
             }
         });*/
-        int maxLogSize = 1000;
+        /*int maxLogSize = 1000;
         for(int i = 0; i <= veryLongString.length() / maxLogSize; i++) {
             int start = i * maxLogSize;
             int end = (i+1) * maxLogSize;
             end = end > veryLongString.length() ? veryLongString.length() : end;
             Log.v("SUKA", veryLongString.substring(start, end));
-        }
+        }*/
         /*time = System.currentTimeMillis();
         document.html();
         Log.d("myparser", "test html new: " + ((System.currentTimeMillis() - time)));

@@ -1,12 +1,227 @@
-<div>
-    <div class="signature"><span style="color:blue"><span style="font-family:tempus sans itc"><b>CWM </span><span style="font-family:Comic Sans MS">мертв, а я еще нет...</b></span></span>
-        <span style="font-family:Segoe UI"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php?s=&showtopic=522854&view=findpost&p=39733526" target="_blank"><b><span style="color:limegreen">Мои поделки</span></b>
-        </a>
-        </span>
-    </div>
-    <div class="signature"><b><span style="color:red">OxygenOS | Android 6.0.1 | Stock Kernel </b></span>
-        <b><span style="color:red"><sup>flounder</sup> Stock | Android 7.0 | Fire-Ice Kernel </b></span>
-    </div>
-    <div class="u-note"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php" target="_blank"><b>Cо-разрабо</a></b>
-    </div>
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<script type="text/javascript"><!--
+(function(f,h){var c="$4";if("function"!=typeof f[c]||.3>f[c].lib4PDA){var g={},b=function(){return f[c]||this},k=function(a,d){return function(){"function"==typeof d&&(!a||a in b?d(b[a],a):!g[a]&&(g[a]=[d])||g[a].push(d))}};b.fn=b.prototype={lib4PDA:.3,constructor:b,addModule:function(a,d){if(!(a in b)){b[a]=b.fn[a]=d?"function"==typeof d?d(b):d:h;for(var c=0,e=g[a];e&&c<e.length;)e[c++](b[a],a);delete g[a]}return b},onInit:function(a,d){for(var c=(a=(a+"").split(" ")).length,e=d;c;)e=new k(a[--c],
+e);e();return b}};f[c]=f.lib4PDA=b;for(c in b.fn)b[c]=b.fn[c]}})(window);
+//--></script>
+<meta http-equiv="content-type" content="text/html;charset=windows-1251" />
+<meta name="description" content="Административный - 4PDA" />
+<meta name="keywords" content="Административный - 4PDA" />
+<meta name="google-play-app" content="app-id=ru.fourpda.client" data-icon-url="http://s.4pda.to/JK4Kz0feLhoibneUW8R3svz2AR82huqPbg9r3KCY.png" data-title="4PDA" data-author="4PDA"/>
+
+<!--meta name="theme-color" content="#0072bc"/-->
+
+<!--[if lt IE 9]>
+<script src="http://s.4pda.to/JK4K2oZDf2c7cHEWOEG3.js?_=1112"></script>
+<![endif]-->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" title="Поиск по форуму 4pda" href="opensearch_4pda.xml" />
+<title>Административный - 4PDA</title>
+<link rel="stylesheet" href="http://s.4pda.to/JK4KQ2BWPnz2H0MUH2kPL8c4lFX.css?_=1481710477" media="all, handheld"/>
+<link rel="stylesheet" href="http://s.4pda.to/JK4KHXswoMyZnUL6ETdDsjZuz2DFatuOitRZ6jdOz12YpPSaX3d3uUTrGvb3vJPoRgpa3axH.css?_=111"  media="all, handheld"/>
+<link rel="stylesheet" href="http://s.4pda.to/JK4KQ2BWPjdz0CHVPKjOPKT8cZB9M.css?_=1481266011"  media="all, handheld"/>
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://s.4pda.to/JK4K30MKetz12i1NDsuPQoYeMxNVH.css?_=122">
+<![endif]-->
+<script src="http://s.4pda.to/JK4KQ2BWPDsz0DkHuVz11H9HwdMLAQ.js?_=1481266106"></script>
+<script src="http://s.4pda.to/JK4KQ2BWPDsw8k6L3ygFquhlZHRKv6fWz1U.js?_=1481540006"></script>
+</head>
+<body>
+<div id="ipbwrapper">
+<!--ipb.javascript.start-->
+<script type="text/javascript"><!--
+document.cookie="modtids=; page=/";
+document.cookie="modpids=; page=/";
+ var ipb_var_st            = "0";
+ var ipb_lang_tpl_q1       = "Введите номер страницы, на которую хотите перейти.";
+ var ipb_var_s             = "";
+ var ipb_var_phpext        = "php";
+ var ipb_var_base_url      = "http://4pda.ru/forum/index.php?s=&";
+ var ipb_var_image_url     = "http://s.4pda.to/JK4K79XpPpuVeto7IfoudM1NI0or/1";
+ var ipb_input_f           = "200";
+ var ipb_input_t           = "0";
+ var ipb_input_p           = "0";
+ var ipb_var_cookieid      = "";
+ var ipb_var_cookie_domain = "";
+ var ipb_var_cookie_path   = "/";
+ var ipb_md5_check         = "558628747c61f4fe63e58846d699ce44";
+ var use_enhanced_js       = 1;
+ var use_charset           = "windows-1251";
+ var ipb_myass_chars_lang  = "Вы ввели слишком мало символов для поиска";
+ var ajax_load_msg         = "Загрузка...";
+ var ipb_skin_emodir = "default";
+ var ipb_var_board_url = "http://4pda.ru/forum";
+//-->
+</script>
+<script type="text/javascript"><!--
+function info_mm(o){o.className="row1";}
+function info_mo(o){o.className="row2";}
+//-->
+</script>
+<script type="text/javascript" src="http://s.4pda.to/JK4K7Hm9z0tkkz2KCmA0T67z1eOemcIgKfi65FCefLf.js?_=2"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4KOcnoKjfd5cNv2bVt4uHOfwpxaxiUX9EPz1O.js?_=4"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4K1f7Sz07DPhM95LWrCJwmPAeCiiaTudxg.js?_=6.2"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4KOMn7WmPARnjVel3RN4Sz1DjdP418z2uZFecrrJllkCz0Nz2GfO2tw9Msz0z2ViPoxQBeTNb2.js?_=6.1"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4K0ImBd1PwikwOGfcz1B9PbnHCJbpuNWD3d5IFoRoPjd6ZNZ2VYNESxXqo.js?_=2"></script>
+<script type="text/javascript"><!--
+var ipsclass = new ipsclass();
+ipsclass.init();
+ipsclass.settings["do_linked_resize"] = 1;
+ipsclass.settings["resize_percent"]   = 50;
+//--></script>
+<!--ipb.javascript.end-->
+<div class="r6ANSntIMjIGPBVpJFoPosWu">
+<table cellspacing="0" cellpadding="0" border="0" width="100%"><tr valign="top">
+<td width="20%">
+<div id="logostrip"><a href="/"><img src="http://s.4pda.to/JK4KRvTtz2Yq1n1wh31YbxmLjUahInU59Gayr9aSC0aFz0kXLr71nJ.png" alt="4PDA" style="vertical-align:top" border="0" /></a></div>
+</td><td class="rOIftHcDbSVbx1z0B">
+
+<div class="r2oZEmt0n">
+<!-- Здесь реклама -->
+<a rel="nofollow" href='http://4pda.ru/2016/12/17/2800486/' target='_blank'><img src='http://s.4pda.to/JK4KNfnlo7nz0CS33vNyIWWDOqu8RW6q1T0PuuH6GoNHyUqXZz0R4uarNt.jpg' height='90' alt='' title='' border='0' /></a><div style='position: absolute; left: 0px; top: 0px; visibility: hidden;'><img src='http://s.4pda.to/JK4KCBhqCIRa1z0wvI1buev1EhG.gif' width='0' height='0' alt='' style='width: 0px; height: 0px;' /></div><!-- Здесь конец рекламы -->
 </div>
+
+</td></tr></table>
+	<div id="submenu">
+		<!--ipb.leftlinks.start-->
+
+		<!--IBF.RULES-->
+		<!--ipb.leftlinks.end-->
+		<!--ipb.rightlinks.start-->
+		<div class="ipb-top-right-link"><a href="http://4pda.ru/forum/index.php?act=Help">Помощь</a></div>
+		<div class="ipb-top-right-link"><a href="http://4pda.ru/forum/index.php?act=boardrules">Правила</a></div>
+		<div class="ipb-top-right-link" id="ipb-tl-search"><a href="http://4pda.ru/forum/index.php?act=search&amp;forums[]=0">Поиск</a></div>
+		<div class="popupmenu-new" id="ipb-tl-search_menu" style="display:none;width:210px">
+			<form action="http://4pda.ru/forum/index.php?" method="get">
+				<input type="hidden" name="act" value="search" /><input type="hidden" name="source" value="all" />
+				<input type="hidden" name="forums[]" id="gbl-search-forums" value="all" />
+				<input type="text" size="20" id="_fskit" name="query"/>
+				<input class="button" type="image" style="border:0px" src="http://s.4pda.to/JK4KQQhz1J8ptVtqXJfLRod7SAq4gcpOlmhaWEz2rKfjhs1E9z2.gif" />
+				<br /><input type="checkbox" id="gbl-search-checkbox" value="1" onclick="gbl_check_search_box()" checked="checked" /> Искать только в этом форуме<input type="hidden" name="subforums" value="1" />
+				<br /><label><input type="checkbox" name="result" value="topics" /> Результаты в виде тем</label>
+			</form>
+			<div style="padding:4px">
+				<a href="http://4pda.ru/forum/index.php?act=search" onclick="var obj=document.getElementById('_fskit');if(obj&&obj.value)this.href+='&query='+obj.value;return true;">Дополнительные параметры</a>
+			</div>
+		</div><script type="text/javascript">
+			ipsmenu.register( "ipb-tl-search", "document.getElementById('_fskit').focus();" );
+			gbl_check_search_box();
+		</script>
+		<!--ipb.rightlinks.end-->
+	</div>
+</div>
+
+<script type="text/javascript" src="http://s.4pda.to/JK4K0Ueq1rkxU288a88kXDmsbevSz1HWiwThFV52EJ4iwz2jVu.js?_=2"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4KGcf6d7YEosHnHryefz0hBx5Dz0Sv7nMdwEBWDEksjegWs7U9kf6K.js?_=2"></script>
+<script type="text/javascript" src="http://s.4pda.to/JK4KJnLiELZ6dpAZAGDWT1QO9k3K0AMAQUp.js?_=2"></script>
+<div id="get-myassistant" style="display:none;width:606px;text-align:left;">
+<div class="borderwrap">
+ <div class="maintitle" id="myass-drag" title="Нажмите и задержите для перемещения этого окна">
+  <div style="float:right"><a href="#" onclick="document.getElementById('get-myassistant').style.display='none'; return false;" title="Закрыть окно">[X]</a></div>
+  <div>Помощник</div>
+ </div>
+ <div id="myass-content" style="overflow-x:auto;"></div>
+ </div>
+</div>
+<!-- Loading Layer -->
+<div id="loading-layer" style="display:none">
+	<div id="loading-layer-shadow">
+	   <div id="loading-layer-inner">
+	 	<img src="http://s.4pda.to/JK4KP5tUL5e5X8A9GCiqwp5PZJOy1Fz1GGxiKSIu9yCOeIWYz0.gif" border="0" alt="Загрузка. Пожалуйста, подождите..." />
+		<span style="font-weight:bold" id="loading-layer-text">Загрузка. Пожалуйста, подождите...</span>
+	    </div>
+	</div>
+</div>
+<!-- / Loading Layer -->
+<!-- Msg Layer -->
+<div id="ipd-msg-wrapper">
+	<div id="ipd-msg-title">
+		<a href="#" onclick="document.getElementById('ipd-msg-wrapper').style.display='none'; return false;"><img src="http://s.4pda.to/JK4KHz0UnmAB0Uz1bUoxuz0knrz2amyHwtlQx0dH07C.png" alt="X" title="Close Window" class="ipd" /></a> &nbsp; <strong>Сообщение сайта</strong>
+	</div>
+	<div id="ipd-msg-inner"><span style="font-weight:bold" id="ipd-msg-text"></span><div class="pp-tiny-text">(Сообщение закроется через 2 секунды)</div></div>
+</div>
+<!-- Msg Layer -->
+
+<!-- / End board header --><div class="user_home">
+			<b>Вошли как: <a href="http://4pda.ru/forum/index.php?showuser=2556269">radiation15</a></b> ( <a href="http://4pda.ru/forum/index.php?act=login&CODE=03&k=558628747c61f4fe63e58846d699ce44&return=http%3A%2F%2F4pda.ru%2Fforum%2Findex.php%3Fshowforum%3D200">Выход</a> )
+			</div><div id="userlinks"><p class="home"><script type="text/javascript">nav_menu_titles();</script></p><p>&nbsp;<a href="http://4pda.ru/forum/index.php?act=mentions">Упоминания </a> &nbsp;&middot;&nbsp;
+			<a href="http://4pda.ru/forum/index.php?act=qms" target="_blank">Сообщения</a>
+			&nbsp;&middot;&nbsp;<a href="http://4pda.ru/forum/index.php?act=fav">Избранное (12)</a>
+			&nbsp;&middot;&nbsp;<span id="post-member-usercp" class="usercp_menu_out" unselectable="true" style="display:inline;">Меню пользователя</span></p></div><script type="text/javascript">nav_menu_body();</script><div class="popupmenu-new" id="post-member-usercp_menu" style="display: none; width: 130px; position: absolute; left: 0px; top:0px;">
+<div class="popupmenu-item-last">
+<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=Members">Пользователи</a></div>
+<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=search&username-id=2556269&source=pst&sort=dd&noform=1">Мои ответы</a></div>
+<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=attach&code=showuser">Мои файлы</a></div>
+
+<div class="popupmenu-item-last"><b><a href="http://4pda.ru/forum/index.php?act=UserCP" title="Настройки форума">Настройки</a></b></div>
+	</div>
+</div>
+<script type="text/javascript">ipsmenu.register("post-member-usercp","","usercp_menu","usercp_menu_out");</script><script type="text/javascript">window.CONFIG = {member_id:2556269,baseurl:"http://4pda.ru/forum/index.php?",mailboxes:["u2556269"],ws:"ws://app.4pda.ru/ws/",xhr:"http://app.4pda.ru/er/"};</script><div id="events-wrapper" style="display:none;"><div id="events-list"></div><a href="http://4pda.ru/forum/index.php?act=qms&" id="events-count" data-count="0">Сообщений: 0</a></div><script src="http://s.4pda.to/JK4KQ2BWPDMxWxi24i8J0T.js?_=1481266113" charset="windows-1251"></script><style type="text/css">@import url("http://s.4pda.to/JK4KQ2BWPbctRMIFnytaJyz0Wtj.css");</style><link rel="stylesheet" href="http://s.4pda.to/JK4K7Hm8z2Ez2nVLJKYIh5e2tbo72h6bz0oC0xukXKl313.css?_=1481266006"  media="all"/><script type="text/javascript" src="http://s.4pda.to/JK4K7Hm8z2Ez2nVLJKYIykz0nr3w8ncIvsMoaolARz0elle.js?_=5"></script><div class="globalmesswrap" style="display:none" id="gc_1"><p style="float:right;width:auto;margin:7px;padding:0"><a href="javascript:toggleglobalmess(1,0,1482016563);" style="text-decoration:none;margin:-.4em;padding:.4em;display:inline-block;position:relative"><img src="http://s.4pda.to/JK4K79GIw5um4A7z1z0eYoSGwOtELFyCwz1oZDlARz0eFz20.gif" border="0" alt="Показать объявления"/></a></p><h4>Объявления</h4></div><div class="globalmesswrap" style="display:show" id="go_1"><p style="float:right;width:auto;margin:7px;padding:0"><a href="javascript:toggleglobalmess(1,1,1482016563);" style="text-decoration:none;margin:-.4em;padding:.4em;display:inline-block;position:relative"><img src="http://s.4pda.to/JK4K79mI3kjZdi3MknWWihqIgDRfz2JeUDPgaHXLrdn9V.gif" border="0" alt="Скрыть объявления"/></a></p><h4>Объявления</h4><div class="globalmesscontent"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php?showtopic=789149" target="_blank"><div align="center"><b><span style="color:orangered">Выиграй Hi-Fi плеер в конкурсе "Слышать больше с FiiO</span></b></div></a></div></div><div id="navstrip"><img src="http://s.4pda.to/JK4K2I3i6rAXFz0JkiYJTjz15pWKtH0gdeoGQH.gif" border="0"  alt="&gt;" />&nbsp;<a href="http://4pda.ru/forum/index.php?act=idx">4PDA</a>&nbsp;&gt;&nbsp;<a href="http://4pda.ru/forum/index.php?showforum=200">Административный</a></div><script language="javascript" type="text/javascript"><!--
+	var
+		img_markers = {
+			"bc_new.gif" : "bc_nonew.gif",
+			"bf_new.gif" : "bf_nonew.gif",
+			"br_new.gif" : "br_nonew.gif"
+		}
+	,	regex_markers = "bc_new.gif|bf_new.gif|br_new.gif"
+	,	perm_can_edit = 0
+	,	perm_can_open = 0
+	,	perm_can_close = 0
+	,	perm_max_length = 150
+	;
+	--></script><script type="text/javascript" src="http://s.4pda.to/JK4KPrMgAs7YMz1UWOEGKMp0jgqv42lkz2swRo.js"></script><br /><div class="borderwrap" style="display:none" id="fc_200"><div class="maintitlecollapse"><p class="expand"><a href="javascript:togglecategory(200,0);"><img src="http://s.4pda.to/JK4K79GIw5um4A7z1z0eYoSGwOtELFyCwz1oZDlARz0eFz20.gif" border="0"  alt="+" /></a></p><p><img src="http://s.4pda.to/JK4KPT4dPz20oZxCPULpFpaqyYVKLGsiSquBz2BrH.gif" border="0"  alt="&gt;" width="8" height="8" />&nbsp;<a href="/forum/index.php?showforum=200">Административный - подфорумы</a></p></div></div>
+		<div class="borderwrap" style="display:" id="fo_200"><div class="maintitle">
+			<p class="expand"><a href="javascript:togglecategory(200,1);"><img src="http://s.4pda.to/JK4K79mI3kjZdi3MknWWihqIgDRfz2JeUDPgaHXLrdn9V.gif" border="0" /></a></p>
+			<p><img src="http://s.4pda.to/JK4KPT4dPz20oZxCPULpFpaqyYVKLGsiSquBz2BrH.gif" border="0"  alt="&gt;" width="8" height="8" />&nbsp;<a href="/forum/index.php?showforum=200">Административный - подфорумы</a></p>
+			</div>
+			<table class="ipbtable" cellspacing="1"><tr><th colspan="2" width="66%">Форум</th><th style="text-align:center" width="7%">Тем</th><th style="text-align:center" width="7%">Ответов</th><th width="35%">Последнее сообщение</th></tr><tr><td style="text-align:center" class="row2" width="1%"><a id="f-5" href="/forum/index.php?act=login&CODE=04&f=5&fromforum=200&i=1" title="Отметить форум прочитанным?" onclick="boards_send_marker_update(5, 1);return false;"><img src="http://s.4pda.to/JK4KHX6SYugcrIFvWOQjx7UxZues4u0IFowaHCU.gif" border="0"  alt="+" /></a></td><td class="row2" onmousemove="info_mm(this);" onmouseout="info_mo(this);"><b><a href="/forum/index.php?showforum=5">4PDA.ru - работа сайта</a></b><br /><span class="forumdesc">Предложения и отзывы по работе сайта и форума 4PDA.ru. Счетчик сообщений отключен. <hr class="sfr "/><b><a href="/forum/index.php?showforum=373">Багтрекер</a>, <a href="/forum/index.php?showforum=505">Школа Куратора</a>, <a href="/forum/index.php?showforum=828">Мобильный клиент 4PDA</a></b><br /><i>Модераторы: <a href="/forum/index.php?act=Members&filter=4">Админы</a></i></span></td><td style="text-align:center" class="row1">1358</td><td style="text-align:center" class="row1">84706</td><td class="row1" nowrap="nowrap"><a href="/forum/index.php?showtopic=93526&amp;view=getlastpost" title="К последнему сообщению"><img src="http://s.4pda.to/JK4K0U8sWmjeXRz1nbKaz0ayqZTFM9J4kS7o6TNESRHCU.gif" border="0"  alt="&gt;&gt;" /></a> <span>Сегодня, 01:20<br /><b>Тема:</b>&nbsp;<a href="/forum/index.php?showtopic=93526&amp;view=getnewpost" title="К первому непрочитанному сообщению: Пробуем загружать файлы и картинки на форум">Пробуем загружать файлы и карт...</a><br /><b>Автор:</b> <a href="/forum/index.php?showuser=3461759">pamarinS</a></span></td></tr><td class="catend" colspan="5"><!-- no content --></td></tr></table></div><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter29691590 = new Ya.Metrika({id:29691590, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/29691590" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><br /><br />
+			<table cellspacing="0" id="gfooter">
+				<tr>
+					<td width="25%">&nbsp;</td>
+					<td width="50%" align="center" nowrap="nowrap"><a href="/wp-content/plugins/ngx.php?mb=1"><b>Мобильная версия</b></a>&nbsp;&nbsp;&nbsp;<a href="lofiversion/index.php?f200.html"><b>Текстовая версия</b></a></td>
+					<td width="25%" align="right" nowrap="nowrap">Сейчас: 18.12.16, 02:16</td>
+				</tr>
+			</table>
+<script type="text/javascript">
+//<![CDATA[
+if("jsEmoticons" in window)jsEmoticons.parseAll();else("$4" in window && $4.onInit("jsEmoticons",function(){jsEmoticons.parseAll()}));
+if("initPostBlock" in window)initPostBlock();else("$4" in window && $4.onInit("initPostBlock",function(){initPostBlock()}));
+menu_do_global_init();
+show_inline_messages();
+//]]>
+</script>
+			<!-- Copyright Information -->
+			<div align="center" class="copyright">
+				&copy; 4PDA 2005-2016 г. Все права защищены.<br />4PDA<sup>&reg;</sup> - зарегистрированный товарный знак.<br />
+				<a href="/copyright_notice/">Условия использования информации</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://4pda.ru/disclaimer/">Отказ от ответственности</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="/advert/" title="Размещение рекламы"><strong>Размещение рекламы</strong></a><br />
+				<br />
+				<noindex><a href="http://www.ibresource.ru/" style="text-decoration:none" target="_blank">Форум</a> <a href="http://www.invisionboard.com" style="text-decoration:none" target="_blank">IP.Board</a> &copy; 2016 &nbsp;<a href="http://www.invisionpower.com" style="text-decoration:none" target="_blank">IPS, Inc</a>.<br /></noindex>
+			</div>
+			<!-- / Copyright -->
+			<div style="text-align:center">
+
+			<script type="text/javascript" src="http://s.4pda.to/JK4KRvTd0Pd.js?_=2"></script>
+
+<noindex><span class="social-icons">
+<a href="http://twitter.com/4pdaru" rel="nofollow" title="Следуйте за нами в Twitter" target="_blank" class="icon-TWITTER"></a>&nbsp;<a href="http://vk.com/4pdaru" rel="nofollow" title="Официальная группа 4pda" target="_blank" class="icon-VK"></a>&nbsp;<a href="https://www.facebook.com/4pdaru" rel="nofollow" title="Официальная страница в Facebook" target="_blank" class="icon-FB"></a>&nbsp;<a href="http://www.youtube.com/user/4pdaRU" rel="nofollow" title="Наш канал на YouTube" target="_blank" class="icon-YOUTUBE"></a>
+</span>
+</noindex>
+<br />
+<br />
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: number of pageviews for 24 hours,"+
+" of visitors for 24 hours and for today is shown' "+
+"border=0 width=88 height=31></a>")//--></script><!--/LiveInternet-->
+		</div>
+		</div>
+		</body></html>
