@@ -23,19 +23,20 @@ public class Document {
 
     public static void init() {
         if (mainPattern == null)
-            mainPattern = Pattern.compile("(?:<(?:(?:!(?!DOCTYPE)|(?:script|style)[^>]*>)[\\s\\S]*?(?:--|\\/script|\\/style)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?(?:<\\/(?:script|--|style)>[^<]*)?");
+            mainPattern = Pattern.compile("(?:<(?:!--[\\s\\S]*?--|(?:(script|style)(?: )?([^>]*)>)([\\s\\S]*?)(?:<\\/\\1)|([\\/])?([\\w]*)(?: ([^>]*))?\\/?)>)(?:([^<]+))?");
         ElementHelper.init();
     }
 
     public static Document parse(String html) {
         Document doc = new Document();
         ElementsList openedTags = new ElementsList();
-        //ArrayList<Pair<String, String>> errorTags = new ArrayList<>();
         ArrayList<String> errorTags = new ArrayList<>();
-        Element lastOpened = null, lastClosed = null, newElement = null;
-        String tag, text;
+        Element lastOpened = null, lastClosed = null, newElement;
+        //ssTag - блоки script/style, т.к в них может быть всякая дичь
+        String tag, text, afterText, ssTag;
+        boolean ssTagNull;
         Matcher m = mainPattern.matcher(html);
-        int tags = 0, otherText = 0, resolvedErrors = 0, openTagsCount = 0, closeTagsCount = 0;
+        int tags = 0, comments = 0, resolvedErrors = 0, openTagsCount = 0, closeTagsCount = 0;
         while (m.find()) {
             tags++;
             //Более удобное обращение к последнему открытому тегу
@@ -43,11 +44,13 @@ public class Document {
                 lastOpened = openedTags.get(openedTags.size() - 1);
 
             //Выбор название тега
-            tag = m.group(2);
+            ssTag = m.group(1);
+            ssTagNull = ssTag == null;
+            tag = m.group(5);
 
-            //null в том случае, когда попадается script/style/comment
-            if (tag == null) {
-                otherText++;
+            //true в том случае, когда попадается комментарии
+            if (tag == null && ssTagNull) {
+                comments++;
                 //Если нет последнего закрытого элемента, то попавшийся текст добавляется в тело элемента
                 //Иначе добавляется как текст после элемента
                 if (lastClosed == null) {
@@ -61,13 +64,14 @@ public class Document {
             }
 
             //Выбор текста
-            text = m.group(4);
+            afterText = m.group(7);
+            text = ssTagNull ? afterText : m.group(3);
 
             //null в том случае, когда тег открывается
-            if (m.group(1) == null) {
+            if (m.group(4) == null | !ssTagNull) {
                 openTagsCount++;
                 //Группа 3 - аттрибуты тега, добавляются сразу для уменьшения времени парсинга
-                newElement = new Element(tag, m.group(3));
+                newElement = new Element(ssTagNull ? tag : ssTag, m.group(ssTagNull ? 6 : 2));
 
                 //Уровень вложенности элемента. Совпадает с кол-вом открытых тегов
                 newElement.setLevel(openedTags.size());
@@ -87,9 +91,14 @@ public class Document {
                 doc.add(newElement);
 
                 //Проверка на теги, которые можно не закрывать
-                if (containsInUTag(newElement.tagName())) {
+                if (!ssTagNull | containsInUTag(newElement.tagName())) {
+
+                    //Добавляем текст внутри script/style
+                    if (!ssTagNull) {
+                        newElement.addText(text);
+                    }
                     //Т.к. у незакрывающегося тега нет тела, то текст добавляется после него
-                    newElement.addAfterText(text);
+                    newElement.addAfterText(afterText);
 
                     //Т.к. тег неявно закрывающийся, то последний закрытый тег это он
                     lastClosed = newElement;
@@ -169,7 +178,7 @@ public class Document {
 
 
                     //Добавляем текст после закрывающего тега
-                    lastClosed.addAfterText(text);
+                    lastClosed.addAfterText(afterText);
 
                     //Удаляем/"закрываем" тег
                     openedTags.remove(openedTags.size() - 1);
@@ -179,7 +188,7 @@ public class Document {
         }
 
         Log.d("QualityControl", "Main Info {AllTags: " + tags + "; ErrorTags: " + errorTags.size() + "; ResolvedErrors : " + resolvedErrors + "; UnclosedTags: " + openedTags.size() + "}");
-        Log.d("QualityControl", "More Info {OtherText: " + otherText + "; OpenedTags: " + openTagsCount + "; ClosedTags: " + closeTagsCount + "}");
+        Log.d("QualityControl", "More Info {Comments: " + comments + "; OpenedTags: " + openTagsCount + "; ClosedTags: " + closeTagsCount + "}");
         for (Element el : openedTags.toArray()) {
             Log.e("QualityControl", "Unclosed Tag: " + el.tagName());
         }

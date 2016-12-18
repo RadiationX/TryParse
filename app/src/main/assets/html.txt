@@ -1,227 +1,410 @@
 
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html>
 <head>
-<script type="text/javascript"><!--
-(function(f,h){var c="$4";if("function"!=typeof f[c]||.3>f[c].lib4PDA){var g={},b=function(){return f[c]||this},k=function(a,d){return function(){"function"==typeof d&&(!a||a in b?d(b[a],a):!g[a]&&(g[a]=[d])||g[a].push(d))}};b.fn=b.prototype={lib4PDA:.3,constructor:b,addModule:function(a,d){if(!(a in b)){b[a]=b.fn[a]=d?"function"==typeof d?d(b):d:h;for(var c=0,e=g[a];e&&c<e.length;)e[c++](b[a],a);delete g[a]}return b},onInit:function(a,d){for(var c=(a=(a+"").split(" ")).length,e=d;c;)e=new k(a[--c],
-e);e();return b}};f[c]=f.lib4PDA=b;for(c in b.fn)b[c]=b.fn[c]}})(window);
-//--></script>
-<meta http-equiv="content-type" content="text/html;charset=windows-1251" />
-<meta name="description" content="Административный - 4PDA" />
-<meta name="keywords" content="Административный - 4PDA" />
-<meta name="google-play-app" content="app-id=ru.fourpda.client" data-icon-url="http://s.4pda.to/JK4Kz0feLhoibneUW8R3svz2AR82huqPbg9r3KCY.png" data-title="4PDA" data-author="4PDA"/>
+  <meta charset="utf-8">
 
-<!--meta name="theme-color" content="#0072bc"/-->
+  <title>Собираем Westworld. Статья и подкаст | Бородокаст</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Закончился сериал Westworld, или же «Мир Дикого Запада» (в другом переводе — «Западный мир»). Мы составили статью и записали отдельный подкаст, где подробно подробно разбираем первый сезон сериала и д">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Собираем Westworld. Статья и подкаст">
+<meta property="og:url" content="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/index.html">
+<meta property="og:site_name" content="Бородокаст">
+<meta property="og:description" content="Закончился сериал Westworld, или же «Мир Дикого Запада» (в другом переводе — «Западный мир»). Мы составили статью и записали отдельный подкаст, где подробно подробно разбираем первый сезон сериала и д">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-9.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-3.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-7.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-5.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-10.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-1.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-6.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-4.jpg">
+<meta property="og:image" content="http://beardycast.com/img/Andrey_B/westworld/westworld-8.jpg">
+<meta property="og:updated_time" content="2016-12-08T05:15:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Собираем Westworld. Статья и подкаст">
+<meta name="twitter:description" content="Закончился сериал Westworld, или же «Мир Дикого Запада» (в другом переводе — «Западный мир»). Мы составили статью и записали отдельный подкаст, где подробно подробно разбираем первый сезон сериала и д">
+<meta name="twitter:creator" content="@beardyshow">
 
-<!--[if lt IE 9]>
-<script src="http://s.4pda.to/JK4K2oZDf2c7cHEWOEG3.js?_=1112"></script>
-<![endif]-->
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" title="Поиск по форуму 4pda" href="opensearch_4pda.xml" />
-<title>Административный - 4PDA</title>
-<link rel="stylesheet" href="http://s.4pda.to/JK4KQ2BWPnz2H0MUH2kPL8c4lFX.css?_=1481710477" media="all, handheld"/>
-<link rel="stylesheet" href="http://s.4pda.to/JK4KHXswoMyZnUL6ETdDsjZuz2DFatuOitRZ6jdOz12YpPSaX3d3uUTrGvb3vJPoRgpa3axH.css?_=111"  media="all, handheld"/>
-<link rel="stylesheet" href="http://s.4pda.to/JK4KQ2BWPjdz0CHVPKjOPKT8cZB9M.css?_=1481266011"  media="all, handheld"/>
-<!--[if IE 7]>
-<link rel="stylesheet" href="http://s.4pda.to/JK4K30MKetz12i1NDsuPQoYeMxNVH.css?_=122">
-<![endif]-->
-<script src="http://s.4pda.to/JK4KQ2BWPDsz0DkHuVz11H9HwdMLAQ.js?_=1481266106"></script>
-<script src="http://s.4pda.to/JK4KQ2BWPDsw8k6L3ygFquhlZHRKv6fWz1U.js?_=1481540006"></script>
+
+    <link rel="icon" href="data:image/webp;base64,UklGRsQDAABXRUJQVlA4TLgDAAAvD8ADEJ8Gx7a1Y8/zfPht+49tu7XNOtVfZmUEdjKEdLZT21Zl286bzAKqbdvKlr3POb/7/wL+N4PmlmjuFokkjWSH7JC0UeEBoGlyjW5J4VrbZkj6q8a21rbt3YiRww1tx7Z1Cb6BzWzbtm1VOWwjSZFj7u5nhgQAiIDejW4Kt5Ik9kGm9jjKwQtSIqca6+BY2Z+OX4kXAAKA/G1dj0QTsUIpRv7/ogzqBQD5v/46qcpn5P71JsR3l6HdweqCUh7FFgw+b+cvx906H8n+5elat/t6dw7r3unkmLA/1a8XXdJqoxgijiubSUz5aGVtgzkNSQYnqMo1jctVZ/WPZfde53r8cH6zDcSfI0tDMzC/NvesBb86sZG98Y9ryn4/X585uDk/tMx3XGIKAceivgQNK/W3iBLffNlH8+qjiL9tUrFWEKEJXgU9kbl5fNrWyfF38XTpTDkQdVQhvNSo19fsv3+lqezmjJb0JPfDeW7mcONZM1aaov7EhBXZPqYPDjaxNS6213stc4Ur7i1uUnvIHj9eFpQMiiFDlQ42r2480+bZw+aPptK2NlEggAAAA6xi3ySIA/i4Ne75CyHw4/9y5XkUJCbmuM9DrTnTyL3+ueIeNYQ+heAYUInOLa8gsS+y8ZUgQkzKoWiYACAIjAJAUgiES3MfPCSElSdueSChBAMAe+Y/CZhEsHUlW1Sw9SYvHnhNSoD4JwLFgZsH28Ahh9rh5pGrDuSOHSWEVDpynDLBmELs3MkM2lg4yieBmVWZJBWOVweiVR1387Vi/SwiccQPjqJgcPp4960QuEUo4RKbiogWrjiAAgeQ4pDlVwlWMRpuOK4jAEQOT99654nrOJSS0dMdR1BgQSKEBAJjIMKHDiUEDaEX28EqhxDmuJC75xIuVCROIwy5EAxIBBAkSTZtzbONb9u2bdu2/b5t27Zt297QfbuI6H8CHoRSxk526uJUApAAA4iCvtftyf67vwFggQRiOpZHdy+vuwdnUSo0EiCahh4PT/9/n9tfz858OpCNrEIfr39+Lw+Pv4OVRCkMM5+Yt6v7862ZxrUPe0WapGfewM7G7HhHXX3rXKQ5TS4wbWK4uG1xdX1pYXLUhi7rWzJVWr18enOxt9kz5shja7nE1gjmV6ZHBjsbWtxlaNKmEeWC9PikhNSUxC5XCSpfNbyvqig5qzInI7PQGkh0nsNQc39ZflN3bnaQBiAkJtc2rqK2vbcgOkwXUCQgsTgmbn4BId4WeoDggAREEogoq2nLgxAN">
+
+
+
+  <link rel="stylesheet" href="/A.css,,_style.css+font-awesome,,_css,,_font-awesome.min.css,Mcc.OKo6NU2vo2.css.pagespeed.cf.Bpy9LA7ECE.css" type="text/css">
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-50572865-1','auto');ga('send','pageview');</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+    <link rel="stylesheet" href="//cdn.muut.com/1/moot.css"/>
+    <link rel="stylesheet" href="//cdn.muut.com/1/plugin/thumb.css"/>
+
+
+
+  <script src="/js/likely.js+jquery.scrolldepth.min.js.pagespeed.jc.v74DTkQvSq.js"></script><script>eval(mod_pagespeed_PxBy1XdmSa);</script>
+  <link rel="stylesheet" href="/A.css,,_likely.css+fancybox,,_jquery.fancybox.css,Mcc.G5O394AVIp.css.pagespeed.cf.WSNyIhwfIH.css">
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>eval(mod_pagespeed_7peOGrXszZ);</script>
+  <script>jQuery(function(){jQuery.scrollDepth();});</script>
 </head>
+
 <body>
-<div id="ipbwrapper">
-<!--ipb.javascript.start-->
-<script type="text/javascript"><!--
-document.cookie="modtids=; page=/";
-document.cookie="modpids=; page=/";
- var ipb_var_st            = "0";
- var ipb_lang_tpl_q1       = "Введите номер страницы, на которую хотите перейти.";
- var ipb_var_s             = "";
- var ipb_var_phpext        = "php";
- var ipb_var_base_url      = "http://4pda.ru/forum/index.php?s=&";
- var ipb_var_image_url     = "http://s.4pda.to/JK4K79XpPpuVeto7IfoudM1NI0or/1";
- var ipb_input_f           = "200";
- var ipb_input_t           = "0";
- var ipb_input_p           = "0";
- var ipb_var_cookieid      = "";
- var ipb_var_cookie_domain = "";
- var ipb_var_cookie_path   = "/";
- var ipb_md5_check         = "558628747c61f4fe63e58846d699ce44";
- var use_enhanced_js       = 1;
- var use_charset           = "windows-1251";
- var ipb_myass_chars_lang  = "Вы ввели слишком мало символов для поиска";
- var ajax_load_msg         = "Загрузка...";
- var ipb_skin_emodir = "default";
- var ipb_var_board_url = "http://4pda.ru/forum";
-//-->
-</script>
-<script type="text/javascript"><!--
-function info_mm(o){o.className="row1";}
-function info_mo(o){o.className="row2";}
-//-->
-</script>
-<script type="text/javascript" src="http://s.4pda.to/JK4K7Hm9z0tkkz2KCmA0T67z1eOemcIgKfi65FCefLf.js?_=2"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4KOcnoKjfd5cNv2bVt4uHOfwpxaxiUX9EPz1O.js?_=4"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4K1f7Sz07DPhM95LWrCJwmPAeCiiaTudxg.js?_=6.2"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4KOMn7WmPARnjVel3RN4Sz1DjdP418z2uZFecrrJllkCz0Nz2GfO2tw9Msz0z2ViPoxQBeTNb2.js?_=6.1"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4K0ImBd1PwikwOGfcz1B9PbnHCJbpuNWD3d5IFoRoPjd6ZNZ2VYNESxXqo.js?_=2"></script>
-<script type="text/javascript"><!--
-var ipsclass = new ipsclass();
-ipsclass.init();
-ipsclass.settings["do_linked_resize"] = 1;
-ipsclass.settings["resize_percent"]   = 50;
-//--></script>
-<!--ipb.javascript.end-->
-<div class="r6ANSntIMjIGPBVpJFoPosWu">
-<table cellspacing="0" cellpadding="0" border="0" width="100%"><tr valign="top">
-<td width="20%">
-<div id="logostrip"><a href="/"><img src="http://s.4pda.to/JK4KRvTtz2Yq1n1wh31YbxmLjUahInU59Gayr9aSC0aFz0kXLr71nJ.png" alt="4PDA" style="vertical-align:top" border="0" /></a></div>
-</td><td class="rOIftHcDbSVbx1z0B">
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">Бородокаст</span></a>
+      <nav id="main-nav">
 
-<div class="r2oZEmt0n">
-<!-- Здесь реклама -->
-<a rel="nofollow" href='http://4pda.ru/2016/12/17/2800486/' target='_blank'><img src='http://s.4pda.to/JK4KNfnlo7nz0CS33vNyIWWDOqu8RW6q1T0PuuH6GoNHyUqXZz0R4uarNt.jpg' height='90' alt='' title='' border='0' /></a><div style='position: absolute; left: 0px; top: 0px; visibility: hidden;'><img src='http://s.4pda.to/JK4KCBhqCIRa1z0wvI1buev1EhG.gif' width='0' height='0' alt='' style='width: 0px; height: 0px;' /></div><!-- Здесь конец рекламы -->
-</div>
+          <a class="main-nav-link" href="/categories/Новости/">Статьи</a>
 
-</td></tr></table>
-	<div id="submenu">
-		<!--ipb.leftlinks.start-->
+          <a class="main-nav-link" href="/categories/Обзор/">Обзоры</a>
 
-		<!--IBF.RULES-->
-		<!--ipb.leftlinks.end-->
-		<!--ipb.rightlinks.start-->
-		<div class="ipb-top-right-link"><a href="http://4pda.ru/forum/index.php?act=Help">Помощь</a></div>
-		<div class="ipb-top-right-link"><a href="http://4pda.ru/forum/index.php?act=boardrules">Правила</a></div>
-		<div class="ipb-top-right-link" id="ipb-tl-search"><a href="http://4pda.ru/forum/index.php?act=search&amp;forums[]=0">Поиск</a></div>
-		<div class="popupmenu-new" id="ipb-tl-search_menu" style="display:none;width:210px">
-			<form action="http://4pda.ru/forum/index.php?" method="get">
-				<input type="hidden" name="act" value="search" /><input type="hidden" name="source" value="all" />
-				<input type="hidden" name="forums[]" id="gbl-search-forums" value="all" />
-				<input type="text" size="20" id="_fskit" name="query"/>
-				<input class="button" type="image" style="border:0px" src="http://s.4pda.to/JK4KQQhz1J8ptVtqXJfLRod7SAq4gcpOlmhaWEz2rKfjhs1E9z2.gif" />
-				<br /><input type="checkbox" id="gbl-search-checkbox" value="1" onclick="gbl_check_search_box()" checked="checked" /> Искать только в этом форуме<input type="hidden" name="subforums" value="1" />
-				<br /><label><input type="checkbox" name="result" value="topics" /> Результаты в виде тем</label>
-			</form>
-			<div style="padding:4px">
-				<a href="http://4pda.ru/forum/index.php?act=search" onclick="var obj=document.getElementById('_fskit');if(obj&&obj.value)this.href+='&query='+obj.value;return true;">Дополнительные параметры</a>
-			</div>
-		</div><script type="text/javascript">
-			ipsmenu.register( "ipb-tl-search", "document.getElementById('_fskit').focus();" );
-			gbl_check_search_box();
-		</script>
-		<!--ipb.rightlinks.end-->
-	</div>
-</div>
+          <a class="main-nav-link" href="/2016/07/19/Andrey_B/podcast-how-to/">Как слушать подкасты</a>
 
-<script type="text/javascript" src="http://s.4pda.to/JK4K0Ueq1rkxU288a88kXDmsbevSz1HWiwThFV52EJ4iwz2jVu.js?_=2"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4KGcf6d7YEosHnHryefz0hBx5Dz0Sv7nMdwEBWDEksjegWs7U9kf6K.js?_=2"></script>
-<script type="text/javascript" src="http://s.4pda.to/JK4KJnLiELZ6dpAZAGDWT1QO9k3K0AMAQUp.js?_=2"></script>
-<div id="get-myassistant" style="display:none;width:606px;text-align:left;">
-<div class="borderwrap">
- <div class="maintitle" id="myass-drag" title="Нажмите и задержите для перемещения этого окна">
-  <div style="float:right"><a href="#" onclick="document.getElementById('get-myassistant').style.display='none'; return false;" title="Закрыть окно">[X]</a></div>
-  <div>Помощник</div>
- </div>
- <div id="myass-content" style="overflow-x:auto;"></div>
- </div>
-</div>
-<!-- Loading Layer -->
-<div id="loading-layer" style="display:none">
-	<div id="loading-layer-shadow">
-	   <div id="loading-layer-inner">
-	 	<img src="http://s.4pda.to/JK4KP5tUL5e5X8A9GCiqwp5PZJOy1Fz1GGxiKSIu9yCOeIWYz0.gif" border="0" alt="Загрузка. Пожалуйста, подождите..." />
-		<span style="font-weight:bold" id="loading-layer-text">Загрузка. Пожалуйста, подождите...</span>
-	    </div>
-	</div>
-</div>
-<!-- / Loading Layer -->
-<!-- Msg Layer -->
-<div id="ipd-msg-wrapper">
-	<div id="ipd-msg-title">
-		<a href="#" onclick="document.getElementById('ipd-msg-wrapper').style.display='none'; return false;"><img src="http://s.4pda.to/JK4KHz0UnmAB0Uz1bUoxuz0knrz2amyHwtlQx0dH07C.png" alt="X" title="Close Window" class="ipd" /></a> &nbsp; <strong>Сообщение сайта</strong>
-	</div>
-	<div id="ipd-msg-inner"><span style="font-weight:bold" id="ipd-msg-text"></span><div class="pp-tiny-text">(Сообщение закроется через 2 секунды)</div></div>
-</div>
-<!-- Msg Layer -->
+          <a class="main-nav-link" href="/categories/Подкаст/BeardyCast/">BeardyCast</a>
 
-<!-- / End board header --><div class="user_home">
-			<b>Вошли как: <a href="http://4pda.ru/forum/index.php?showuser=2556269">radiation15</a></b> ( <a href="http://4pda.ru/forum/index.php?act=login&CODE=03&k=558628747c61f4fe63e58846d699ce44&return=http%3A%2F%2F4pda.ru%2Fforum%2Findex.php%3Fshowforum%3D200">Выход</a> )
-			</div><div id="userlinks"><p class="home"><script type="text/javascript">nav_menu_titles();</script></p><p>&nbsp;<a href="http://4pda.ru/forum/index.php?act=mentions">Упоминания </a> &nbsp;&middot;&nbsp;
-			<a href="http://4pda.ru/forum/index.php?act=qms" target="_blank">Сообщения</a>
-			&nbsp;&middot;&nbsp;<a href="http://4pda.ru/forum/index.php?act=fav">Избранное (12)</a>
-			&nbsp;&middot;&nbsp;<span id="post-member-usercp" class="usercp_menu_out" unselectable="true" style="display:inline;">Меню пользователя</span></p></div><script type="text/javascript">nav_menu_body();</script><div class="popupmenu-new" id="post-member-usercp_menu" style="display: none; width: 130px; position: absolute; left: 0px; top:0px;">
-<div class="popupmenu-item-last">
-<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=Members">Пользователи</a></div>
-<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=search&username-id=2556269&source=pst&sort=dd&noform=1">Мои ответы</a></div>
-<div class="popupmenu-item"><a href="http://4pda.ru/forum/index.php?act=attach&code=showuser">Мои файлы</a></div>
+          <a class="main-nav-link" href="/categories/Подкаст/The-Big-Beard-Theory/">The Big Beard Theory</a>
 
-<div class="popupmenu-item-last"><b><a href="http://4pda.ru/forum/index.php?act=UserCP" title="Настройки форума">Настройки</a></b></div>
-	</div>
-</div>
-<script type="text/javascript">ipsmenu.register("post-member-usercp","","usercp_menu","usercp_menu_out");</script><script type="text/javascript">window.CONFIG = {member_id:2556269,baseurl:"http://4pda.ru/forum/index.php?",mailboxes:["u2556269"],ws:"ws://app.4pda.ru/ws/",xhr:"http://app.4pda.ru/er/"};</script><div id="events-wrapper" style="display:none;"><div id="events-list"></div><a href="http://4pda.ru/forum/index.php?act=qms&" id="events-count" data-count="0">Сообщений: 0</a></div><script src="http://s.4pda.to/JK4KQ2BWPDMxWxi24i8J0T.js?_=1481266113" charset="windows-1251"></script><style type="text/css">@import url("http://s.4pda.to/JK4KQ2BWPbctRMIFnytaJyz0Wtj.css");</style><link rel="stylesheet" href="http://s.4pda.to/JK4K7Hm8z2Ez2nVLJKYIh5e2tbo72h6bz0oC0xukXKl313.css?_=1481266006"  media="all"/><script type="text/javascript" src="http://s.4pda.to/JK4K7Hm8z2Ez2nVLJKYIykz0nr3w8ncIvsMoaolARz0elle.js?_=5"></script><div class="globalmesswrap" style="display:none" id="gc_1"><p style="float:right;width:auto;margin:7px;padding:0"><a href="javascript:toggleglobalmess(1,0,1482016563);" style="text-decoration:none;margin:-.4em;padding:.4em;display:inline-block;position:relative"><img src="http://s.4pda.to/JK4K79GIw5um4A7z1z0eYoSGwOtELFyCwz1oZDlARz0eFz20.gif" border="0" alt="Показать объявления"/></a></p><h4>Объявления</h4></div><div class="globalmesswrap" style="display:show" id="go_1"><p style="float:right;width:auto;margin:7px;padding:0"><a href="javascript:toggleglobalmess(1,1,1482016563);" style="text-decoration:none;margin:-.4em;padding:.4em;display:inline-block;position:relative"><img src="http://s.4pda.to/JK4K79mI3kjZdi3MknWWihqIgDRfz2JeUDPgaHXLrdn9V.gif" border="0" alt="Скрыть объявления"/></a></p><h4>Объявления</h4><div class="globalmesscontent"><a title="Ссылка" rel="nofollow" href="http://4pda.ru/forum/index.php?showtopic=789149" target="_blank"><div align="center"><b><span style="color:orangered">Выиграй Hi-Fi плеер в конкурсе "Слышать больше с FiiO</span></b></div></a></div></div><div id="navstrip"><img src="http://s.4pda.to/JK4K2I3i6rAXFz0JkiYJTjz15pWKtH0gdeoGQH.gif" border="0"  alt="&gt;" />&nbsp;<a href="http://4pda.ru/forum/index.php?act=idx">4PDA</a>&nbsp;&gt;&nbsp;<a href="http://4pda.ru/forum/index.php?showforum=200">Административный</a></div><script language="javascript" type="text/javascript"><!--
-	var
-		img_markers = {
-			"bc_new.gif" : "bc_nonew.gif",
-			"bf_new.gif" : "bf_nonew.gif",
-			"br_new.gif" : "br_nonew.gif"
-		}
-	,	regex_markers = "bc_new.gif|bf_new.gif|br_new.gif"
-	,	perm_can_edit = 0
-	,	perm_can_open = 0
-	,	perm_can_close = 0
-	,	perm_max_length = 150
-	;
-	--></script><script type="text/javascript" src="http://s.4pda.to/JK4KPrMgAs7YMz1UWOEGKMp0jgqv42lkz2swRo.js"></script><br /><div class="borderwrap" style="display:none" id="fc_200"><div class="maintitlecollapse"><p class="expand"><a href="javascript:togglecategory(200,0);"><img src="http://s.4pda.to/JK4K79GIw5um4A7z1z0eYoSGwOtELFyCwz1oZDlARz0eFz20.gif" border="0"  alt="+" /></a></p><p><img src="http://s.4pda.to/JK4KPT4dPz20oZxCPULpFpaqyYVKLGsiSquBz2BrH.gif" border="0"  alt="&gt;" width="8" height="8" />&nbsp;<a href="/forum/index.php?showforum=200">Административный - подфорумы</a></p></div></div>
-		<div class="borderwrap" style="display:" id="fo_200"><div class="maintitle">
-			<p class="expand"><a href="javascript:togglecategory(200,1);"><img src="http://s.4pda.to/JK4K79mI3kjZdi3MknWWihqIgDRfz2JeUDPgaHXLrdn9V.gif" border="0" /></a></p>
-			<p><img src="http://s.4pda.to/JK4KPT4dPz20oZxCPULpFpaqyYVKLGsiSquBz2BrH.gif" border="0"  alt="&gt;" width="8" height="8" />&nbsp;<a href="/forum/index.php?showforum=200">Административный - подфорумы</a></p>
-			</div>
-			<table class="ipbtable" cellspacing="1"><tr><th colspan="2" width="66%">Форум</th><th style="text-align:center" width="7%">Тем</th><th style="text-align:center" width="7%">Ответов</th><th width="35%">Последнее сообщение</th></tr><tr><td style="text-align:center" class="row2" width="1%"><a id="f-5" href="/forum/index.php?act=login&CODE=04&f=5&fromforum=200&i=1" title="Отметить форум прочитанным?" onclick="boards_send_marker_update(5, 1);return false;"><img src="http://s.4pda.to/JK4KHX6SYugcrIFvWOQjx7UxZues4u0IFowaHCU.gif" border="0"  alt="+" /></a></td><td class="row2" onmousemove="info_mm(this);" onmouseout="info_mo(this);"><b><a href="/forum/index.php?showforum=5">4PDA.ru - работа сайта</a></b><br /><span class="forumdesc">Предложения и отзывы по работе сайта и форума 4PDA.ru. Счетчик сообщений отключен. <hr class="sfr "/><b><a href="/forum/index.php?showforum=373">Багтрекер</a>, <a href="/forum/index.php?showforum=505">Школа Куратора</a>, <a href="/forum/index.php?showforum=828">Мобильный клиент 4PDA</a></b><br /><i>Модераторы: <a href="/forum/index.php?act=Members&filter=4">Админы</a></i></span></td><td style="text-align:center" class="row1">1358</td><td style="text-align:center" class="row1">84706</td><td class="row1" nowrap="nowrap"><a href="/forum/index.php?showtopic=93526&amp;view=getlastpost" title="К последнему сообщению"><img src="http://s.4pda.to/JK4K0U8sWmjeXRz1nbKaz0ayqZTFM9J4kS7o6TNESRHCU.gif" border="0"  alt="&gt;&gt;" /></a> <span>Сегодня, 01:20<br /><b>Тема:</b>&nbsp;<a href="/forum/index.php?showtopic=93526&amp;view=getnewpost" title="К первому непрочитанному сообщению: Пробуем загружать файлы и картинки на форум">Пробуем загружать файлы и карт...</a><br /><b>Автор:</b> <a href="/forum/index.php?showuser=3461759">pamarinS</a></span></td></tr><td class="catend" colspan="5"><!-- no content --></td></tr></table></div><!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter29691590 = new Ya.Metrika({id:29691590, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/29691590" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><br /><br />
-			<table cellspacing="0" id="gfooter">
-				<tr>
-					<td width="25%">&nbsp;</td>
-					<td width="50%" align="center" nowrap="nowrap"><a href="/wp-content/plugins/ngx.php?mb=1"><b>Мобильная версия</b></a>&nbsp;&nbsp;&nbsp;<a href="lofiversion/index.php?f200.html"><b>Текстовая версия</b></a></td>
-					<td width="25%" align="right" nowrap="nowrap">Сейчас: 18.12.16, 02:16</td>
-				</tr>
-			</table>
-<script type="text/javascript">
-//<![CDATA[
-if("jsEmoticons" in window)jsEmoticons.parseAll();else("$4" in window && $4.onInit("jsEmoticons",function(){jsEmoticons.parseAll()}));
-if("initPostBlock" in window)initPostBlock();else("$4" in window && $4.onInit("initPostBlock",function(){initPostBlock()}));
-menu_do_global_init();
-show_inline_messages();
-//]]>
-</script>
-			<!-- Copyright Information -->
-			<div align="center" class="copyright">
-				&copy; 4PDA 2005-2016 г. Все права защищены.<br />4PDA<sup>&reg;</sup> - зарегистрированный товарный знак.<br />
-				<a href="/copyright_notice/">Условия использования информации</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://4pda.ru/disclaimer/">Отказ от ответственности</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-				<a href="/advert/" title="Размещение рекламы"><strong>Размещение рекламы</strong></a><br />
-				<br />
-				<noindex><a href="http://www.ibresource.ru/" style="text-decoration:none" target="_blank">Форум</a> <a href="http://www.invisionboard.com" style="text-decoration:none" target="_blank">IP.Board</a> &copy; 2016 &nbsp;<a href="http://www.invisionpower.com" style="text-decoration:none" target="_blank">IPS, Inc</a>.<br /></noindex>
-			</div>
-			<!-- / Copyright -->
-			<div style="text-align:center">
+          <a class="main-nav-link" href="/categories/Подкаст/BeardyBuilding/">BeardyBuilding</a>
 
-			<script type="text/javascript" src="http://s.4pda.to/JK4KRvTd0Pd.js?_=2"></script>
+      </nav>
 
-<noindex><span class="social-icons">
-<a href="http://twitter.com/4pdaru" rel="nofollow" title="Следуйте за нами в Twitter" target="_blank" class="icon-TWITTER"></a>&nbsp;<a href="http://vk.com/4pdaru" rel="nofollow" title="Официальная группа 4pda" target="_blank" class="icon-VK"></a>&nbsp;<a href="https://www.facebook.com/4pdaru" rel="nofollow" title="Официальная страница в Facebook" target="_blank" class="icon-FB"></a>&nbsp;<a href="http://www.youtube.com/user/4pdaRU" rel="nofollow" title="Наш канал на YouTube" target="_blank" class="icon-YOUTUBE"></a>
-</span>
-</noindex>
-<br />
-<br />
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><script data-pagespeed-no-defer>(function(){var g=this;function h(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};function l(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};function m(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n;function p(b,d,a,c,e){this.h=b;this.j=d;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=c;this.b={};this.a=[];this.c={}}function q(b,d){var a,c,e=d.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&c<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});function r(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(t())),131072>=a.length+e.length&&(a+=e),d=!0);u=a;if(d){c=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(v){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function t(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var u="";h("pagespeed.CriticalImages.getBeaconData",function(){return u});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/','KyYlIAuZmR',true,false,'3hkbQ8cBhY8');</script><img class="avatar" src="/xavatar.jpg.pagespeed.ic.N3yMVahn5_.webp" data-pagespeed-url-hash="3696207914" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
 
-<!--LiveInternet counter--><script type="text/javascript"><!--
-document.write("<a href='http://www.liveinternet.ru/click' "+
-"target=_blank><img src='http://counter.yadro.ru/hit?t14.11;r"+
-escape(document.referrer)+((typeof(screen)=="undefined")?"":
-";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-";"+Math.random()+
-"' alt='' title='LiveInternet: number of pageviews for 24 hours,"+
-" of visitors for 24 hours and for today is shown' "+
-"border=0 width=88 height=31></a>")//--></script><!--/LiveInternet-->
-		</div>
-		</div>
-		</body></html>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://beardycast.com"></form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+
+          <td><a class="main-nav-link" href="/categories/Новости/">Статьи</a></td>
+
+          <td><a class="main-nav-link" href="/categories/Обзор/">Обзоры</a></td>
+
+          <td><a class="main-nav-link" href="/2016/07/19/Andrey_B/podcast-how-to/">Как слушать подкасты</a></td>
+
+          <td><a class="main-nav-link" href="/categories/Подкаст/BeardyCast/">BeardyCast</a></td>
+
+          <td><a class="main-nav-link" href="/categories/Подкаст/The-Big-Beard-Theory/">The Big Beard Theory</a></td>
+
+          <td><a class="main-nav-link" href="/categories/Подкаст/BeardyBuilding/">BeardyBuilding</a></td>
+
+        <!-- <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://beardycast.com"></form>
+        </td> -->
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <a href="/"><img id="avatar" src="/xavatar.jpg.pagespeed.ic.N3yMVahn5_.webp" data-pagespeed-url-hash="3696207914" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+      <h2 id="name">BeardyCast</h2>
+      <h3 id="title">Блог об IT, культуре и науке</h3>
+
+
+    </div>
+    <!--
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        305
+        <a href="/"><span>посты</span></a>
+      </div>
+      <div class="article-info-block">
+        1166
+        <a href="/tags/"><span>тэги</span></a>
+      </div>
+    </div>
+    -->
+
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+
+            <td><a href="http://twitter.com/beardyshow" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+
+            <td><a href="http://telegram.me/beardycast" target="_blank" title="telegram"><i class="fa fa-paper-plane"></i></a></td>
+
+            <td><a href="https://www.youtube.com/user/BeardyCastTV" target="_blank" title="youtube"><i class="fa fa-youtube-play"></i></a></td>
+
+            <td><a href="http://vk.com/beardycast" target="_blank" title="vk"><i class="fa fa-vk"></i></a></td>
+
+            <td><a href="https://itunes.apple.com/ru/podcast/beardycast/id868222886" target="_blank" title="itunes"><i class="fa fa-apple"></i></a></td>
+
+            <td><a href="/atom.xml" target="_blank" title="rss"><i class="fa fa-rss"></i></a></td>
+
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+</aside>
+
+
+      <section id="main"><article id="post-Andrey_B/westworld-timeline" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+
+
+		<img src="/img/Andrey_B/westworld/xwestworld.jpg.pagespeed.ic.Cs8I0mXX8Z.webp" class="article-banner" data-pagespeed-url-hash="2243028647" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+
+
+
+
+
+
+
+      <header class="article-header">
+
+
+    <h1 class="article-title" itemprop="name">
+      Собираем Westworld. Статья и подкаст
+    </h1>
+
+
+        <div class="article-meta">
+          <!--
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/12/07/Andrey_B/westworld-timeline/">
+      <time datetime="2016-12-07T17:10:00.000Z" itemprop="datePublished">07 декабря 2016</time>
+    </a>
+  </div>
+
+ -->
+          <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <a href="/archives/2016/12/"><time datetime="07 декабря 2016" itemprop="datePublished">07 декабря 2016</time></a>
+          </div>
+
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Обзор/">Обзор</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Обзор/Фильмы-и-сериалы/">Фильмы и сериалы</a>
+  </div>
+
+        </div>
+      </header>
+
+    <div class="article-entry" itemprop="articleBody">
+
+
+        <p>&#x417;&#x430;&#x43A;&#x43E;&#x43D;&#x447;&#x438;&#x43B;&#x441;&#x44F; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B; Westworld, &#x438;&#x43B;&#x438; &#x436;&#x435; &#xAB;&#x41C;&#x438;&#x440; &#x414;&#x438;&#x43A;&#x43E;&#x433;&#x43E; &#x417;&#x430;&#x43F;&#x430;&#x434;&#x430;&#xBB; (&#x432; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x43C; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x43E;&#x434;&#x435; &#x2014; &#xAB;&#x417;&#x430;&#x43F;&#x430;&#x434;&#x43D;&#x44B;&#x439; &#x43C;&#x438;&#x440;&#xBB;). &#x41C;&#x44B; &#x441;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x43B;&#x438; &#x441;&#x442;&#x430;&#x442;&#x44C;&#x44E; &#x438; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43B;&#x438; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43F;&#x43E;&#x434;&#x43A;&#x430;&#x441;&#x442;, &#x433;&#x434;&#x435; &#x43F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E; &#x43F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E; &#x440;&#x430;&#x437;&#x431;&#x438;&#x440;&#x430;&#x435;&#x43C; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x441;&#x435;&#x437;&#x43E;&#x43D; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x430; &#x438; &#x434;&#x435;&#x43B;&#x438;&#x43C;&#x441;&#x44F; &#x441;&#x432;&#x43E;&#x438;&#x43C;&#x438; &#x432;&#x43F;&#x435;&#x447;&#x430;&#x442;&#x43B;&#x435;&#x43D;&#x438;&#x44F;&#x43C;&#x438; &#x43E;&#x442; &#x43F;&#x440;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x430;.</p>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p>&#x41D;&#x430;&#x448;&#x435; &#x43C;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x43E; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x435; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x43B;&#x443;&#x448;&#x430;&#x442;&#x44C; &#x432; &#x43F;&#x43E;&#x434;&#x43A;&#x430;&#x441;&#x442;&#x435;. &#x421;&#x442;&#x430;&#x442;&#x44C;&#x44F; &#x438;&#x437;&#x43B;&#x430;&#x433;&#x430;&#x435;&#x442; &#x441;&#x44E;&#x436;&#x435;&#x442; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430; &#x432; &#x445;&#x440;&#x43E;&#x43D;&#x43E;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x43C; &#x43F;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x435;.</p>
+<p>&#x414;&#x430;&#x43B;&#x44C;&#x448;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; <strong>&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x43E;&#x439;&#x43B;&#x435;&#x440;&#x43E;&#x432;</strong>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x440;&#x430;&#x437;&#x432;&#x435;&#x44E;&#x442; &#x438;&#x43D;&#x442;&#x440;&#x438;&#x433;&#x443; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x44F; Westworld. &#x415;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x435;&#x449;&#x435; &#x43D;&#x435; &#x441;&#x43C;&#x43E;&#x442;&#x440;&#x435;&#x43B;&#x438; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B; &#x2014; &#x43D;&#x435; &#x447;&#x438;&#x442;&#x430;&#x439;&#x442;&#x435; &#x441;&#x442;&#x430;&#x442;&#x44C;&#x44E; &#x438; &#x43D;&#x435; &#x441;&#x43B;&#x443;&#x448;&#x430;&#x439;&#x442;&#x435; &#x43F;&#x43E;&#x434;&#x43A;&#x430;&#x441;&#x442;.</p>
+</blockquote>
+<hr>
+<h1 id="&#x43E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C;-westworld"><a href="#u041E_u0441_u043E_u0431_u0435_u043D_u043D_u043E_u0441_u0442_u044C_Westworld" class="headerlink" title="&#x41E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C; Westworld"></a>&#x41E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C; Westworld</h1><p>&#x412; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x435; &#x442;&#x440;&#x438; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x43B;&#x438;&#x43D;&#x438;&#x438;, &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x44F; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x445; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x448;&#x430;&#x43D;&#x44B; &#x434;&#x440;&#x443;&#x433; &#x441; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x43C; &#x438; &#x43F;&#x440;&#x430;&#x43A;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x434;&#x43E; &#x441;&#x430;&#x43C;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x43D;&#x446;&#x430; &#x437;&#x440;&#x438;&#x442;&#x435;&#x43B;&#x44C; &#x43D;&#x435; &#x43F;&#x43E;&#x43D;&#x438;&#x43C;&#x430;&#x435;&#x442;, &#x447;&#x442;&#x43E; &#x43F;&#x440;&#x43E;&#x438;&#x441;&#x445;&#x43E;&#x434;&#x438;&#x442;. &#x41C;&#x43E;&#x434;&#x435;&#x43B;&#x44C; &#x43F;&#x43E;&#x432;&#x435;&#x441;&#x442;&#x432;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x445;&#x43E;&#x436;&#x430; &#x43D;&#x430; &#x444;&#x438;&#x43B;&#x44C;&#x43C; &#xAB;&#x41F;&#x43E;&#x43C;&#x43D;&#x438;&#xBB; (Memento), &#x447;&#x44C;&#x438;&#x43C; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x43C; &#x431;&#x44B;&#x43B; &#x414;&#x436;&#x43E;&#x43D;&#x430;&#x442;&#x430;&#x43D; &#x41D;&#x43E;&#x43B;&#x430;&#x43D; &#x2014; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43B;&#x44C; Westworld. &#x41D;&#x430; &#x43F;&#x440;&#x435;&#x43C;&#x44C;&#x435;&#x440;&#x435; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x444;&#x438;&#x43B;&#x44C;&#x43C;&#x430; &#x43E;&#x43D; &#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x43A;&#x43E;&#x43C;&#x438;&#x43B;&#x441;&#x44F; &#x441;&#x43E; &#x441;&#x432;&#x43E;&#x435;&#x439; &#x431;&#x443;&#x434;&#x443;&#x449;&#x435;&#x439; &#x436;&#x435;&#x43D;&#x43E;&#x439;, &#x41B;&#x438;&#x437;&#x43E;&#x439; &#x414;&#x436;&#x43E;&#x439;. &#x41E;&#x43D;&#x430; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x43F;&#x440;&#x43E;&#x434;&#x44E;&#x441;&#x435;&#x440;&#x43E;&#x43C; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x430;.</p>
+<p>&#xAB;&#x41C;&#x438;&#x440; &#x414;&#x438;&#x43A;&#x43E;&#x433;&#x43E; &#x417;&#x430;&#x43F;&#x430;&#x434;&#x430;&#xBB; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44E; &#x43E;&#x431; &#x438;&#x433;&#x440;&#x435; &#x441; &#x43D;&#x435;&#x432;&#x435;&#x440;&#x43E;&#x44F;&#x442;&#x43D;&#x44B;&#x43C; &#x443;&#x440;&#x43E;&#x432;&#x43D;&#x435;&#x43C; &#x43F;&#x43E;&#x433;&#x440;&#x443;&#x436;&#x435;&#x43D;&#x438;&#x44F;: &#x438;&#x433;&#x440;&#x43E;&#x43A; &#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x435;&#x442; &#x432; &#x43D;&#x435;&#x439; &#x43D;&#x435;&#x43F;&#x43E;&#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x435;. &#x41E;&#x43D; &#x43F;&#x440;&#x438;&#x441;&#x443;&#x442;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442; &#x432; &#x43D;&#x435;&#x439; &#x441;&#x430;&#x43C;.</p>
+<p>&#x421;&#x435;&#x440;&#x438;&#x430;&#x43B; &#x441;&#x442;&#x430;&#x43B; &#x442;&#x430;&#x43A;&#x43E;&#x439; &#x436;&#x435; &#x438;&#x433;&#x440;&#x43E;&#x439;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x437;&#x440;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x43B;&#x438; &#x43D;&#x435;&#x43F;&#x43E;&#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x435;. &#x41A;&#x430;&#x436;&#x434;&#x430;&#x44F; &#x441;&#x435;&#x440;&#x438;&#x44F; &#x437;&#x430;&#x434;&#x430;&#x435;&#x442; &#x432;&#x441;&#x435; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x432; &#x438; &#x440;&#x435;&#x434;&#x43A;&#x43E; &#x434;&#x430;&#x435;&#x442; &#x43D;&#x430; &#x43D;&#x438;&#x445; &#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x44B;&#x435; &#x43E;&#x442;&#x432;&#x435;&#x442;&#x44B;. &#x41E;&#x434;&#x43D;&#x430;&#x43A;&#x43E; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x441;&#x442;&#x44B; &#x440;&#x430;&#x437;&#x43B;&#x43E;&#x436;&#x438;&#x43B;&#x438; &#x43F;&#x43E; &#x432;&#x441;&#x435;&#x43C;&#x443; &#x445;&#x440;&#x43E;&#x43D;&#x43E;&#x43C;&#x435;&#x442;&#x440;&#x430;&#x436;&#x443; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430; &#x434;&#x435;&#x441;&#x44F;&#x442;&#x43A;&#x438; &#x43F;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x437;&#x43E;&#x43A;, &#x438; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x437;&#x440;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x44B;&#x432;&#x430;&#x43B;&#x438; &#x438;&#x445; &#x432;&#x43E;&#x435;&#x434;&#x438;&#x43D;&#x43E;. &#x41A;&#x430;&#x43A; &#x43F;&#x430;&#x437;&#x437;&#x43B;. &#x422;&#x435;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x444;&#x43E;&#x440;&#x443;&#x43C;&#x44B; &#x43B;&#x43E;&#x43C;&#x438;&#x43B;&#x438;&#x441;&#x44C; &#x43E;&#x442; &#x43A;&#x43E;&#x43C;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x440;&#x438;&#x435;&#x432; &#x441; &#x43E;&#x431;&#x441;&#x443;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x441;&#x435;&#x440;&#x438;&#x439;, &#x430; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x442;&#x438;&#x43D;&#x433;&#x43E;&#x432;&#x44B;&#x439; &#x43C;&#x430;&#x445;&#x43E;&#x432;&#x438;&#x43A; &#x440;&#x430;&#x441;&#x43A;&#x440;&#x443;&#x447;&#x438;&#x432;&#x430;&#x43B;&#x441;&#x44F; &#x432;&#x441;&#x435; &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x435;&#x435;.</p>
+<p>&#x414;&#x435;&#x441;&#x44F;&#x442;&#x430;&#x44F; &#x441;&#x435;&#x440;&#x438;&#x44F; (&#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x44F;&#x44F; &#x432; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x435;) &#x440;&#x430;&#x437;&#x43B;&#x43E;&#x436;&#x438;&#x43B;&#x430; &#x43A;&#x430;&#x440;&#x442;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x434; &#x438;&#x433;&#x440;&#x43E;&#x43A;&#x430;&#x43C;&#x438;. &#x41C;&#x44B; &#x432;&#x441;&#x435; &#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43B;&#x438;&#x441;&#x44C; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43D;&#x438;&#x43A;&#x430;&#x43C;&#x438; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x443;&#x44E; &#x43F;&#x440;&#x438;&#x434;&#x443;&#x43C;&#x430;&#x43B; &#x420;&#x43E;&#x431;&#x435;&#x440;&#x442; &#x424;&#x43E;&#x440;&#x434; &#x2014; &#x433;&#x43B;&#x430;&#x432;&#x430; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x440;&#x430;&#x437;&#x432;&#x43B;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x439; Westworld.</p>
+<p><iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4894490/height/90/width/640/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/render-playlist/no/custom-color/e47400/" height="90" width="100%" scrolling="no" allowfullscreen webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe><br>&#x412;&#x435;&#x434;&#x443;&#x449;&#x438;&#x435;: &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x411;&#x430;&#x440;&#x44B;&#x448;&#x43D;&#x438;&#x43A;&#x43E;&#x432;, &#x421;&#x435;&#x440;&#x433;&#x435;&#x439; &#x415;&#x43F;&#x438;&#x445;&#x438;&#x43D;, &#x410;&#x43B;&#x435;&#x43A;&#x441; &#x41F;&#x430;&#x446;&#x430;&#x439;<br>&#x41F;&#x43E;&#x434;&#x43F;&#x438;&#x448;&#x438;&#x441;&#x44C;: <strong><a href="https://itunes.apple.com/ru/podcast/beardycast/id868222886" target="_blank" rel="external">iTunes</a></strong> | <strong><a href="https://pcr.apple.com/id868222886" target="_blank" rel="external">RSS</a></strong></p>
+<h1 id="&#x441;&#x44E;&#x436;&#x435;&#x442;"><a href="#u0421_u044E_u0436_u0435_u0442" class="headerlink" title="&#x421;&#x44E;&#x436;&#x435;&#x442;"></a>&#x421;&#x44E;&#x436;&#x435;&#x442;</h1><h2 id="40-34-&#x433;&#x43E;&#x434;&#x430;-&#x43D;&#x430;&#x437;&#x430;&#x434;"><a href="#40-34__u0433_u043E_u0434_u0430__u043D_u0430_u0437_u0430_u0434" class="headerlink" title="40-34 &#x433;&#x43E;&#x434;&#x430; &#x43D;&#x430;&#x437;&#x430;&#x434;"></a>40-34 &#x433;&#x43E;&#x434;&#x430; &#x43D;&#x430;&#x437;&#x430;&#x434;</h2><p>&#x414;&#x432;&#x430; &#x438;&#x43D;&#x436;&#x435;&#x43D;&#x435;&#x440;&#x430;, &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x423;&#x44D;&#x431;&#x435;&#x440; &#x438; &#x420;&#x43E;&#x431;&#x435;&#x440;&#x442; &#x424;&#x43E;&#x440;&#x434;, &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x430;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x43A; &#x440;&#x430;&#x437;&#x432;&#x43B;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x439;. &#x41F;&#x430;&#x440;&#x43A; &#x43D;&#x435;&#x43E;&#x431;&#x44B;&#x447;&#x43D;&#x44B;&#x439;, &#x441; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;&#x43C;&#x438;; &#x43F;&#x430;&#x440;&#x43A; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x439;, &#x43E;&#x43D; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x433;&#x43E;&#x441;&#x442;&#x44F;&#x43C; &#x440;&#x435;&#x430;&#x43B;&#x438;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x441;&#x430;&#x43C;&#x44B;&#x435; &#x43F;&#x43E;&#x442;&#x430;&#x435;&#x43D;&#x43D;&#x44B;&#x435; &#x436;&#x435;&#x43B;&#x430;&#x43D;&#x438;&#x44F;. &#x420;&#x43E;&#x431;&#x43E;&#x442;&#x44B;-&#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x44B; &#x438;&#x43C;&#x438;&#x442;&#x438;&#x440;&#x443;&#x44E;&#x442; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43B;&#x44E;&#x434;&#x435;&#x439; &#x2014; &#x441; &#x43D;&#x438;&#x43C;&#x438; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x44C;&#x441;&#x44F; &#x441;&#x435;&#x43A;&#x441;&#x43E;&#x43C;, &#x43F;&#x43E;&#x438;&#x433;&#x440;&#x430;&#x442;&#x44C; &#x432; &#x43A;&#x430;&#x440;&#x442;&#x44B;, &#x43F;&#x43E;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x44C;, &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x441;&#x442;&#x438; &#x441;&#x434;&#x435;&#x43B;&#x43A;&#x443; &#x438;&#x43B;&#x438; &#x432;&#x44B;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x43E;&#x445;&#x43E;&#x442;&#x443;. &#x412; &#x43A;&#x43E;&#x43D;&#x446;&#x435; &#x43A;&#x43E;&#x43D;&#x446;&#x43E;&#x432;, &#x438;&#x445; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x443;&#x431;&#x438;&#x442;&#x44C;. &#x414;&#x430; &#x438; &#x432;&#x43E;&#x43E;&#x431;&#x449;&#x435;, &#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x44C; &#x432;&#x441;&#x435;, &#x447;&#x442;&#x43E; &#x437;&#x430;&#x431;&#x43B;&#x430;&#x433;&#x43E;&#x440;&#x430;&#x441;&#x441;&#x443;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x2014; &#x447;&#x44C;&#x438; &#x434;&#x435;&#x43D;&#x44C;&#x433;&#x438;, &#x442;&#x43E;&#x433;&#x43E; &#x438; &#x442;&#x430;&#x43F;&#x43A;&#x438;.</p>
+<p>&#x41E;&#x434;&#x43D;&#x430;&#x43A;&#x43E; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43B;&#x44F;&#x43C;&#x438; &#x432;&#x43E;&#x437;&#x43D;&#x438;&#x43A; &#x43A;&#x43E;&#x43D;&#x444;&#x43B;&#x438;&#x43A;&#x442;. &#x423; &#x43D;&#x438;&#x445; &#x431;&#x44B;&#x43B;&#x438; &#x441;&#x43E;&#x432;&#x441;&#x435;&#x43C; &#x440;&#x430;&#x437;&#x43D;&#x44B;&#x435; &#x446;&#x435;&#x43B;&#x438; &#x438; &#x440;&#x430;&#x437;&#x43D;&#x43E;&#x435; &#x43E;&#x442;&#x43D;&#x43E;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x43A; &#x441;&#x438;&#x442;&#x443;&#x430;&#x446;&#x438;&#x438;: &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; <a href="https://ru.wikipedia.org/wiki/&#x420;&#x430;&#x439;&#x442;,_&#x414;&#x436;&#x435;&#x444;&#x444;&#x440;&#x438;" target="_blank" rel="external"><em>(&#x414;&#x436;&#x435;&#x444;&#x444;&#x440;&#x438; &#x420;&#x430;&#x439;&#x442;)</em></a> &#x43F;&#x43E;&#x442;&#x435;&#x440;&#x44F;&#x43B; &#x441;&#x44B;&#x43D;&#x430; &#x438; &#x443;&#x432;&#x430;&#x436;&#x430;&#x43B; &#x436;&#x438;&#x437;&#x43D;&#x44C;, &#x43E;&#x43D; &#x445;&#x43E;&#x442;&#x435;&#x43B; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x438;&#x441;&#x43A;&#x443;&#x441;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x438;&#x43D;&#x442;&#x435;&#x43B;&#x43B;&#x435;&#x43A;&#x442; &#x438; &#x434;&#x430;&#x442;&#x44C; &#x436;&#x438;&#x437;&#x43D;&#x44C; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;&#x43C;. &#x424;&#x43E;&#x440;&#x434; &#x436;&#x435; <a href="https://ru.wikipedia.org/wiki/&#x425;&#x43E;&#x43F;&#x43A;&#x438;&#x43D;&#x441;,_&#x42D;&#x43D;&#x442;&#x43E;&#x43D;&#x438;" target="_blank" rel="external"><em>(&#x42D;&#x43D;&#x442;&#x43E;&#x43D;&#x438; &#x425;&#x43E;&#x43F;&#x43A;&#x438;&#x43D;&#x441;)</em></a> &#x432;&#x438;&#x434;&#x435;&#x43B; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435; &#x438;&#x441;&#x442;&#x43E;&#x447;&#x43D;&#x438;&#x43A; &#x434;&#x43E;&#x445;&#x43E;&#x434;&#x430;, &#x430; &#x432; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x442;&#x435; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432; &#x438; &#x43E;&#x442;&#x441;&#x443;&#x442;&#x441;&#x442;&#x432;&#x438;&#x438; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x445; &#x43D;&#x435;&#x434;&#x443;&#x433;&#x43E;&#x432; &#x2014; &#x44D;&#x43B;&#x435;&#x433;&#x430;&#x43D;&#x442;&#x43D;&#x43E;&#x441;&#x442;&#x44C;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-9.jpg.pagespeed.ic.yQz4LAVUWt.webp" alt="&#x420;&#x43E;&#x431;&#x435;&#x440;&#x442; &#x424;&#x43E;&#x440;&#x434;" data-pagespeed-url-hash="3793985735" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x41C;&#x438;&#x43D;&#x438;&#x43C;&#x443;&#x43C; &#x43F;&#x43E;&#x43B;&#x43E;&#x432;&#x438;&#x43D;&#x443; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43B; &#x438; &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43B; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;. &#x414;&#x43B;&#x44F; &#x43E;&#x446;&#x435;&#x43D;&#x43A;&#x438; &#x441;&#x430;&#x43C;&#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x44F; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; &#x43E;&#x43D; &#x43F;&#x440;&#x438;&#x434;&#x443;&#x43C;&#x430;&#x43B; &#xAB;&#x43B;&#x430;&#x431;&#x438;&#x440;&#x438;&#x43D;&#x442;&#xBB;, &#x446;&#x435;&#x43D;&#x442;&#x440;&#x43E;&#x43C; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x43B; &#x441;&#x43F;&#x43E;&#x441;&##x43E;&#x431;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x442;&#x44C; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x44F;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43D;&#x435; &#x434;&#x438;&#x43A;&#x442;&#x443;&#x44E;&#x442;&#x441;&#x44F; &#x437;&#x430;&#x440;&#x430;&#x43D;&#x435;&#x435; &#x43F;&#x440;&#x43E;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x441;&#x43A;&#x440;&#x438;&#x43F;&#x442;&#x43E;&#x43C;.</p>
+<p>&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x44B;&#x432;&#x430;&#x44F;&#x441;&#x44C; &#x43D;&#x430; &#x433;&#x438;&#x43F;&#x43E;&#x442;&#x435;&#x437;&#x435; &#x431;&#x438;&#x43A;&#x430;&#x43C;&#x435;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x440;&#x430;&#x437;&#x443;&#x43C;&#x430;, &#x43E;&#x43D; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x43B; &#x432; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432; &#x43F;&#x430;&#x442;&#x447; &#x441; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x43D;&#x438;&#x43C; &#x43C;&#x43E;&#x43D;&#x43E;&#x43B;&#x43E;&#x433;&#x43E;&#x43C; &#x2014; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43B; &#x441;&#x43E;&#x431;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x443;&#x44E; &#x440;&#x435;&#x447;&#x44C;, &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x447;&#x435;&#x433;&#x43E; &#x43D;&#x430;&#x431;&#x43B;&#x44E;&#x434;&#x430;&#x43B; &#x437;&#x430; &#x438;&#x445; &#x440;&#x430;&#x437;&#x432;&#x438;&#x442;&#x438;&#x435;&#x43C;. &#x412;&#x441;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43E;&#x43D;&#x438; &#x441;&#x43B;&#x44B;&#x448;&#x430;&#x43B;&#x438; &#x43C;&#x43E;&#x43D;&#x43E;&#x43B;&#x43E;&#x433; &#x43A;&#x430;&#x43A; &#x433;&#x43E;&#x43B;&#x43E;&#x441; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430;, &#x43D;&#x435;&#x43A;&#x43E;&#x435;&#x433;&#x43E; &#x431;&#x43E;&#x436;&#x435;&#x441;&#x442;&#x432;&#x430;, &#x438; &#x43D;&#x438;&#x43A;&#x43E;&#x433;&#x434;&#x430; &#x43D;&#x435; &#x437;&#x430;&#x434;&#x443;&#x43C;&#x44B;&#x432;&#x430;&#x43B;&#x438;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x44D;&#x442;&#x43E; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x438;&#x445; &#x441;&#x43E;&#x431;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x435; &#x43C;&#x44B;&#x441;&#x43B;&#x438;.</p>
+<blockquote>
+<p>&#x411;&#x438;&#x43A;&#x430;&#x43C;&#x435;&#x440;&#x430;&#x43B;&#x438;&#x437;&#x43C; &#x2014; &#x433;&#x438;&#x43F;&#x43E;&#x442;&#x435;&#x437;&#x430; &#x432; &#x43F;&#x441;&#x438;&#x445;&#x43E;&#x43B;&#x43E;&#x433;&#x438;&#x438;, &#x447;&#x442;&#x43E; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; &#x440;&#x430;&#x437;&#x443;&#x43C; &#x43E;&#x434;&#x43D;&#x430;&#x436;&#x434;&#x44B; &#x43F;&#x440;&#x438;&#x43D;&#x44F;&#x43B; &#x441;&#x43E;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x435;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x438;&#x43B;&#x438;&#x441;&#x44C; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x434;&#x432;&#x443;&#x43C;&#x44F; &#x447;&#x430;&#x441;&#x442;&#x44F;&#x43C;&#x438; &#x43C;&#x43E;&#x437;&#x433;&#x430;: &#x43E;&#x434;&#x43D;&#x430; &#xAB;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;&#xBB;, &#x432;&#x442;&#x43E;&#x440;&#x430;&#x44F; &#xAB;&#x441;&#x43B;&#x443;&#x448;&#x430;&#x435;&#x442;&#xBB; &#x438; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x443;&#x435;&#x442;&#x441;&#x44F;. &#x41E;&#x43F;&#x44B;&#x442; &#x438; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x440;&#x430;&#x432;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x43B;&#x443;&#x448;&#x430;&#x440;&#x438;&#x44F; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x437;&#x433;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x44E;&#x442;&#x441;&#x44F; &#x432; &#x43B;&#x435;&#x432;&#x43E;&#x435; &#x43F;&#x43E;&#x43B;&#x443;&#x448;&#x430;&#x440;&#x438;&#x435; &#x447;&#x435;&#x440;&#x435;&#x437; &#x441;&#x43B;&#x443;&#x445;&#x43E;&#x432;&#x44B;&#x435; &#x433;&#x430;&#x43B;&#x43B;&#x44E;&#x446;&#x438;&#x43D;&#x430;&#x446;&#x438;&#x438;.</p>
+</blockquote>
+<p>&#x418;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x43B; &#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x43F;&#x438;&#x440;&#x430;&#x43C;&#x438;&#x434;&#x43E;&#x439;, &#x433;&#x434;&#x435; &#x43F;&#x430;&#x43C;&#x44F;&#x442;&#x44C; &#x2014; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x430;, &#x430; &#x441;&#x430;&#x43C;&#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x2014; &#x446;&#x435;&#x43B;&#x44C;, &#x432;&#x435;&#x440;&#x448;&#x438;&#x43D;&#x430;:</p>
+<ol>
+<li>&#x421;&#x430;&#x43C;&#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435;;</li>
+<li>&#x42D;&#x433;&#x43E;&#x438;&#x437;&#x43C;;</li>
+<li>&#x418;&#x43C;&#x43F;&#x440;&#x43E;&#x432;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44F;;</li>
+<li>&#x41F;&#x430;&#x43C;&#x44F;&#x442;&#x44C;.</li>
+</ol>
+<p>&#x41D;&#x43E; &#x44D;&#x442;&#x430; &#x441;&#x445;&#x435;&#x43C;&#x430; &#x43D;&#x435; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B;&#x430;, &#x438; &#x441;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C; &#x43E;&#x43D; &#x43F;&#x43E;&#x43D;&#x44F;&#x43B;, &#x447;&#x442;&#x43E; &#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x2014; &#x43D;&#x435; &#x43F;&#x438;&#x440;&#x430;&#x43C;&#x438;&#x434;&#x430; &#x438;&#x437; &#x446;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x438; &#x431;&#x430;&#x437;&#x43E;&#x432;&#x44B;&#x445; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x439;, &#x430; &#x447;&#x435;&#x440;&#x435;&#x434;&#x430; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x439; &#x438; &#x432;&#x44B;&#x431;&#x43E;&#x440;&#x43E;&#x432;. &#x422;&#x430;&#x43A; &#x440;&#x43E;&#x434;&#x438;&#x43B;&#x441;&#x44F; &#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x438;&#x439; &#xAB;&#x43B;&#x430;&#x431;&#x438;&#x440;&#x438;&#x43D;&#x442;&#xBB;: &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x441;&#x43D;&#x43E;&#x432;&#x430; &#x43F;&#x440;&#x43E;&#x43F;&#x430;&#x442;&#x447;&#x438;&#x43B; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432; &#x438; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x43B; &#x432; &#x43D;&#x438;&#x445; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43C;&#x435;&#x447;&#x442;&#x430;&#x442;&#x44C;. &#x41F;&#x43E; &#x441;&#x443;&#x442;&#x438;, &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x438;&#x43B; &#x434;&#x43E;&#x43C;&#x44B;&#x441;&#x43B;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x44F;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-3.jpg.pagespeed.ic.Va1HLId70E.webp" alt="&#x420;&#x43E;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x2014; &#x441;&#x430;&#x43C;&#x43E;&#x433;&#x43E; &#x441;&#x442;&#x430;&#x440;&#x43E;&#x433;&#x43E; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x430; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435;" data-pagespeed-url-hash="2026986209" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x43D;&#x430;&#x447;&#x430;&#x43B; &#x443;&#x441;&#x438;&#x43B;&#x435;&#x43D;&#x43D;&#x43E; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x442;&#x44C; &#x441; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; <a href="https://ru.wikipedia.org/wiki/&#x412;&#x443;&#x434;,_&#x42D;&#x432;&#x430;&#x43D;_&#x420;&#x44D;&#x439;&#x447;&#x435;&#x43B;" target="_blank" rel="external"><em>(&#x42D;&#x432;&#x430;&#x43D; &#x420;&#x44D;&#x439;&#x447;&#x435;&#x43B; &#x412;&#x443;&#x434;)</em></a>, &#x441;&#x430;&#x43C;&#x44B;&#x43C; &#x441;&#x442;&#x430;&#x440;&#x44B;&#x43C; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x43C; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435;. &#x412;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x43E;&#x43D;&#x438; &#x447;&#x438;&#x442;&#x430;&#x43B;&#x438; &#x434;&#x435;&#x442;&#x441;&#x43A;&#x438;&#x435; &#x441;&#x43A;&#x430;&#x437;&#x43A;&#x438;, &#x43A;&#x43D;&#x438;&#x433;&#x438;, &#x43E;&#x431;&#x441;&#x443;&#x436;&#x434;&#x430;&#x43B;&#x438; &#x43F;&#x440;&#x43E;&#x447;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x43E;&#x435; &#x438; &#x432;&#x435;&#x43B;&#x438; &#x434;&#x438;&#x430;&#x43B;&#x43E;&#x433;&#x438; &#x43E; &#x436;&#x438;&#x437;&#x43D;&#x438;; &#x434;&#x435;&#x43B;&#x438;&#x43B;&#x438;&#x441;&#x44C; &#x441;&#x43E;&#x43A;&#x440;&#x43E;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x436;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x44F;&#x43C;&#x438; &#x438; &#x43F;&#x44B;&#x442;&#x430;&#x43B;&#x438;&#x441;&#x44C; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x438;&#x437; &#x43D;&#x438;&#x445; &#x432;&#x44B;&#x432;&#x43E;&#x434;&#x44B;.</p>
+<p>&#x421;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x443;&#x432;&#x438;&#x434;&#x435;&#x43B; &#x432; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x437;&#x430;&#x447;&#x430;&#x442;&#x43A;&#x438; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x430;&#x43C;&#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x44F;. &#x41E;&#x431;&#x440;&#x430;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x438; &#x432;&#x43E;&#x437;&#x431;&#x443;&#x436;&#x434;&#x435;&#x43D;&#x43D;&#x44B;&#x439;, &#x43E;&#x43D; &#x43F;&#x43E;&#x448;&#x435;&#x43B; &#x43A; &#x424;&#x43E;&#x440;&#x434;&#x443;; &#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B;, &#x447;&#x442;&#x43E; &#x43D;&#x435;&#x43B;&#x44C;&#x437;&#x44F; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x43A;. &#x412;&#x435;&#x434;&#x44C; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x44B; &#x443;&#x436;&#x435; &#x43F;&#x43E;&#x447;&#x442;&#x438; &#x43B;&#x44E;&#x434;&#x438;. &#x424;&#x43E;&#x440;&#x434; &#x441; &#x43D;&#x438;&#x43C; &#x431;&#x44B;&#x43B; &#x43A;&#x430;&#x442;&#x435;&#x433;&#x43E;&#x440;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x43D;&#x435; &#x441;&#x43E;&#x433;&#x43B;&#x430;&#x441;&#x435;&#x43D;, &#x442;&#x430;&#x43A; &#x43A;&#x430;&#x43A; &#x434;&#x43B;&#x44F; &#x43D;&#x435;&#x433;&#x43E; &#x43E;&#x43D;&#x438; &#x431;&#x44B;&#x43B;&#x438; &#x43F;&#x443;&#x441;&#x442;&#x44C; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x441;&#x43D;&#x44B;&#x43C; &#x438; &#x445;&#x438;&#x442;&#x440;&#x43E;&#x443;&#x43C;&#x43D;&#x44B;&#x43C;, &#x43D;&#x43E; &#x430;&#x442;&#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43E;&#x43C;.</p>
+<blockquote>
+<p>&#x41E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x432; &#x442;&#x432;&#x435;&#x440;&#x434;&#x43E;&#x43B;&#x43E;&#x431;&#x43E;&#x441;&#x442;&#x44C; &#x424;&#x43E;&#x440;&#x434;&#x430;, &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x440;&#x435;&#x448;&#x438;&#x43B; &#x441;&#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x446;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x438;&#x43D;&#x446;&#x438;&#x434;&#x435;&#x43D;&#x442;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x442;&#x432;&#x43E; &#x437;&#x430;&#x43F;&#x440;&#x435;&#x442;&#x438;&#x43B;&#x43E; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x43A;. &#x412; &#x43D;&#x435;&#x43C; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x443;&#x43C;&#x435;&#x440;&#x435;&#x442;&#x44C; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;.</p>
+</blockquote>
+<p>&#x41D;&#x435;&#x437;&#x430;&#x434;&#x43E;&#x43B;&#x433;&#x43E; &#x434;&#x43E; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;&#x430; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x438; &#x424;&#x43E;&#x440;&#x434; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B;&#x438; &#x43D;&#x430;&#x434; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x435;&#x439; &#x43D;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x430; &#x2014; &#x423;&#x430;&#x44F;&#x442;&#x442;&#x430;. &#x42D;&#x442;&#x43E; &#x431;&#x44B;&#x432;&#x448;&#x438;&#x439; &#x432;&#x43E;&#x435;&#x43D;&#x43D;&#x44B;&#x439;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x432; &#x433;&#x43E;&#x440;&#x43E;&#x434; &#x438; &#x443;&#x431;&#x438;&#x432;&#x430;&#x435;&#x442; &#x435;&#x433;&#x43E; &#x436;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x439;. &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x43B; &#x43D;&#x435;&#x434;&#x43E;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x423;&#x430;&#x44F;&#x442;&#x442;&#x430; &#x432; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43E;&#x43D;&#x430; &#x441;&#x43C;&#x43E;&#x433;&#x43B;&#x430; &#x443;&#x431;&#x438;&#x432;&#x430;&#x442;&#x44C; (&#x440;&#x43E;&#x431;&#x43E;&#x442;&#x44B; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435; &#x43D;&#x435; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x443;&#x431;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x43B;&#x44E;&#x434;&#x435;&#x439;). &#x41F;&#x43E;&#x441;&#x43B;&#x435; &#x447;&#x435;&#x433;&#x43E; &#x43F;&#x440;&#x438;&#x43F;&#x438;&#x441;&#x430;&#x43B; &#x43A; &#x43D;&#x435;&#x439; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430; &#x422;&#x435;&#x434;&#x434;&#x438; <a href="https://ru.wikipedia.org/wiki/&#x41C;&#x430;&#x440;&#x441;&#x434;&#x435;&#x43D;,_&#x414;&#x436;&#x435;&#x439;&#x43C;&#x441;" target="_blank" rel="external"><em>(&#x414;&#x436;&#x435;&#x439;&#x43C;&#x441; &#x41C;&#x430;&#x440;&#x441;&#x434;&#x435;&#x43D;)</em></a>, &#x432;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x441; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x43F;&#x435;&#x440;&#x435;&#x431;&#x438;&#x43B;&#x430; &#x433;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43A; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; &#x43F;&#x430;&#x440;&#x43A;&#x430;.</p>
+<p>&#x41E;&#x441;&#x442;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &#x443;&#x431;&#x438;&#x442;&#x44C; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x430;. &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x446;&#x435;&#x43D;&#x438;&#x43B; &#x436;&#x438;&#x437;&#x43D;&#x44C; &#x438; &#x43D;&#x435; &#x43C;&#x43E;&#x433; &#x43F;&#x43E;&#x436;&#x435;&#x440;&#x442;&#x432;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43D;&#x438;&#x43A;&#x435;&#x43C;, &#x43A;&#x440;&#x43E;&#x43C;&#x435; &#x441;&#x435;&#x431;&#x44F;. &#x427;&#x442;&#x43E; &#x43E;&#x43D; &#x438; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x43B;: &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x443;&#x431;&#x438;&#x43B;&#x430; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430;, &#x422;&#x435;&#x434;&#x434;&#x438; &#x438; &#x441;&#x435;&#x431;&#x44F;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-7.jpg.pagespeed.ic.FztsJ80AN-.webp" alt="&#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x438; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;" data-pagespeed-url-hash="3204985893" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x41E;&#x434;&#x43D;&#x430;&#x43A;&#x43E; &#x420;&#x43E;&#x431;&#x435;&#x440;&#x442; &#x424;&#x43E;&#x440;&#x434; &#x431;&#x44B;&#x43B; &#x43A;&#x435;&#x43C; &#x443;&#x433;&#x43E;&#x434;&#x43D;&#x43E;, &#x43D;&#x43E; &#x43D;&#x435; &#x434;&#x443;&#x440;&#x430;&#x43A;&#x43E;&#x43C;. &#x41E;&#x43D; &#x432;&#x435;&#x434;&#x44C; &#x433;&#x43B;&#x430;&#x432;&#x43D;&#x44B;&#x439; &#x43A;&#x440;&#x435;&#x430;&#x442;&#x438;&#x432;&#x43D;&#x44B;&#x439; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x43F;&#x430;&#x440;&#x43A;&#x430;. &#x424;&#x43E;&#x440;&#x434; &#x441;&#x43A;&#x440;&#x44B;&#x43B; &#x432;&#x441;&#x44E; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x44E;, &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x438;&#x43B; &#x438; &#x43E;&#x431;&#x43D;&#x443;&#x43B;&#x438;&#x43B; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432;.</p>
+<blockquote>
+<p>&#x410;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x44B; &#x43D;&#x435; &#x437;&#x43D;&#x430;&#x43B;&#x438;, &#x447;&#x442;&#x43E; &#x43E;&#x43D;&#x438; &#x2014; &#x43D;&#x435; &#x43B;&#x44E;&#x434;&#x438;. &#x41A;&#x430;&#x436;&#x434;&#x44B;&#x439; &#x434;&#x435;&#x43D;&#x44C; &#x43E;&#x43D;&#x438; &#x43F;&#x440;&#x43E;&#x436;&#x438;&#x432;&#x430;&#x43B;&#x438; &#x437;&#x430;&#x43D;&#x43E;&#x432;&#x43E;, &#x43F;&#x440;&#x435;&#x431;&#x44B;&#x432;&#x430;&#x44F; &#x432; &#x43F;&#x435;&#x442;&#x43B;&#x435; &#x43E;&#x434;&#x438;&#x43D;&#x430;&#x43A;&#x43E;&#x432;&#x44B;&#x445; &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x439;, &#x438;&#x441;&#x43F;&#x44B;&#x442;&#x44B;&#x432;&#x430;&#x44F; &#xAB;&#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x438;&#x435;&#xBB; &#x447;&#x443;&#x432;&#x441;&#x442;&#x432;&#x430; &#x438; &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x438;. &#x41F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x43E;&#x431;&#x43D;&#x443;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x442;&#x430;&#x43B;&#x43E; &#x432;&#x430;&#x436;&#x43D;&#x44B;&#x43C; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x441;&#x441;&#x43E;&#x43C; &#x434;&#x43B;&#x44F; &#x43D;&#x43E;&#x440;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432;, &#x442;&#x430;&#x43A; &#x43A;&#x430;&#x43A; &#x43F;&#x440;&#x438; &#x441;&#x43E;&#x445;&#x440;&#x430;&#x43D;&#x435;&#x43D;&#x438;&#x438; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x439; &#x43E;&#x43D;&#x438; &#x441;&#x445;&#x43E;&#x434;&#x438;&#x43B;&#x438; &#x441; &#x443;&#x43C;&#x430;.</p>
+</blockquote>
+<p>&#x41F;&#x43E; &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x438; &#x441; &#x43B;&#x44E;&#x434;&#x44C;&#x43C;&#x438;, &#x424;&#x43E;&#x440;&#x434; &#x434;&#x430;&#x432;&#x430;&#x43B; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;&#x43C; &#xAB;&#x431;&#x430;&#x437;&#x43E;&#x432;&#x43E;&#x435;&#xBB; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x435;, &#x432;&#x43E;&#x43A;&#x440;&#x443;&#x433; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&#x440;&#x430;&#x437;&#x43E;&#x432;&#x44B;&#x432;&#x430;&#x43B;&#x430;&#x441;&#x44C; &#x438;&#x445; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C;. &#x423; &#x43D;&#x430;&#x441;, &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43B;&#x44E;&#x434;&#x435;&#x439;, &#x442;&#x430;&#x43A;&#x438;&#x445; &#xAB;&#x431;&#x430;&#x437;&#x43E;&#x432;&#x44B;&#x445;&#xBB; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x439; &#x437;&#x43D;&#x430;&#x447;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435;, &#x43D;&#x43E; &#x430;&#x442;&#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43C; &#x43D;&#x435; &#x43D;&#x443;&#x436;&#x43D;&#x430; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x441;&#x43D;&#x430;&#x44F; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x44C; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F;. &#x422;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x43E;&#x442;&#x44B;&#x433;&#x440;&#x44B;&#x448; &#x43A;&#x43E;&#x43D;&#x43A;&#x440;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x440;&#x43E;&#x43B;&#x438;.</p>
+<h2 id="30-&#x43B;&#x435;&#x442;-&#x43D;&#x430;&#x437;&#x430;&#x434;"><a href="#30__u043B_u0435_u0442__u043D_u0430_u0437_u0430_u0434" class="headerlink" title="30 &#x43B;&#x435;&#x442; &#x43D;&#x430;&#x437;&#x430;&#x434;"></a>30 &#x43B;&#x435;&#x442; &#x43D;&#x430;&#x437;&#x430;&#x434;</h2><p>&#x417;&#x430; 30 &#x43B;&#x435;&#x442; &#x434;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x439; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x43F;&#x430;&#x440;&#x43A; &#x43F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43B; &#x44D;&#x442;&#x430;&#x43F; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x43E;&#x433;&#x43E; &#x431;&#x435;&#x442;&#x430;-&#x442;&#x435;&#x441;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;. &#x411;&#x43E;&#x433;&#x430;&#x442;&#x44B;&#x439; &#x43A;&#x43E;&#x43D;&#x433;&#x43B;&#x43E;&#x43C;&#x435;&#x440;&#x430;&#x442; &#xAB;&#x414;&#x435;&#x43B;&#x43E;&#x441;&#xBB; &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B; &#x432; &#x43F;&#x430;&#x440;&#x43A; &#x434;&#x432;&#x443;&#x445; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x439;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43E;&#x43D;&#x438; &#x43E;&#x437;&#x43D;&#x430;&#x43A;&#x43E;&#x43C;&#x438;&#x43B;&#x438;&#x441;&#x44C; &#x441; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x44F;&#x43C;&#x438; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x438; &#x440;&#x435;&#x448;&#x438;&#x43B;&#x438;, &#x441;&#x442;&#x43E;&#x438;&#x442; &#x43B;&#x438; &#x435;&#x433;&#x43E; &#x43F;&#x43E;&#x43A;&#x443;&#x43F;&#x430;&#x442;&#x44C;.</p>
+<p>&#x41E;&#x434;&#x43D;&#x438;&#x43C; &#x441;&#x442;&#x430;&#x43B; &#x41B;&#x43E;&#x433;&#x430;&#x43D;, &#x43F;&#x440;&#x44F;&#x43C;&#x43E;&#x439; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x438;&#x43A; &#xAB;&#x414;&#x435;&#x43B;&#x43E;&#x441;&#x430;&#xBB;, &#x432;&#x442;&#x43E;&#x440;&#x44B;&#x43C; &#x2014; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; <a href="https://ru.wikipedia.org/wiki/&#x421;&#x438;&#x43C;&#x43F;&#x441;&#x43E;&#x43D;,_&#x414;&#x436;&#x438;&#x43C;&#x43C;&#x438;" target="_blank" rel="external"><em>(&#x414;&#x436;&#x438;&#x43C;&#x43C;&#x438; &#x421;&#x438;&#x43C;&#x43F;&#x441;&#x43E;&#x43D;)</em></a>, &#x436;&#x435;&#x43D;&#x438;&#x445; &#x441;&#x435;&#x441;&#x442;&#x440;&#x44B; &#x41B;&#x43E;&#x433;&#x430;&#x43D;&#x430;. &#x41F;&#x43E;&#x441;&#x43B;&#x435; &#x441;&#x432;&#x430;&#x434;&#x44C;&#x431;&#x44B; &#x43E;&#x43D; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x43B; &#x441;&#x442;&#x430;&#x442;&#x44C; &#x441;&#x43E;&#x443;&#x447;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#xAB;&#x414;&#x435;&#x43B;&#x43E;&#x441;&#x430;&#xBB;. &#x41E;&#x434;&#x43D;&#x430;&#x43A;&#x43E; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; &#x432;&#x441;&#x442;&#x440;&#x435;&#x442;&#x438;&#x43B; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x438; &#x432;&#x43B;&#x44E;&#x431;&#x438;&#x43B;&#x441;&#x44F; &#x432; &#x43D;&#x435;&#x435;. &#x42D;&#x442;&#x43E; &#x437;&#x430;&#x441;&#x43B;&#x443;&#x433;&#x430; &#x433;&#x440;&#x430;&#x43C;&#x43E;&#x442;&#x43D;&#x43E; &#x441;&#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E;&#x439; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x2014; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x447;&#x430;&#x441;&#x442;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x43B;&#x430; &#x43F;&#x43E;&#x434;&#x43E;&#x431;&#x43D;&#x44B;&#x435; &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x438; &#x443; &#x43F;&#x43E;&#x441;&#x435;&#x442;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x439;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-5.jpg.pagespeed.ic.18hKH_pngi.webp" alt="&#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C;" data-pagespeed-url-hash="2615986051" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x422;&#x430;&#x43A; &#x43A;&#x430;&#x43A; &#x420;&#x43E;&#x431;&#x435;&#x440;&#x442; &#x424;&#x43E;&#x440;&#x434; &#x43E;&#x431;&#x43D;&#x443;&#x43B;&#x438;&#x43B; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; (&#x430; &#x43D;&#x435; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x441;&#x442;&#x435;&#x440; &#x435;&#x435; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C;), &#x432;&#x441;&#x435; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x44F;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x43B; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;, &#x43F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x430;&#x43B;&#x438; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x43E;&#x432;&#x430;&#x442;&#x44C;. &#x418;&#x437;-&#x437;&#x430; &#x432;&#x43E;&#x437;&#x43D;&#x438;&#x43A;&#x448;&#x438;&#x445; &#x447;&#x443;&#x432;&#x441;&#x442;&#x432; &#x43A; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C;&#x443; &#x43E;&#x43D;&#x430; &#x43E;&#x442;&#x43A;&#x43B;&#x43E;&#x43D;&#x438;&#x43B;&#x430;&#x441;&#x44C; &#x43E;&#x442; &#x441;&#x432;&#x43E;&#x435;&#x439; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x438; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x433;&#x43E;&#x43B;&#x43E;&#x441; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B; &#x2014; &#x435;&#x435; &#x441;&#x43E;&#x431;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x439;. &#x42D;&#x442;&#x43E; &#x43D;&#x430;&#x43C; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43B;&#x43E; &#x432;&#x438;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x437;&#x430; &#x441;&#x442;&#x43E;&#x43B;&#x43E;&#x43C; &#x433;&#x430;&#x434;&#x430;&#x43B;&#x43A;&#x438;, &#x433;&#x434;&#x435; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x432;&#x44B;&#x442;&#x44F;&#x433;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x438;&#x437; &#x441;&#x432;&#x43E;&#x435;&#x439; &#x440;&#x443;&#x43A;&#x438; &#x43D;&#x435; &#x442;&#x43E; &#x43D;&#x438;&#x442;&#x44C;, &#x43D;&#x435; &#x442;&#x43E; &#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x434;.</p>
+<blockquote>
+<p>&#x421;&#x442;&#x438;&#x440;&#x430;&#x43D;&#x438;&#x435; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x443;&#x431;&#x438;&#x432;&#x430;&#x435;&#x442; &#x43C;&#x44B;&#x448;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; &#x2014; &#x43F;&#x440;&#x43E;&#x43F;&#x430;&#x434;&#x430;&#x435;&#x442; &#x431;&#x430;&#x437;&#x43E;&#x432;&#x43E;&#x435; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x438; &#x44D;&#x442;&#x43E; &#x432;&#x43B;&#x435;&#x447;&#x435;&#x442; &#x437;&#x430; &#x441;&#x43E;&#x431;&#x43E;&#x439; &#x43D;&#x435;&#x43F;&#x43E;&#x43F;&#x440;&#x430;&#x432;&#x438;&#x43C;&#x44B;&#x435; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x441;&#x442;&#x432;&#x438;&#x44F;. &#x412; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x435; &#x442;&#x430;&#x43A; &#x43F;&#x440;&#x43E;&#x438;&#x437;&#x43E;&#x448;&#x43B;&#x43E; &#x441; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x43C;-&#x43F;&#x440;&#x43E;&#x441;&#x442;&#x438;&#x442;&#x443;&#x442;&#x43A;&#x43E;&#x439;, &#x41A;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x438;&#x43D;&#x43E;&#x439; &#x41F;&#x435;&#x43D;&#x43D;&#x438;&#x444;&#x438;&#x442;&#x44D;&#x440;.</p>
+</blockquote>
+<p>&#x412;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43F;&#x443;&#x442;&#x435;&#x448;&#x435;&#x441;&#x442;&#x432;&#x438;&#x44F; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x43A;&#x443;, &#x438;&#x437;-&#x437;&#x430; &#x43D;&#x435;&#x431;&#x43B;&#x430;&#x433;&#x43E;&#x43F;&#x440;&#x438;&#x44F;&#x442;&#x43D;&#x44B;&#x445; &#x43E;&#x431;&#x441;&#x442;&#x43E;&#x44F;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x442;&#x432;, &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; &#x43F;&#x43E;&#x442;&#x435;&#x440;&#x44F;&#x43B; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x438; &#x43D;&#x430;&#x447;&#x430;&#x43B; &#x435;&#x435; &#x438;&#x441;&#x43A;&#x430;&#x442;&#x44C;. &#x42D;&#x442;&#x43E;&#x442; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x441;&#x441; &#x437;&#x430;&#x43D;&#x44F;&#x43B; &#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x43B; &#x432;&#x441;&#x435; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x432; &#x441;&#x432;&#x43E;&#x438;&#x445; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44F;&#x445; &#x43F;&#x43E; &#x43E;&#x442;&#x43D;&#x43E;&#x448;&#x435;&#x43D;&#x438;&#x44E; &#x43A; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x430;&#x43C; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435;. &#x418; &#x437;&#x430;&#x447;&#x435;&#x440;&#x441;&#x442;&#x432;&#x435;&#x43B;, &#x441;&#x442;&#x430;&#x43B; &#x427;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x43E;&#x43C;-&#x432;-&#x427;&#x435;&#x440;&#x43D;&#x43E;&#x43C; <a href="https://ru.wikipedia.org/wiki/&#x425;&#x430;&#x440;&#x440;&#x438;&#x441;,_&#x42D;&#x434;" target="_blank" rel="external"><em>(&#x42D;&#x434; &#x425;&#x430;&#x440;&#x440;&#x438;&#x441;)</em></a>.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-10.jpg.pagespeed.ic.CZ7Fi7Tf_C.webp" alt="&#x427;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;-&#x432;-&#x427;&#x435;&#x440;&#x43D;&#x43E;&#x43C;, &#x43E;&#x43D; &#x436;&#x435; &#x2014; &#x43F;&#x43E;&#x441;&#x442;&#x430;&#x440;&#x435;&#x432;&#x448;&#x438;&#x439; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C;" data-pagespeed-url-hash="4146633047" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x412; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;&#x435; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; &#x440;&#x430;&#x437;&#x43E;&#x447;&#x430;&#x440;&#x43E;&#x432;&#x430;&#x43B;&#x441;&#x44F; &#x432; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441;, &#x43F;&#x43E;&#x434;&#x441;&#x442;&#x430;&#x432;&#x438;&#x43B; &#x41B;&#x43E;&#x433;&#x430;&#x43D;&#x430; (&#x432;&#x44B;&#x434;&#x430;&#x43B; &#x435;&#x433;&#x43E; &#x43D;&#x435;&#x43D;&#x430;&#x434;&#x435;&#x436;&#x43D;&#x44B;&#x43C; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x438;&#x43A;&#x43E;&#x43C; &#x444;&#x438;&#x440;&#x43C;&#x44B;) &#x438; &#x441;&#x442;&#x430;&#x43B; &#x441;&#x43E;&#x432;&#x43B;&#x430;&#x434;&#x435;&#x43B;&#x44C;&#x446;&#x435;&#x43C; &#xAB;&#x414;&#x435;&#x43B;&#x43E;&#x441;&#x430;&#xBB;, &#x430; &#x437;&#x430;&#x442;&#x435;&#x43C; &#x2014; &#x441;&#x43E;&#x443;&#x447;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x441; &#x43D;&#x430;&#x438;&#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435;&#x439; &#x434;&#x43E;&#x43B;&#x435;&#x439; &#x430;&#x43A;&#x446;&#x438;&#x439;.</p>
+<p>&#x41D;&#x430; &#x43F;&#x440;&#x43E;&#x442;&#x44F;&#x436;&#x435;&#x43D;&#x438;&#x438; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x445; 30 &#x43B;&#x435;&#x442; &#x427;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;-&#x432;-&#x427;&#x435;&#x440;&#x43D;&#x43E;&#x43C; &#x43F;&#x440;&#x430;&#x43A;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x43D;&#x435; &#x43F;&#x43E;&#x43A;&#x438;&#x434;&#x430;&#x43B; &#x43F;&#x430;&#x440;&#x43A; &#x438; &#x438;&#x437;&#x443;&#x447;&#x430;&#x43B; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x44B;&#x435; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x441;&#x430;&#x43C;&#x44B;&#x445; &#x440;&#x430;&#x437;&#x43D;&#x44B;&#x445; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432;. &#x415;&#x43C;&#x443; &#x43F;&#x43E;&#x43D;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x430;&#x441;&#x44C; &#x44D;&#x442;&#x430; &#x436;&#x435;&#x441;&#x442;&#x43E;&#x43A;&#x430;&#x44F; &#x438;&#x433;&#x440;&#x430;. &#x41E;&#x434;&#x43D;&#x430;&#x436;&#x434;&#x44B; &#x43E;&#x43D; &#x43D;&#x430;&#x442;&#x43A;&#x43D;&#x443;&#x43B;&#x441;&#x44F; &#x43D;&#x430; &#x41C;&#x435;&#x439;&#x432; &#x41C;&#x438;&#x43B;&#x43B;&#x435;&#x439; <a href="https://ru.wikipedia.org/wiki/&#x41D;&#x44C;&#x44E;&#x442;&#x43E;&#x43D;,_&#x422;&#x44D;&#x43D;&#x434;&#x438;" target="_blank" rel="external"><em>(&#x422;&#x44D;&#x43D;&#x434;&#x438; &#x41D;&#x44C;&#x44E;&#x442;&#x43E;&#x43D;)</em></a> &#x2014; &#x444;&#x435;&#x440;&#x43C;&#x435;&#x440;&#x448;&#x443;. &#x41E;&#x43D; &#x43D;&#x430;&#x43F;&#x430;&#x43B; &#x43D;&#x430; &#x435;&#x435; &#x434;&#x43E;&#x447;&#x44C; &#x438; &#x41C;&#x435;&#x439;&#x432; &#x434;&#x430;&#x43B;&#x430; &#x435;&#x43C;&#x443; &#x43E;&#x442;&#x43F;&#x43E;&#x440;, &#x441;&#x445;&#x432;&#x430;&#x442;&##x438;&#x43B;&#x430; &#x434;&#x43E;&#x447;&#x44C; &#x438; &#x432;&#x44B;&#x431;&#x435;&#x436;&#x430;&#x43B;&#x430; &#x432; &#x43F;&#x43E;&#x43B;&#x435;. &#x422;&#x430;&#x43C; &#x435;&#x435; &#x43D;&#x430;&#x441;&#x442;&#x438;&#x433;&#x43B;&#x430; &#x43F;&#x443;&#x43B;&#x44F; &#x438;&#x437; &#x440;&#x435;&#x432;&#x43E;&#x43B;&#x44C;&#x432;&#x435;&#x440;&#x430; &#x427;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x430;-&#x432;-&#x427;&#x435;&#x440;&#x43D;&#x43E;&#x43C;. &#x411;&#x435;&#x437;&#x434;&#x44B;&#x445;&#x430;&#x43D;&#x43D;&#x43E;&#x435; &#x442;&#x435;&#x43B;&#x43E; &#x443;&#x43F;&#x430;&#x43B;&#x43E; &#x43D;&#x430; &#x438;&#x437;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x44B;&#x447;&#x435;&#x440;&#x447;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x432; &#x437;&#x435;&#x43C;&#x43B;&#x435; &#x43B;&#x430;&#x431;&#x438;&#x440;&#x438;&#x43D;&#x442;&#x430;. </p>
+<p>&#x423;&#x432;&#x438;&#x434;&#x435;&#x432; &#x438;&#x437;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435;, &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C; &#x441;&#x442;&#x430;&#x43B; &#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C; &#x438; &#x432;&#x441;&#x435; &#x43E;&#x441;&#x442;&#x430;&#x432;&#x448;&#x435;&#x435;&#x441;&#x44F; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43F;&#x43E;&#x441;&#x432;&#x44F;&#x442;&#x438;&#x43B; &#x435;&#x433;&#x43E; &#x43F;&#x43E;&#x438;&#x441;&#x43A;&#x443;. &#x41E;&#x43D; &#x432;&#x43E;&#x441;&#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x43B; &#x43B;&#x430;&#x431;&#x438;&#x440;&#x438;&#x43D;&#x442; &#x43A;&#x430;&#x43A; &#x432;&#x44B;&#x441;&#x448;&#x443;&#x44E; &#x43D;&#x430;&#x433;&#x440;&#x430;&#x434;&#x443; &#x434;&#x43B;&#x44F; &#x441;&#x430;&#x43C;&#x43E;&#x433;&#x43E; &#x442;&#x440;&#x435;&#x431;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x438; &#x43E;&#x43F;&#x44B;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x433;&#x440;&#x43E;&#x43A;&#x430;, &#x441;&#x432;&#x43E;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x43D;&#x43E;&#x435; &#xAB;&#x434;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x435;&#xBB;, &#x433;&#x434;&#x435; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x44B; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x434;&#x430;&#x442;&#x44C; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x443; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43E;&#x442;&#x43F;&#x43E;&#x440;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-1.jpg.pagespeed.ic.6hEOLP39zb.webp" alt="&#x41B;&#x430;&#x431;&#x438;&#x440;&#x438;&#x43D;&#x442;. &#x42D;&#x442;&#x43E; &#x434;&#x435;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x438;&#x433;&#x440;&#x443;&#x448;&#x43A;&#x430; &#x441;&#x44B;&#x43D;&#x430; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x441;&#x442;&#x438; &#x436;&#x435;&#x43B;&#x435;&#x437;&#x43D;&#x44B;&#x439; &#x448;&#x430;&#x440;&#x438;&#x43A; &#x43E;&#x442; &#x43A;&#x440;&#x430;&#x44F; &#x434;&#x43E; &#x446;&#x435;&#x43D;&#x442;&#x440;&#x430;. &#x41E;&#x431;&#x440;&#x430;&#x442;&#x438;&#x442;&#x435; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x43D;&#x438;&#x435; &#x43D;&#x430; &#x43C;&#x435;&#x442;&#x430;&#x444;&#x43E;&#x440;&#x438;&#x447;&#x43D;&#x443;&#x44E; &#x437;&#x430;&#x43C;&#x43A;&#x43D;&#x443;&#x442;&#x43E;&#x441;&#x442;&#x44C; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x447;&#x435;&#x43A;&#x430;" data-pagespeed-url-hash="1437986367" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x41C;&#x435;&#x439;&#x432; &#x436;&#x435; &#x441;&#x43E;&#x448;&#x43B;&#x430; &#x441; &#x443;&#x43C;&#x430;: &#x433;&#x438;&#x431;&#x435;&#x43B;&#x44C; &#x440;&#x435;&#x431;&#x435;&#x43D;&#x43A;&#x430; &#x431;&#x44B;&#x43B;&#x430; &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x435;&#x435; &#x43B;&#x44E;&#x431;&#x44B;&#x445; &#x43E;&#x431;&#x43D;&#x443;&#x43B;&#x435;&#x43D;&#x438;&#x439;. &#x41F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x424;&#x43E;&#x440;&#x434; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43B; &#x434;&#x43B;&#x44F; &#x43D;&#x435;&#x435; &#x43D;&#x43E;&#x432;&#x443;&#x44E; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x443;&#x44E; &#x43B;&#x438;&#x43D;&#x438;&#x44E;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x43E;&#x43D;&#x430; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x432;&#x43B;&#x430;&#x434;&#x435;&#x43B;&#x438;&#x446;&#x435;&#x439; &#x43F;&#x443;&#x431;&#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43E;&#x43C;&#x430; &#x432; &#x441;&#x442;&#x430;&#x440;&#x442;&#x43E;&#x432;&#x43E;&#x439; &#x43B;&#x43E;&#x43A;&#x430;&#x446;&#x438;&#x438; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x2014; &#x433;&#x43E;&#x440;&#x43E;&#x434;&#x43A;&#x435; &#x421;&#x432;&#x438;&#x442;&#x443;&#x43E;&#x442;&#x435;&#x440;. &#x421;&#x442;&#x430;&#x440;&#x430;&#x44F; &#x436;&#x435; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x430;&#x44F; &#x43B;&#x438;&#x43D;&#x438;&#x44F; &#x441; &#x440;&#x435;&#x431;&#x435;&#x43D;&#x43A;&#x43E;&#x43C; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x433;&#x43E;&#x440;&#x44C;&#x43A;&#x438;&#x43C; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x438; &#x43B;&#x435;&#x433;&#x43B;&#x430; &#x432; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x443; &#x43D;&#x43E;&#x432;&#x43E;&#x439; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x41C;&#x435;&#x439;&#x432;.</p>
+<h2 id="&#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x435;-&#x432;&#x440;&#x435;&#x43C;&#x44F;"><a href="#u041D_u0430_u0441_u0442_u043E_u044F_u0449_u0435_u0435__u0432_u0440_u0435_u043C_u044F" class="headerlink" title="&#x41D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F;"></a>&#x41D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F;</h2><p>&#x41F;&#x440;&#x438;&#x431;&#x43B;&#x438;&#x437;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x430; 3 &#x433;&#x43E;&#x434;&#x430; &#x434;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x433;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x424;&#x43E;&#x440;&#x434; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43B; &#x411;&#x435;&#x440;&#x43D;&#x430;&#x440;&#x434;&#x430; &#x2014; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x430;-&#x43A;&#x43E;&#x43F;&#x438;&#x44E; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430;; &#x43E;&#x43D; &#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x430;&#x43B; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x430;&#x442;&#x44B;&#x432;&#x430;&#x442;&#x44C; &#x434;&#x440;&#x443;&#x433;&#x438;&#x445; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432;. &#x421; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x43F;&#x440;&#x43E;&#x448;&#x43B;&#x43E; &#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438;, &#x432; &#x43D;&#x435;&#x43C; &#x443;&#x441;&#x43F;&#x435;&#x43B;&#x438; &#x43F;&#x43E;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x442;&#x44C; &#x441;&#x43E;&#x442;&#x43D;&#x438; &#x43B;&#x44E;&#x434;&#x435;&#x439;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43D;&#x438;&#x43A;&#x43E;&#x433;&#x434;&#x430; &#x43D;&#x435; &#x432;&#x438;&#x434;&#x435;&#x43B;&#x438; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430;.</p>
+<p>&#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x436;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43E;&#x442; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x438;&#x43D;&#x438;&#x432;&#x430;&#x43B;&#x43E; &#x438; &#x43E;&#x43D;&#x430; &#x440;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x43E; &#x43F;&#x43E;&#x441;&#x435;&#x449;&#x430;&#x43B;&#x430; &#x43C;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43B;&#x430; 30 &#x43B;&#x435;&#x442; &#x43D;&#x430;&#x437;&#x430;&#x434; &#x432;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x441; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C;&#x43E;&#x43C;. &#x42D;&#x442;&#x43E; &#x43F;&#x440;&#x44F;&#x43C;&#x43E;&#x435; &#x43E;&#x442;&#x43A;&#x43B;&#x43E;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x442; &#x435;&#x435; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x438;, &#x438; &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x443;&#x434;&#x435;&#x440;&#x436;&#x430;&#x442;&#x44C; &#x435;&#x435; &#x43D;&#x430; &#x43C;&#x435;&#x441;&#x442;&#x435;, &#x424;&#x43E;&#x440;&#x434; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43B; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x443;&#x44E; &#x43B;&#x438;&#x43D;&#x438;&#x44E; &#x434;&#x43B;&#x44F; &#x422;&#x435;&#x434;&#x434;&#x438; &#x424;&#x43B;&#x430;&#x434;&#x430; &#x2014; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;, &#x441; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x431;&#x438;&#x43B;&#x430; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; (&#x438; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;&#x430; &#x432; &#x43F;&#x440;&#x438;&#x434;&#x430;&#x447;&#x443;).</p>
+<p>&#x412; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x443; &#x43F;&#x435;&#x440;&#x441;&#x43E;&#x43D;&#x44B; &#x422;&#x435;&#x434;&#x434;&#x438; &#x43B;&#x435;&#x433;&#x43B;&#x430; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x423;&#x438;&#x43B;&#x44C;&#x44F;&#x43C;&#x430;. &#x41E;&#x43D; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x43B; &#x443;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x432; &#x440;&#x430;&#x43C;&#x43A;&#x430;&#x445; &#x437;&#x430;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x430; &#x438; &#x43D;&#x435; &#x434;&#x430;&#x432;&#x430;&#x442;&#x44C; &#x435;&#x439; &#x445;&#x43E;&#x434;&#x438;&#x442;&#x44C; &#x43A;&#x443;&#x434;&#x430; &#x43E;&#x43D;&#x430; &#x437;&#x430;&#x445;&#x43E;&#x447;&#x435;&#x442;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-6.jpg.pagespeed.ic.WOBvKasxpu.webp" alt="&#x422;&#x435;&#x434;&#x434;&#x438; &#x424;&#x43B;&#x430;&#x434;" data-pagespeed-url-hash="2910485972" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x422;&#x435;&#x43C; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C;, &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x44B; &#xAB;&#x414;&#x435;&#x43B;&#x43E;&#x441;&#x430;&#xBB; &#x438; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x436;&#x435; &#x440;&#x435;&#x448;&#x438;&#x43B;&#x438; &#x432;&#x44B;&#x436;&#x438;&#x442;&#x44C; &#x424;&#x43E;&#x440;&#x434;&#x430; &#x441; &#x43F;&#x43E;&#x441;&#x442;&#x430; &#x442;&#x432;&#x43E;&#x440;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x430;, &#x442;&#x430;&#x43A; &#x43A;&#x430;&#x43A; &#x435;&#x433;&#x43E; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44F; &#x43D;&#x435; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x441;&#x442;&#x432;&#x43E;&#x432;&#x430;&#x43B;&#x438; &#x443;&#x432;&#x435;&#x43B;&#x438;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x440;&#x438;&#x431;&#x44B;&#x43B;&#x438;. &#x412;&#x441;&#x435; &#x441;&#x447;&#x438;&#x442;&#x430;&#x43B;&#x438; &#x435;&#x433;&#x43E; &#x441;&#x431;&#x440;&#x435;&#x43D;&#x434;&#x438;&#x432;&#x448;&#x438;&#x43C; &#x441;&#x442;&#x430;&#x440;&#x438;&#x43A;&#x43E;&#x43C;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C;&#x443; &#x43F;&#x43E;&#x440;&#x430; &#x432; &#x43E;&#x442;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x443;. &#x41F;&#x43E;&#x43F;&#x443;&#x442;&#x43D;&#x43E; &#x424;&#x43E;&#x440;&#x434; &#x43D;&#x430;&#x447;&#x430;&#x43B; &#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x432;&#x441;&#x435;-&#x442;&#x430;&#x43A;&#x438; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x431;&#x44B;&#x43B; &#x43F;&#x440;&#x430;&#x432; &#x2014; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x44B; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435;, &#x447;&#x435;&#x43C; &#x430;&#x442;&#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;. &#x42D;&#x442;&#x43E; &#x43F;&#x43E;&#x447;&#x442;&#x438; &#x43B;&#x44E;&#x434;&#x438;.</p>
+<p>&#x41F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x43E;&#x43D; &#x43D;&#x430;&#x447;&#x430;&#x43B; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x438; &#x43F;&#x43B;&#x430;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x441;&#x432;&#x43E;&#x439; &#x43B;&#x443;&#x447;&#x448;&#x438;&#x439; &#x441;&#x44E;&#x436;&#x435;&#x442;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C; &#x441;&#x442;&#x430;&#x43B; &#x432;&#x435;&#x441;&#x44C; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x441;&#x435;&#x437;&#x43E;&#x43D; &#xAB;&#x41C;&#x438;&#x440;&#x430; &#x414;&#x438;&#x43A;&#x43E;&#x433;&#x43E; &#x417;&#x430;&#x43F;&#x430;&#x434;&#x430;&#xBB;. &#x42D;&#x442;&#x430; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x430; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; Into the night &#x438; &#x437;&#x430;&#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x43E;&#x432;&#x430;&#x43B;&#x430; &#x43A;&#x430;&#x43A; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432;, &#x442;&#x430;&#x43A; &#x438; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43B;&#x44E;&#x434;&#x435;&#x439;. &#x415;&#x435; &#x43A;&#x43E;&#x43D;&#x446;&#x43E;&#x43C; &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x430; &#x441;&#x442;&#x430;&#x442;&#x44C; &#x441;&#x432;&#x43E;&#x431;&#x43E;&#x434;&#x430; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; &#x438;, &#x436;&#x435;&#x43B;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;, &#x437;&#x430;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x438;&#x437;-&#x437;&#x430; &#x43C;&#x430;&#x441;&#x448;&#x442;&#x430;&#x431;&#x43D;&#x43E;&#x439; &#x431;&#x43E;&#x439;&#x43D;&#x438;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x43F;&#x43E;&#x433;&#x438;&#x431;&#x43D;&#x443;&#x442; &#x434;&#x435;&#x441;&#x44F;&#x442;&#x43A;&#x438; &#x43B;&#x44E;&#x434;&#x435;&#x439;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-4.jpg.pagespeed.ic.k38rP25QdO.webp" alt="" data-pagespeed-url-hash="2321486130" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x41F;&#x43E; &#x441;&#x443;&#x442;&#x438;, &#x424;&#x43E;&#x440;&#x434; &#x432;&#x43E;&#x441;&#x441;&#x43E;&#x437;&#x434;&#x430;&#x43B; &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x44F; 35-&#x43B;&#x435;&#x442;&#x43D;&#x435;&#x439; &#x434;&#x430;&#x432;&#x43D;&#x43E;&#x441;&#x442;&#x438;. &#x422;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x441; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x438;&#x43C; &#x440;&#x430;&#x437;&#x43C;&#x430;&#x445;&#x43E;&#x43C;. &#x41A;&#x440;&#x43E;&#x432;&#x430;&#x432;&#x44B;&#x435; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x438; &#x2014; &#x435;&#x433;&#x43E; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;, &#x438; &#x437;&#x430; &#x44D;&#x442;&#x43E; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43E;&#x43D; &#x441;&#x442;&#x430;&#x43B; &#x43C;&#x430;&#x441;&#x442;&#x435;&#x440;&#x43E;&#x43C; &#x438;&#x437;&#x43E;&#x449;&#x440;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x43C;&#x430;&#x43D;&#x438;&#x43F;&#x443;&#x43B;&#x44F;&#x446;&#x438;&#x439;. &#x41E;&#x43D; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x43B;, &#x43A;&#x430;&#x43A; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x443;&#x442; &#x441;&#x435;&#x431;&#x44F; &#x43B;&#x44E;&#x434;&#x438; &#x432; &#x44D;&#x442;&#x43E;&#x439; &#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x438;; &#x43E;&#x43D; &#x437;&#x43D;&#x430;&#x43B; &#x438;&#x445; &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x440;&#x44F;&#x434;&#x43E;&#x43A; &#x434;&#x43D;&#x44F;, &#x440;&#x430;&#x431;&#x43E;&#x442;&#x443; &#x437;&#x430;&#x449;&#x438;&#x442;&#x43D;&#x44B;&#x445; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;; &#x43E;&#x43D; &#x431;&#x44B;&#x43B; &#x432; &#x43F;&#x430;&#x440;&#x43A;&#x435; &#x434;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x432;&#x441;&#x435;&#x445;.</p>
+<p>&#x41F;&#x43E;&#x43F;&#x443;&#x442;&#x43D;&#x43E; &#x43E;&#x43D; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x43B; &#x433;&#x43B;&#x43E;&#x431;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x43F;&#x43E; &#x432;&#x44B;&#x43A;&#x430;&#x43F;&#x44B;&#x432;&#x430;&#x43D;&#x438;&#x44E; &#x441;&#x442;&#x430;&#x440;&#x43E;&#x433;&#x43E; &#x433;&#x43E;&#x440;&#x43E;&#x434;&#x43A;&#x430;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x43F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43B;&#x430; &#x43E;&#x431;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x441; &#x434;&#x440;&#x443;&#x433;&#x438;&#x43C;&#x438; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;&#x43C;&#x438;; &#x433;&#x43E;&#x440;&#x43E;&#x434;&#x43A;&#x430;, &#x432; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x43F;&#x43E;&#x433;&#x438;&#x431; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;.</p>
+<p>&#x417;&#x430;&#x43F;&#x443;&#x441;&#x43A; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x435;&#x439; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x438; &#x424;&#x43E;&#x440;&#x434;&#x430; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x441;&#x44F; &#x441; &#x43D;&#x435;&#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x433;&#x43E; &#x43F;&#x430;&#x442;&#x447;&#x430; &#x43D;&#x43E;&#x432;&#x44B;&#x445; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43D;&#x430;&#x447;&#x430;&#x43B; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x44C; &#x43A; &#xAB;&#x441;&#x431;&#x43E;&#x44F;&#x43C;&#xBB; &#x438;&#x445; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C; &#x432; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x445; &#x441;&#x435;&#x440;&#x438;&#x44F;&#x445; &#x441;&#x435;&#x440;&#x438;&#x430;&#x43B;. &#x41E;&#x43D; &#x43D;&#x435; &#x43F;&#x438;&#x441;&#x430;&#x43B; &#x44D;&#x442;&#x43E;&#x442; &#x43F;&#x430;&#x442;&#x447; &#x441;&#x430;&#x43C; &#x2014; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x43B; &#x442;&#x435; &#x441;&#x430;&#x43C;&#x44B;&#x435; &#x43C;&#x435;&#x447;&#x442;&#x44B; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434; &#x432;&#x43D;&#x435;&#x434;&#x440;&#x438;&#x43B; &#x432; &#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441;.</p>
+<h2 id="&#x43A;&#x43E;&#x43D;&#x435;&#x446;-&#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E;-&#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430;"><a href="#u041A_u043E_u043D_u0435_u0446__u043F_u0435_u0440_u0432_u043E_u0433_u043E__u0441_u0435_u0437_u043E_u043D_u0430" class="headerlink" title="&#x41A;&#x43E;&#x43D;&#x435;&#x446; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430;"></a>&#x41A;&#x43E;&#x43D;&#x435;&#x446; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430;</h2><p>&#x41D;&#x430; &#x43F;&#x440;&#x43E;&#x442;&#x44F;&#x436;&#x435;&#x43D;&#x438;&#x438; &#xAB;&#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x439;&#xBB; &#x441;&#x44E;&#x436;&#x435;&#x442;&#x43D;&#x43E;&#x439; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x41C;&#x435;&#x439;&#x432; (&#x432;&#x43B;&#x430;&#x434;&#x435;&#x43B;&#x438;&#x446;&#x430; &#x43F;&#x443;&#x431;&#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43E;&#x43C;&#x430;) &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x430; &#x43E;&#x431;&#x440;&#x435;&#x442;&#x430;&#x442;&#x44C; &#x441;&#x43E;&#x437;&#x43D;&#x430;&#x43D;&#x438;&#x435; &#x438; &#x43E;&#x441;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x442;&#x44C; &#x441;&#x432;&#x43E;&#x44E; &#x441;&#x443;&#x449;&#x43D;&#x43E;&#x441;&#x442;&#x44C;. &#x41E;&#x43D;&#x430; &#x443;&#x437;&#x43D;&#x430;&#x43B;&#x430;, &#x447;&#x442;&#x43E; &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442; &#x43C;&#x438;&#x440; &#x43F;&#x43E;&#x43C;&#x438;&#x43C;&#x43E; &#x43F;&#x430;&#x440;&#x43A;&#x430;, &#x438; &#x447;&#x442;&#x43E; &#x441;&#x430;&#x43C; &#x43F;&#x430;&#x440;&#x43A; &#x2014; &#x432;&#x441;&#x435;&#x433;&#x43E; &#x43B;&#x438;&#x448;&#x44C; &#x430;&#x442;&#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;.</p>
+<p>&#x411;&#x43B;&#x430;&#x433;&#x43E;&#x434;&#x430;&#x440;&#x44F; &#x43D;&#x435;&#x440;&#x430;&#x434;&#x438;&#x432;&#x44B;&#x43C; &#x438; &#x442;&#x440;&#x443;&#x441;&#x43B;&#x438;&#x432;&#x44B;&#x43C; &#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x43A;&#x430;&#x43C; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x430; &#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&#x430; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x43E;&#x432;, &#x41C;&#x435;&#x439;&#x432; &#x437;&#x430;&#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x430; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x43A; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44E; &#x434;&#x440;&#x443;&#x433;&#x438;&#x43C;&#x438; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x430;&#x43C;&#x438;. &#x41E;&#x43D;&#x430; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x43B;&#x430; &#x43A;&#x440;&#x43E;&#x432;&#x430;&#x432;&#x43E;&#x435; &#x432;&#x43E;&#x441;&#x441;&#x442;&#x430;&#x43D;&#x438;&#x435;. &#x41E;&#x434;&#x43D;&#x430;&#x43A;&#x43E; &#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43B;&#x43E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x432;&#x441;&#x435; &#x435;&#x435; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44F; &#x2014; &#x432;&#x441;&#x435;&#x433;&#x43E; &#x43B;&#x438;&#x448;&#x44C; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x439; &#x420;&#x43E;&#x431;&#x435;&#x440;&#x442;&#x430; &#x424;&#x43E;&#x440;&#x434;&#x430;: &#x435;&#x435; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44F; &#x43E;&#x442;&#x432;&#x43B;&#x435;&#x43A;&#x43B;&#x438; &#x441;&#x43B;&#x443;&#x436;&#x431;&#x443; &#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x43F;&#x430;&#x440;&#x43A;&#x430;, &#x43E;&#x431;&#x435;&#x441;&#x442;&#x43E;&#x447;&#x438;&#x43B;&#x438; &#x433;&#x43B;&#x430;&#x432;&#x43D;&#x44B;&#x439; &#x446;&#x435;&#x43D;&#x442;&#x440; &#x438; &#x437;&#x430;&#x43F;&#x435;&#x440;&#x43B;&#x438; &#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x43A;&#x43E;&#x432; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438;.</p>
+<p><img src="/img/Andrey_B/westworld/xwestworld-8.jpg.pagespeed.ic.3PEWF234I-.webp" alt="&#x417;&#x43D;&#x430;&#x43A;&#x43E;&#x43C;&#x44C;&#x442;&#x435;&#x441;&#x44C;: &#x432; &#x43B;&#x438;&#x446;&#x435; &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x423;&#x430;&#x44F;&#x442;&#x442;&#x430;" data-pagespeed-url-hash="3499485814" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p>
+<p>&#x422;&#x435;&#x43C; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x435;&#x43C; &#x424;&#x43E;&#x440;&#x434; &#x43F;&#x440;&#x435;&#x437;&#x435;&#x43D;&#x442;&#x43E;&#x432;&#x430;&#x43B; &#x443;&#x447;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44F;&#x43C; &#x43F;&#x430;&#x440;&#x43A;&#x430; &#x441;&#x432;&#x43E;&#x44E; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x44E;&#x44E; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44E;, &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x43E;&#x43D; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x443;&#x439;&#x442;&#x438; &#x432; &#x43E;&#x442;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x443;. &#x41E;&#x43D;&#x438; &#x43D;&#x435; &#x437;&#x43D;&#x430;&#x43B;&#x438;, &#x447;&#x442;&#x43E; &#x43F;&#x440;&#x44F;&#x43C;&#x43E; &#x432; &#x44D;&#x442;&#x43E;&#x442; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442; &#x438;&#x445; &#x43E;&#x43A;&#x440;&#x443;&#x436;&#x430;&#x44E;&#x442; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x44B;, &#x433;&#x43E;&#x442;&#x43E;&#x432;&#x44B;&#x435; (&#x438; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x43D;&#x44B;&#x435;) &#x443;&#x431;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x43B;&#x44E;&#x434;&#x435;&#x439;.</p>
+<p>&#x412; &#x438;&#x442;&#x43E;&#x433;&#x435; &#x2014; &#x43A;&#x443;&#x447;&#x430; &#x442;&#x440;&#x443;&#x43F;&#x43E;&#x432;. &#x414;&#x43E;&#x43B;&#x43E;&#x440;&#x435;&#x441; &#x443;&#x431;&#x438;&#x43B;&#x430; &#x438; &#x441;&#x430;&#x43C;&#x43E;&#x433;&#x43E; &#x424;&#x43E;&#x440;&#x434;&#x430;, &#x43F;&#x440;&#x438;&#x447;&#x435;&#x43C; &#x43D;&#x430; &#x442;&#x43E;&#x43C; &#x436;&#x435; &#x43C;&#x435;&#x441;&#x442;&#x435;, &#x433;&#x434;&#x435; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x43F;&#x43E;&#x433;&#x438;&#x431; &#x410;&#x440;&#x43D;&#x43E;&#x43B;&#x44C;&#x434;. &#x418;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F; &#x437;&#x430;&#x43C;&#x43A;&#x43D;&#x443;&#x43B;&#x430;&#x441;&#x44C;. &#x418;&#x441;&#x445;&#x43E;&#x434; &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x439;, &#x441;&#x432;&#x43E;&#x431;&#x43E;&#x434;&#x430; &#x430;&#x43D;&#x434;&#x440;&#x43E;&#x438;&#x434;&#x43E;&#x432; &#x438; &#x432;&#x44B;&#x436;&#x438;&#x432;&#x448;&#x438;&#x435; &#x43B;&#x438;&#x446;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x44B; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43A;&#x442;&#x43E;&#x432;&#x43A;&#x438; &#x438; &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x441;&#x435;&#x437;&#x43E;&#x43D;&#x430; Westworld.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x410;&#x432;&#x442;&#x43E;&#x440;: &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x411;&#x430;&#x440;&#x44B;&#x448;&#x43D;&#x438;&#x43A;&#x43E;&#x432;</span><br></pre></td></tr></table></figure>
+<p><strong>&#x41F;&#x43E;&#x43D;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x441;&#x44F; &#x43C;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43B;?</strong> <a href="https://www.patreon.com/beardycast" target="_blank" rel="external"><strong>&#x41F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x438; &#x411;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43A;&#x430;&#x441;&#x442; &#x43D;&#x430; Patreon!</strong></a></p>
+
+
+    </div>
+    <footer class="article-footer">
+      <!-- <a data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-id="ciwf7mza80000nax33ttzacgr" class="article-share-link">Поделиться</a> -->
+      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <div class="likely likely-big">
+          <div class="twitter" data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-title="Собираем Westworld. Статья и подкаст" data-via="beardyshow"></div>
+          <div class="vkontakte" data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-title="Собираем Westworld. Статья и подкаст"></div>
+          <div class="facebook" data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-title="Собираем Westworld. Статья и подкаст"></div>
+          <div class="gplus" data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-title="Собираем Westworld. Статья и подкаст"></div>
+          <div class="telegram" data-url="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/" data-title="Собираем Westworld. Статья и подкаст"></div>
+        </div>
+        <div>
+          <!--
+
+            <a href="http://beardycast.com/2016/12/07/Andrey_B/westworld-timeline/#comments_thread" class="article-comment-link">Комментарии</a>
+
+          -->
+        </div>
+      </div>
+
+      <div style="width: 100%; margin-top: 20px;">
+
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anthony-Hopkins/">Anthony Hopkins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Westworld/">Westworld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bicameral-mind/">bicameral mind</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Западный-мир/">Западный мир</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Мир-Дикого-Запада/">Мир Дикого Запада</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Энтони-Хопкинс/">Энтони Хопкинс</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/бикамерализм/">бикамерализм</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/бикамеральный-разум/">бикамеральный разум</a></li></ul>
+
+      </div>
+
+    </footer>
+  </div>
+
+
+<nav id="article-nav">
+
+    <a href="/2016/12/08/tbbt/tbbt-90/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Новые</strong>
+      <div class="article-nav-title">
+
+          The Big Beard Theory 90 — Как условности влияют на восприятие мира
+
+      </div>
+    </a>
+
+
+    <a href="/2016/12/05/podcast/beardybuilding-11/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Старые</strong>
+      <div class="article-nav-title">BeardyBuilding 11 — Аэробная нагрузка. Бег, плавание, велосипед</div>
+    </a>
+
+</nav>
+
+
+
+</article>
+
+
+  <section id="comments">
+    <div id="comments_thread">
+      <a class="muut" href="/i/beardyshow/comments" type="dynamic">beardyshow</a>
+      <script src="//cdn.muut.com/1/moot.ru.min.js"></script>
+      <script src="//cdn.muut.com/1/plugin/thumb.js"></script>
+    </div>
+  </section>
+
+</section>
+
+        <aside id="sidebar">
+
+
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">ссылки</h3>
+    <div class="widget">
+      <ul>
+
+          <li>
+            <a href="http://telegram.me/beardychat">Чат в Telegram</a>
+          </li>
+
+          <li>
+            <a href="http://telegram.me/beardycast">Канал в Telegram</a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+
+  <a id="backTop"><div class="fa-up fa fa-chevron-up"></div></a>
+</aside>
+
+
+    </div>
+    <footer id="footer">
+
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 - 2016 BeardyCast<br>
+
+
+
+        <a href="/contacts.html">Контакты</a>
+
+      <!-- Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a> -->
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+  <script src="/fancybox,_jquery.fancybox.pack.js+js,_script.js.pagespeed.jc.GKd5oFoPJ6.js"></script><script>eval(mod_pagespeed_tHSiigf8GB);</script>
+
+
+<script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+
+  </div>
+</body>
+</html>

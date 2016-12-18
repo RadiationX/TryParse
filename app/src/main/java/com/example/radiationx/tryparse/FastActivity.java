@@ -100,7 +100,7 @@ public class FastActivity extends AppCompatActivity {
         Document.init();
         list = (LinearLayout) findViewById(R.id.list);
         webView = (WebView) findViewById(R.id.webview);
-        if(true){
+        if(false){
             try {
                 run();
             } catch (Exception e) {
@@ -354,13 +354,13 @@ public class FastActivity extends AppCompatActivity {
 
             }
         });*/
-        /*int maxLogSize = 1000;
+        int maxLogSize = 1000;
         for(int i = 0; i <= veryLongString.length() / maxLogSize; i++) {
             int start = i * maxLogSize;
             int end = (i+1) * maxLogSize;
             end = end > veryLongString.length() ? veryLongString.length() : end;
             Log.v("SUKA", veryLongString.substring(start, end));
-        }*/
+        }
         /*time = System.currentTimeMillis();
         document.html();
         Log.d("myparser", "test html new: " + ((System.currentTimeMillis() - time)));
